@@ -8,7 +8,7 @@ const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 const PRODUCTS = {
   ivoz: {
     name: 'iVoz Pro - Lifetime License',
-    price: 19.99,
+    price: 24.99,
     currency: 'USD',
     downloads: [
       { name: 'iVoz', url: 'https://github.com/hikaribrandan3-code/hikari-yaps-website/releases/download/v1.0/iVoz.app.zip', desc: 'Talk to your Mac' }
@@ -16,7 +16,7 @@ const PRODUCTS = {
   },
   iorganize: {
     name: 'iOrganize Pro - Lifetime License',
-    price: 9.99,
+    price: 12.99,
     currency: 'USD',
     downloads: [
       { name: 'iOrganize', url: 'https://github.com/hikaribrandan3-code/iorganize/releases/download/v1.0/iOrganize.app.zip', desc: 'Smart file cleanup' }
@@ -32,7 +32,7 @@ const PRODUCTS = {
   },
   bundle: {
     name: 'iSuite Bundle (iVoz + iOrganize + Screen Bridge)',
-    price: 34.99,
+    price: 44.99,
     currency: 'USD',
     downloads: [
       { name: 'iVoz', url: 'https://github.com/hikaribrandan3-code/hikari-yaps-website/releases/download/v1.0/iVoz.app.zip', desc: 'Talk to your Mac' },
