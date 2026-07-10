@@ -210,7 +210,7 @@
 <a href="index-es.html" class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md">ES</a>
 <button onclick="startCheckout('bundle')" class="bg-primary text-on-primary px-lg py-sm rounded-full font-label-md text-label-md hover:opacity-90 active:scale-95 transition-all">Get the Suite</button>
 </div>
-<button class="md:hidden material-symbols-outlined text-on-surface">menu</button>
+<button class="md:hidden material-symbols-outlined text-on-surface ml-auto">menu</button>
 </div>
 </div>
 </nav>
@@ -218,9 +218,15 @@
 <!-- Hero Section -->
 <section class="bg-white pt-xl pb-md overflow-hidden relative">
 <div class="max-w-[1440px] mx-auto px-margin-desktop relative">
-<img src="assets/hero-en.png" alt="The Missing Office Suite for macOS" class="w-full h-auto"/>
+<img src="assets/hero-en.png" alt="The Missing Office Suite for macOS" class="hidden md:block w-full h-auto"/>
 <!-- Hidden CTA Overlay (positioned over the "Get iSuite Office" button in the image) -->
-<button onclick="startCheckout('bundle')" class="absolute top-[28%] left-1/2 -translate-x-1/2 w-32 h-12 bg-transparent cursor-pointer" title="Get iSuite Office"></button>
+<button onclick="startCheckout('bundle')" class="hidden md:block absolute top-[28%] left-1/2 -translate-x-1/2 w-32 h-12 bg-transparent cursor-pointer" title="Get iSuite Office"></button>
+<!-- Mobile Hero Text -->
+<div class="md:hidden text-center py-xl">
+<h1 class="font-headline-lg text-headline-lg mb-md">The Missing Office Suite for macOS</h1>
+<p class="text-on-surface-variant font-body-lg mb-lg">Three Focused, Powerful Tools, Feeling Native, Working Seamlessly Together</p>
+<button onclick="startCheckout('bundle')" class="bg-primary text-on-primary px-lg py-md rounded-full font-title-lg text-title-lg hover:opacity-90 active:scale-95 transition-all inline-block">Get Suite Office</button>
+</div>
 </div>
 </section>
 <!-- Deep Dives -->
@@ -577,8 +583,8 @@
 <!-- Footer -->
 <footer class="w-full bg-surface-container-lowest border-t border-outline-variant/10">
 <div class="max-w-[1440px] mx-auto px-margin-desktop py-xl">
-<!-- Footer Grid - 4 Columns -->
-<div class="grid grid-cols-1 md:grid-cols-4 gap-lg mb-xl">
+<!-- Footer Grid - 4 Columns Desktop, Centered on Mobile -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg md:gap-xl mb-xl md:text-left text-center">
 <!-- Column 1: Product -->
 <div>
 <h4 class="font-label-md text-label-md font-bold text-on-surface mb-md uppercase tracking-wider opacity-70">Product</h4>
@@ -608,7 +614,7 @@
 <!-- Column 4: Payments -->
 <div>
 <h4 class="font-label-md text-label-md font-bold text-on-surface mb-md uppercase tracking-wider opacity-70">Payment</h4>
-<div class="space-y-xs">
+<div class="space-y-xs flex flex-col md:flex-col items-center md:items-start">
 <div class="flex items-center gap-sm p-sm rounded-lg hover:bg-white/5 transition-colors">
 <span class="material-symbols-outlined text-primary text-lg">payment</span>
 <span class="font-body-md text-on-surface">PayPal</span>
@@ -717,7 +723,7 @@
     <script src="checkout.js"></script>
 <!-- Sticky Floating CTA Button - v2 -->
 
-<div id="floatingCTA" class="fixed bottom-24 right-8 z-40 opacity-0 translate-y-8 transition-all duration-500 pointer-events-none">
+<div id="floatingCTA" class="hidden md:block fixed bottom-24 right-8 z-40 opacity-0 translate-y-8 transition-all duration-500 pointer-events-none">
     <button onclick="startCheckout('bundle')" class="bg-primary text-on-primary px-lg py-md rounded-full font-title-lg text-title-lg hover:shadow-2xl hover:scale-110 active:scale-95 transition-all shadow-lg flex items-center gap-sm pointer-events-auto">
         <span class="material-symbols-outlined">shopping_cart</span>
         Get Suite
