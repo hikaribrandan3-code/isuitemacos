@@ -186,6 +186,48 @@
         .demo-label.done { color: #10b981; }
         /* Disable double-tap zoom on mobile */
         button, a, input, textarea, select { touch-action: manipulation; }
+
+        /* Mobile Hero — Animated App Showcase (Apple Store style) */
+        .hero-showcase { position: relative; height: 248px; }
+        .hero-app-card {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 28px 24px;
+            border-radius: 28px;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(0,0,0,0.06);
+            box-shadow: 0 24px 60px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04);
+            opacity: 0;
+            transform: scale(0.94) translateY(8px);
+            transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+            pointer-events: none;
+        }
+        .hero-app-card.active {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+            pointer-events: auto;
+        }
+        .hero-app-icon-wrap {
+            width: 72px;
+            height: 72px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        }
+        .hero-app-icon { width: 44px; height: 44px; object-fit: contain; filter: brightness(0) invert(1); }
+        .hero-app-name { font-size: 22px; font-weight: 700; letter-spacing: -0.01em; color: #1a1b1f; margin-bottom: 6px; }
+        .hero-app-tag { font-size: 14px; color: #414755; line-height: 1.4; max-width: 260px; }
+        .hero-dots { display: flex; gap: 8px; justify-content: center; margin-top: 18px; }
+        .hero-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(0,0,0,0.15); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+        .hero-dot.active { background: #0058bc; width: 20px; border-radius: 4px; }
     </style>
     <!-- Open Graph / Social Sharing -->
     <meta property="og:type" content="website"/>
@@ -225,11 +267,42 @@
 <img src="assets/hero-en.png" alt="The Missing Office Suite for macOS" class="hidden md:block w-full h-auto"/>
 <!-- Hidden CTA Overlay (positioned over the "Get iSuite Office" button in the image) -->
 <button onclick="startCheckout('bundle')" class="hidden md:block absolute top-[28%] left-1/2 -translate-x-1/2 w-32 h-12 bg-transparent cursor-pointer" title="Get iSuite Office"></button>
-<!-- Mobile Hero Text -->
-<div class="md:hidden text-center py-xl">
-<h1 class="font-headline-lg text-headline-lg mb-md">The Missing Office Suite for macOS</h1>
-<p class="text-on-surface-variant font-body-lg mb-lg">Three Focused, Powerful Tools, Feeling Native, Working Seamlessly Together</p>
-<button onclick="startCheckout('bundle')" class="bg-primary text-on-primary px-lg py-md rounded-full font-title-lg text-title-lg hover:opacity-90 active:scale-95 transition-all inline-block">Get Suite Office</button>
+<!-- Mobile Hero — Animated App Showcase -->
+<div class="md:hidden text-center pt-lg pb-xl">
+<span class="inline-block text-primary font-label-md text-label-md tracking-wider uppercase mb-sm">The iSuite Collection</span>
+<h1 class="font-headline-lg text-headline-lg mb-sm px-sm">The Missing Office Suite for macOS</h1>
+<p class="text-on-surface-variant font-body-md mb-lg px-lg">Three focused apps. One seamless system.</p>
+
+<div class="hero-showcase max-w-[320px] mx-auto mb-md">
+<div class="hero-app-card active" id="hero-app-0">
+<div class="hero-app-icon-wrap" style="background: linear-gradient(135deg, #0058bc, #4f8ff7);">
+<img src="assets/ivoz-icon.png" alt="iVoz" class="hero-app-icon"/>
+</div>
+<h3 class="hero-app-name">iVoz</h3>
+<p class="hero-app-tag">Talk to your Mac. Real-time transcription across 40+ languages.</p>
+</div>
+<div class="hero-app-card" id="hero-app-1">
+<div class="hero-app-icon-wrap" style="background: linear-gradient(135deg, #10b981, #34d399);">
+<img src="assets/iorganize-icon.png" alt="iOrganize" class="hero-app-icon"/>
+</div>
+<h3 class="hero-app-name">iOrganize</h3>
+<p class="hero-app-tag">Smart file cleanup and automated workflows, done for you.</p>
+</div>
+<div class="hero-app-card" id="hero-app-2">
+<div class="hero-app-icon-wrap" style="background: linear-gradient(135deg, #f59e0b, #fb923c);">
+<img src="assets/imonitor-icon.png" alt="iMonitor" class="hero-app-icon"/>
+</div>
+<h3 class="hero-app-name">iMonitor</h3>
+<p class="hero-app-tag">Live system stats, always one glance away.</p>
+</div>
+</div>
+<div class="hero-dots" id="hero-dots">
+<span class="hero-dot active" data-idx="0"></span>
+<span class="hero-dot" data-idx="1"></span>
+<span class="hero-dot" data-idx="2"></span>
+</div>
+
+<button onclick="startCheckout('bundle')" class="mt-lg bg-primary text-on-primary px-lg py-md rounded-full font-title-lg text-title-lg hover:opacity-90 active:scale-95 transition-all inline-block">Get iSuite Office</button>
 </div>
 </div>
 </section>
@@ -762,5 +835,20 @@
     // Start demo animations (iOrganize & iMonitor MacBook mockups)
     initDemoAnimation('iorg', 4);
     initDemoAnimation('imon', 4);
+
+    // Mobile Hero — Animated App Showcase cycle
+    (function() {
+        const cards = document.querySelectorAll('.hero-app-card');
+        const dots = document.querySelectorAll('.hero-dot');
+        if (!cards.length) return;
+        let heroIdx = 0;
+        setInterval(() => {
+            cards[heroIdx].classList.remove('active');
+            dots[heroIdx].classList.remove('active');
+            heroIdx = (heroIdx + 1) % cards.length;
+            cards[heroIdx].classList.add('active');
+            dots[heroIdx].classList.add('active');
+        }, 2800);
+    })();
 </script>
 </body></html>
