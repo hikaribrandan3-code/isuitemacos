@@ -137,6 +137,48 @@
         .floating-icon:nth-child(3) {
             animation-delay: -4s;
         }
+        /* MacBook & Demo Animations (from iOrganize & iMonitor repos) */
+        @keyframes mockupFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .macbook-mockup { width: 100%; max-width: 720px; animation: mockupFloat 6s ease-in-out infinite; margin: 0 auto; }
+        .macbook-frame { position: relative; }
+        .macbook-screen { background: #fff; border: 2px solid #d1d1d6; border-radius: 16px 16px 0 0; padding: 8px; box-shadow: 0 24px 80px rgba(0,0,0,0.1); }
+        .screen-header { display: flex; align-items: center; gap: 10px; padding: 8px 12px; background: #f5f5f7; border-radius: 10px 10px 0 0; border-bottom: 1px solid rgba(0,0,0,0.08); }
+        .screen-dots { display: flex; gap: 6px; }
+        .screen-dots span { width: 10px; height: 10px; border-radius: 50%; }
+        .screen-dots span:nth-child(1) { background: #FF5F57; }
+        .screen-dots span:nth-child(2) { background: #FFBD2E; }
+        .screen-dots span:nth-child(3) { background: #28C840; }
+        .screen-title { font-size: 0.75rem; color: #6b7280; font-weight: 600; flex: 1; text-align: center; margin-right: 32px; }
+        .screen-content { padding: 24px 20px; background: #fff; min-height: 180px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 0 0 12px 12px; }
+        .macbook-hinge { height: 8px; background: linear-gradient(180deg, #c1c1c6 0%, #d1d1d6 100%); border-radius: 0 0 4px 4px; margin: 0 12px; }
+        .macbook-base { height: 14px; background: linear-gradient(180deg, #d1d1d6 0%, #e1e1e6 40%, #c1c1c6 100%); border-radius: 0 0 12px 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); margin: 0 -8px; }
+        .macbook-notch { width: 60px; height: 4px; background: #a1a1a6; border-radius: 0 0 3px 3px; position: absolute; top: 0; left: 50%; transform: translateX(-50%); }
+        .screen-meta { display: flex; gap: 12px; font-size: 0.7rem; margin-top: 16px; }
+        .screen-tag { background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 4px 10px; border-radius: 100px; font-weight: 600; }
+        @keyframes demoFadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+        .demo-animation { min-height: 100px; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; }
+        .demo-state { display: none; flex-direction: column; align-items: center; gap: 10px; animation: demoFadeIn 0.4s ease forwards; }
+        .demo-state.active { display: flex; }
+        @keyframes demoPulse { 0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.3); } 50% { transform: scale(1.15); box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); } }
+        .demo-dot { width: 14px; height: 14px; background: #ef4444; border-radius: 50%; animation: demoPulse 1.2s ease-in-out infinite; }
+        .demo-file-match { display: flex; align-items: center; gap: 12px; background: #f9f9fb; border: 1px solid rgba(0,0,0,0.04); border-radius: 12px; padding: 10px 16px; min-width: 240px; }
+        .demo-file-icon { flex-shrink: 0; color: #9ca3af; }
+        .demo-file-info { display: flex; flex-direction: column; gap: 2px; }
+        .demo-file-name { font-size: 0.85rem; font-weight: 600; color: #1f2937; }
+        .demo-file-tags { font-size: 0.72rem; color: #b45309; background: rgba(245, 158, 11, 0.1); padding: 1px 8px; border-radius: 100px; font-weight: 500; }
+        @keyframes fileSlide { 0% { left: 0; } 100% { left: calc(100% - 10px); } }
+        .demo-file-move { display: flex; align-items: center; gap: 10px; min-width: 260px; }
+        .demo-move-icon { flex-shrink: 0; color: #9ca3af; }
+        .demo-move-track { position: relative; flex: 1; height: 2px; background: repeating-linear-gradient(90deg, rgba(0,0,0,0.08) 0 6px, transparent 6px 12px); }
+        .demo-move-file { position: absolute; top: 50%; left: 0; width: 10px; height: 12px; background: #f59e0b; border-radius: 2px; transform: translate(0, -50%); animation: fileSlide 1.4s ease-in-out infinite; }
+        @keyframes checkPop { 0% { transform: scale(0); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
+        .demo-done { display: flex; align-items: center; gap: 12px; font-weight: 600; color: #10b981; }
+        .demo-done svg { animation: checkPop 0.6s ease-out; }
+        .demo-label { font-size: 0.9rem; font-weight: 500; color: #6b7280; }
+        .demo-label.done { color: #10b981; }
     </style>
 </head>
 <body class="bg-background text-on-surface font-body-md">
@@ -219,7 +261,70 @@
 </ul>
 </div>
 <div class="flex-1 w-full">
-<img class="rounded-xl app-preview-shadow border border-outline-variant/30" data-alt="A detailed screen of the iOrganize application, displaying a bento-style grid of file categories and smart folders. The interface uses a soft blue and white color scheme, with smooth gradients and high-contrast text that makes the complex organization system feel intuitive and calm." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaIEp7t1xGTtxobo-LGuTgmkLnp5S_Mr-TdqJGv00hBGt5Lex9RR1AD1LvHWkCbwGo1-T0kHr_cg1ZOtKmEpRwBoYXr1FvL7YfyUPb_WFVVre-N68oTgTkZaIcn1FwRcxK5IV-iouZq8cKSSQxJ15EgLN27Q9Fmg89UQkYQem9FIZmz2WVYW5V_H3-VLii1uqWj_1Xd9hJpxKzzAhdSVZ9oiWIt2BtRUoA7-gGj5C-ZLFhQe_ICKay"/>
+<!-- iOrganize MacBook Mockup with Demo Animation -->
+<div class="macbook-mockup">
+<div class="macbook-frame">
+<div class="macbook-screen">
+<div class="screen-header">
+<div class="screen-dots">
+<span></span><span></span><span></span>
+</div>
+<span class="screen-title">iOrganize</span>
+</div>
+<div class="screen-content">
+<div class="demo-animation">
+<div class="demo-state active" id="iorg-state-1">
+<div class="demo-dot"></div>
+<div class="demo-label">Scanning Downloads...</div>
+</div>
+<div class="demo-state" id="iorg-state-2">
+<div class="demo-file-match">
+<svg class="demo-file-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/>
+<path d="M14 2v6h6"/>
+</svg>
+<div class="demo-file-info">
+<span class="demo-file-name">invoice_2024.dmg</span>
+<span class="demo-file-tags">.dmg · 9 days old</span>
+</div>
+</div>
+<div class="demo-label">Rule matched</div>
+</div>
+<div class="demo-state" id="iorg-state-3">
+<div class="demo-file-move">
+<svg class="demo-move-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+<path d="M3 7a2 2 0 0 1 2-2h4l2 2.5h8a2 2 0 0 1 2 2V17a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/>
+</svg>
+<div class="demo-move-track">
+<span class="demo-move-file"></span>
+</div>
+<svg class="demo-move-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+<path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m2 0-1 14a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L6 6"/>
+</svg>
+</div>
+<div class="demo-label done">Moving to Trash</div>
+</div>
+<div class="demo-state" id="iorg-state-4">
+<div class="demo-done">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5">
+<polyline points="20 6 9 17 4 12"/>
+</svg>
+<span>Cleanup freed 138.5 MB</span>
+</div>
+</div>
+</div>
+<div class="screen-meta">
+<span class="screen-tag">Auto-Flow rule</span>
+<span class="screen-accuracy">Running in background</span>
+</div>
+</div>
+</div>
+<div class="macbook-hinge"></div>
+<div class="macbook-base">
+<div class="macbook-notch"></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <!-- iScreen Share Deep Dive -->
@@ -245,7 +350,75 @@
 </ul>
 </div>
 <div class="flex-1 w-full">
-<img class="rounded-xl app-preview-shadow border border-outline-variant/30" data-alt="The iScreen Share interface demonstrating its 'Universal Bridge' feature. The UI is modern and professional, featuring dark typography on a pristine white background. Status indicators for latency and connectivity are rendered in a minimal, high-fidelity style characteristic of pro macOS tools." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo-k3RNnFtMkvzPhBECH615bglsPdPi0_sq2QCPqD8SSMDyXz4mQVc4e_KavRucU9PUEUWzBv3BiZdMkuicgPupWv4mwNHIRPUaF09HmuHeIxVsFtfGXT6AC01b8UBc4B471qx1bNidoDNauBDEkc9eHMJDhfxsZJNXrwziVGOmGu25oO-8LHPuaIo0bmCYmtbXP7lSX57KaPMqlZtaPJ_MxvHu3mBupqZ4gdzrYR1bYRKGQqfiW7q"/>
+<!-- iMonitor MacBook Mockup with Demo Animation -->
+<div class="macbook-mockup">
+<div class="macbook-frame">
+<div class="macbook-screen">
+<div class="screen-header">
+<div class="screen-dots">
+<span></span><span></span><span></span>
+</div>
+<span class="screen-title">iMonitor</span>
+</div>
+<div class="screen-content">
+<div class="demo-animation">
+<div class="demo-state active" id="imon-state-1">
+<div class="demo-label">📊 System Status Active</div>
+<div class="demo-file-match" style="background: #ecfdf5; border-color: #10b981;">
+<svg class="demo-file-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2">
+<circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/>
+</svg>
+<div class="demo-file-info">
+<span class="demo-file-name" style="color: #065f46;">All Systems Nominal</span>
+<span class="demo-file-tags" style="color: #10b981; background: rgba(16, 185, 129, 0.1);">Running 24/7</span>
+</div>
+</div>
+</div>
+<div class="demo-state" id="imon-state-2">
+<div class="demo-label">🔗 Display Connected</div>
+<div class="demo-file-match" style="background: #e0e7ff; border-color: #6366f1;">
+<svg class="demo-file-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2">
+<rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/>
+</svg>
+<div class="demo-file-info">
+<span class="demo-file-name" style="color: #312e81;">iPad Air (192.168.1.42)</span>
+<span class="demo-file-tags" style="color: #6366f1; background: rgba(99, 102, 241, 0.1);">2ms latency</span>
+</div>
+</div>
+</div>
+<div class="demo-state" id="imon-state-3">
+<div class="demo-label">⚡ Performance Peak</div>
+<div class="demo-file-move">
+<svg class="demo-move-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2">
+<path d="M13 2L3 14h9l-1 8 10-12h-9l1-8Z"/>
+</svg>
+<div class="demo-move-track">
+<span class="demo-move-file" style="animation-duration: 1.6s;"></span>
+</div>
+<span style="color: #f59e0b; font-weight: 600;">CPU 78%</span>
+</div>
+</div>
+<div class="demo-state" id="imon-state-4">
+<div class="demo-done">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5">
+<polyline points="20 6 9 17 4 12"/>
+</svg>
+<span style="color: #10b981;">Zero Lag Connection</span>
+</div>
+</div>
+</div>
+<div class="screen-meta">
+<span class="screen-tag">Real-time Monitoring</span>
+<span class="screen-accuracy">Always in sync</span>
+</div>
+</div>
+</div>
+<div class="macbook-hinge"></div>
+<div class="macbook-base">
+<div class="macbook-notch"></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </section>
@@ -616,5 +789,36 @@
             floatingCTA.classList.add('opacity-0', 'translate-y-8', 'pointer-events-none');
         }
     });
+
+    // Demo Animation Cycle - Real animations extracted from iOrganize & iMonitor repos
+    function initDemoAnimation(prefix, stateCount = 4) {
+        let currentState = 1;
+
+        function showState(index) {
+            for (let i = 1; i <= stateCount; i++) {
+                const el = document.getElementById(`${prefix}-state-${i}`);
+                if (el) {
+                    if (i === index) {
+                        el.classList.add('active');
+                    } else {
+                        el.classList.remove('active');
+                    }
+                }
+            }
+        }
+
+        function cycle() {
+            showState(currentState);
+            const durations = [2500, 2500, 2500, 2500];
+            currentState = currentState < stateCount ? currentState + 1 : 1;
+            setTimeout(cycle, durations[currentState - 1] || 2500);
+        }
+
+        cycle();
+    }
+
+    // Start demo animations (iOrganize & iMonitor MacBook mockups)
+    initDemoAnimation('iorg', 4);
+    initDemoAnimation('imon', 4);
 </script>
 </body></html>
