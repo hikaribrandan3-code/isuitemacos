@@ -528,26 +528,30 @@
             if (type === 'bundle') {
                 html = `
                     <div class="space-y-lg">
-                        <div class="bg-surface-container p-md rounded-lg">
-                            <div class="flex justify-between mb-sm">
-                                <span class="font-body-md">iSuite Bundle (3 Apps)</span>
-                                <span class="font-title-lg text-primary">$89.00</span>
+                        <div class="flex items-center gap-md pb-lg border-b border-outline-variant">
+                            <span class="material-symbols-outlined text-primary text-2xl">shopping_cart</span>
+                            <div>
+                                <p class="font-body-sm text-on-surface-variant">Completa Tu Compra</p>
+                                <h3 class="font-title-lg text-title-lg">iSuite Bundle</h3>
                             </div>
                         </div>
-                        <div class="border-t border-outline-variant pt-lg">
-                            <div class="flex justify-between mb-lg font-title-lg">
-                                <span>Total:</span>
-                                <span class="text-primary">$89.00</span>
+
+                        <div class="bg-primary/5 p-md rounded-xl">
+                            <div class="flex justify-between items-baseline">
+                                <span class="font-body-md text-on-surface-variant">3 Aplicaciones Profesionales</span>
+                                <span class="text-3xl font-headline-lg text-primary">$44.99</span>
                             </div>
+                            <p class="text-on-surface-variant font-body-sm mt-sm">Compra única, acceso de por vida</p>
                         </div>
-                        <div class="space-y-sm">
-                            <button onclick="payWithPayPal('bundle')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:opacity-90 transition-all">
-                                💙 Pagar con PayPal
+
+                        <div class="space-y-sm pt-lg">
+                            <button onclick="payWithPayPal('bundle')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:bg-primary/90 active:scale-95 transition-all shadow-md hover:shadow-lg">
+                                <span class="material-symbols-outlined align-text-bottom mr-xs">payment</span> Pagar con PayPal
                             </button>
-                            <button onclick="payWithMercadoPago('bundle')" class="w-full bg-secondary text-on-secondary py-md rounded-full font-title-lg hover:opacity-90 transition-all">
-                                🟡 Mercado Pago
+                            <button onclick="payWithMercadoPago('bundle')" class="w-full bg-yellow-400 text-black py-md rounded-full font-title-lg hover:bg-yellow-500 active:scale-95 transition-all shadow-md hover:shadow-lg">
+                                <span class="material-symbols-outlined align-text-bottom mr-xs">shopping_bag</span> Mercado Pago
                             </button>
-                            <button onclick="closeCheckout()" class="w-full border border-outline py-md rounded-full font-title-lg">
+                            <button onclick="closeCheckout()" class="w-full border border-outline-variant text-on-surface py-md rounded-full font-title-lg hover:bg-surface-container transition-all">
                                 Cancelar
                             </button>
                         </div>
