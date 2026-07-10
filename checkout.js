@@ -7,8 +7,8 @@ const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 // Products
 const PRODUCTS = {
   bundle: {
-    name: 'iSuite Bundle (IVOZ + iOrganize + iMonitor)',
-    price: 89.00,
+    name: 'iSuite Bundle (iVoz + iOrganize + iMonitor)',
+    price: 34.99,
     currency: 'USD'
   }
 };

@@ -183,7 +183,7 @@
 </head>
 <body class="bg-background text-on-surface font-body-md">
 <!-- Top Navigation Bar -->
-<nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-surface-container-lowest/70 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm h-16">
+<nav class="fixed top-0 w-full z-50 bg-white/90 dark:bg-surface-container-lowest/90 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm h-16">
 <div class="flex justify-center items-center h-16 px-margin-desktop w-full">
 <div class="flex items-center w-full max-w-[1440px]">
 <div class="text-title-lg font-title-lg font-bold text-on-surface dark:text-surface-bright flex items-center gap-xs">
@@ -493,7 +493,7 @@
 <!-- App Link 1 -->
 <a href="https://ivoz.vercel.app/" target="_blank" class="glass-card p-lg rounded-xl hover:translate-y-[-4px] transition-transform group">
 <img src="assets/ivoz-icon.png" alt="iVoz" class="w-20 h-20 rounded-lg mx-auto mb-md group-hover:scale-110 transition-transform"/>
-<h3 class="font-title-lg text-title-lg mb-sm text-center">iVoz Website</h3>
+<h3 class="font-title-lg text-title-lg mb-sm text-center">Visit iVoz</h3>
 <p class="font-body-md text-body-md text-on-surface-variant text-center">Discover all the smart transcription features and how iVoz transforms the way you capture ideas.</p>
 <div class="flex items-center justify-center gap-sm mt-lg text-primary font-title-lg group-hover:gap-md transition-all">Learn More <span class="material-symbols-outlined">arrow_outward</span></div>
 </a>
@@ -668,16 +668,16 @@
                         <div class="bg-primary/5 p-md rounded-xl">
                             <div class="flex justify-between items-baseline">
                                 <span class="font-body-md text-on-surface-variant">3 Professional Apps</span>
-                                <span class="text-3xl font-headline-lg text-primary">$89</span>
+                                <span class="text-3xl font-headline-lg text-primary">$34.99</span>
                             </div>
                             <p class="text-on-surface-variant font-body-sm mt-sm">One-time purchase, lifetime access</p>
                         </div>
 
                         <div class="space-y-sm pt-lg">
-                            <button onclick="processPayment('paypal', 89)" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:bg-primary/90 active:scale-95 transition-all shadow-md hover:shadow-lg">
+                            <button onclick="payWithPayPal('bundle')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:bg-primary/90 active:scale-95 transition-all shadow-md hover:shadow-lg">
                                 <span class="material-symbols-outlined align-text-bottom mr-xs">payment</span> Pay with PayPal
                             </button>
-                            <button onclick="processPayment('mercado', 89)" class="w-full bg-yellow-400 text-black py-md rounded-full font-title-lg hover:bg-yellow-500 active:scale-95 transition-all shadow-md hover:shadow-lg">
+                            <button onclick="payWithMercadoPago('bundle')" class="w-full bg-yellow-400 text-black py-md rounded-full font-title-lg hover:bg-yellow-500 active:scale-95 transition-all shadow-md hover:shadow-lg">
                                 <span class="material-symbols-outlined align-text-bottom mr-xs">shopping_bag</span> Mercado Pago
                             </button>
                             <button onclick="closeCheckout()" class="w-full border border-outline-variant text-on-surface py-md rounded-full font-title-lg hover:bg-surface-container transition-all">
@@ -704,7 +704,7 @@
     <script src="checkout.js"></script>
 <!-- Sticky Floating CTA Button - v2 -->
 
-<div id="floatingCTA" class="fixed bottom-8 right-8 z-40 opacity-0 translate-y-8 transition-all duration-500 pointer-events-none">
+<div id="floatingCTA" class="fixed bottom-24 right-8 z-40 opacity-0 translate-y-8 transition-all duration-500 pointer-events-none">
     <button onclick="startCheckout('bundle')" class="bg-primary text-on-primary px-lg py-md rounded-full font-title-lg text-title-lg hover:shadow-2xl hover:scale-110 active:scale-95 transition-all shadow-lg flex items-center gap-sm pointer-events-auto">
         <span class="material-symbols-outlined">shopping_cart</span>
         Get Suite
