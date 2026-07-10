@@ -1,14 +1,9 @@
 <!DOCTYPE html>
-<!-- iSuite Office Landing Page v4 -->
+
 <html class="scroll-smooth" lang="es"><head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
-<meta name="apple-mobile-web-app-capable" content="yes"/>
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-<title>iSuite Office | The Missing Suite for macOS</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link rel="dns-prefetch" href="https://cdn.tailwindcss.com"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>iSuite Office | La Suite Que Faltaba para macOS</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -142,7 +137,6 @@
         .floating-icon:nth-child(3) {
             animation-delay: -4s;
         }
-        /* MacBook & Demo Animations (from iOrganize & iMonitor repos) */
         @keyframes mockupFloat {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
@@ -184,172 +178,32 @@
         .demo-done svg { animation: checkPop 0.6s ease-out; }
         .demo-label { font-size: 0.9rem; font-weight: 500; color: #6b7280; }
         .demo-label.done { color: #10b981; }
-        /* Disable double-tap zoom on mobile */
-        button, a, input, textarea, select { touch-action: manipulation; }
-
-        /* Mobile Hero — Animated App Showcase (Apple Store style) */
-        .hero-showcase { position: relative; height: 248px; }
-        .hero-app-card {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 28px 24px;
-            border-radius: 28px;
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(24px);
-            border: 1px solid rgba(0,0,0,0.06);
-            box-shadow: 0 24px 60px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04);
-            opacity: 0;
-            transform: scale(0.94) translateY(8px);
-            transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-            pointer-events: none;
-        }
-        .hero-app-card.active {
-            opacity: 1;
-            transform: scale(1) translateY(0);
-            pointer-events: auto;
-        }
-        .hero-app-icon-wrap {
-            width: 72px;
-            height: 72px;
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 16px;
-            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
-        }
-        .hero-app-icon { width: 44px; height: 44px; object-fit: contain; }
-        .hero-app-name { font-size: 22px; font-weight: 700; letter-spacing: -0.01em; color: #1a1b1f; margin-bottom: 6px; }
-        .hero-app-tag { font-size: 14px; color: #414755; line-height: 1.4; max-width: 260px; }
-        .hero-dots { display: flex; gap: 8px; justify-content: center; margin-top: 18px; }
-        .hero-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(0,0,0,0.15); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
-        .hero-dot.active { background: #0058bc; width: 20px; border-radius: 4px; }
-
-        /* Mobile Menu */
-        .mobile-nav-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0,0,0,0.5);
-            backdrop-filter: blur(8px);
-            z-index: 40;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-        }
-        .mobile-nav-overlay.active { opacity: 1; visibility: visible; }
-        .mobile-nav-panel {
-            position: fixed;
-            top: 0;
-            right: 0;
-            width: 80%;
-            max-width: 280px;
-            height: 100vh;
-            background: #ffffff;
-            z-index: 50;
-            padding: 20px;
-            transform: translateX(100%);
-            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-            overflow-y: auto;
-        }
-        .mobile-nav-overlay.active .mobile-nav-panel { transform: translateX(0); }
-        .mobile-nav-close {
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            background: none;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-            color: #1a1b1f;
-            padding: 8px;
-            display: flex;
-        }
-        .mobile-nav-links {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            margin-top: 40px;
-        }
-        .mobile-nav-links a {
-            font-size: 16px;
-            color: #1a1b1f;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 12px 0;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-            transition: color 0.2s;
-        }
-        .mobile-nav-links a:hover { color: #0058bc; }
-        .mobile-nav-links button {
-            margin-top: 12px;
-            padding: 12px 20px;
-            border-radius: 20px;
-            background: #0058bc;
-            color: white;
-            border: none;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            width: 100%;
-        }
     </style>
-    <!-- Open Graph / Social Sharing -->
-    <meta property="og:type" content="website"/>
-    <meta property="og:title" content="iSuite Office - The Missing Suite for macOS"/>
-    <meta property="og:description" content="Get iVoz, iOrganize, and iMonitor in one bundle. $34.99 lifetime access. Productivity and control, together."/>
-    <meta property="og:image" content="https://isuitemacos.vercel.app/assets/linkimage.png"/>
-    <meta property="og:url" content="https://isuitemacos.vercel.app"/>
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:title" content="iSuite Office - The Missing Suite for macOS"/>
-    <meta name="twitter:description" content="Get iVoz, iOrganize, and iMonitor in one bundle. $34.99 lifetime access."/>
-    <meta name="twitter:image" content="https://isuitemacos.vercel.app/assets/linkimage.png"/>
 </head>
 <body class="bg-background text-on-surface font-body-md">
 <!-- Top Navigation Bar -->
 <nav class="fixed top-0 w-full z-50 bg-white/90 dark:bg-surface-container-lowest/90 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm h-16">
-<div class="flex justify-center items-center h-16 px-margin-desktop w-full">
-<div class="flex items-center w-full max-w-[1440px]">
+<div class="flex justify-between items-center h-16 px-margin-desktop max-w-[1440px] mx-auto w-full">
 <div class="text-title-lg font-title-lg font-bold text-on-surface dark:text-surface-bright flex items-center gap-xs">
 <img src="assets/logo.svg" alt="iSuite" class="w-6 h-6 filter brightness-0"/>
                 iSuite Office
             </div>
-<div class="hidden md:flex gap-lg items-center justify-center flex-1">
-<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#features">Features</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#apps">The Apps</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#pricing">Pricing</a>
-<a href="index-es.html" class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md">ES</a>
-<button onclick="startCheckout('bundle')" class="bg-primary text-on-primary px-lg py-sm rounded-full font-label-md text-label-md hover:opacity-90 active:scale-95 transition-all">Get the Suite</button>
+<div class="hidden md:flex gap-lg items-center">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#features">Características</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#apps">Las Apps</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#pricing">Precios</a>
+<a href="index.html" class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md">EN</a>
+<button onclick="startCheckout('bundle')" class="bg-primary text-on-primary px-lg py-sm rounded-full font-label-md text-label-md hover:opacity-90 active:scale-95 transition-all">Obtener Suite</button>
 </div>
-<button onclick="document.getElementById('mobileNav').classList.add('active')" class="md:hidden material-symbols-outlined text-on-surface ml-auto">menu</button>
-</div>
+<button onclick="document.getElementById('mobileNav').classList.add('active')" class="md:hidden material-symbols-outlined text-on-surface">menu</button>
 </div>
 </nav>
-<!-- Mobile Navigation Overlay -->
-<div id="mobileNav" class="mobile-nav-overlay" onclick="if(event.target === this) this.classList.remove('active')">
-<div class="mobile-nav-panel">
-<button class="mobile-nav-close" onclick="document.getElementById('mobileNav').classList.remove('active')">✕</button>
-<div class="mobile-nav-links">
-<a href="#features" onclick="document.getElementById('mobileNav').classList.remove('active')">Features</a>
-<a href="#apps" onclick="document.getElementById('mobileNav').classList.remove('active')">The Apps</a>
-<a href="#pricing" onclick="document.getElementById('mobileNav').classList.remove('active')">Pricing</a>
-<a href="index-es.html">Español</a>
-<button onclick="startCheckout('bundle'); document.getElementById('mobileNav').classList.remove('active')">Get iSuite</button>
-</div>
-</div>
-</div>
 <main class="pt-16">
 <!-- Hero Section (Desktop) -->
 <section class="bg-white pt-xl pb-md overflow-hidden relative">
 <div class="max-w-[1440px] mx-auto px-margin-desktop relative">
-<img src="assets/hero-en.png" alt="La suite de oficina que le falta a macOS" class="hidden md:block w-full h-auto"/>
-<button onclick="startCheckout('bundle')" class="hidden md:block absolute top-[28%] left-1/2 -translate-x-1/2 w-32 h-12 bg-transparent cursor-pointer" title="Get iSuite Office"></button>
+<img src="assets/hero-es.png" alt="La suite de oficina que le falta a macOS" class="hidden md:block w-full h-auto"/>
+<button onclick="startCheckout('bundle')" class="hidden md:block absolute top-[28%] left-1/2 -translate-x-1/2 w-32 h-12 bg-transparent cursor-pointer" title="Obtener iSuite Office"></button>
 </div>
 </section>
 
@@ -361,38 +215,38 @@
 </section>
 
 <!-- Deep Dives -->
-<section class="py-xl space-y-16" id="features">
+<section class="py-xl space-y-32" id="features">
 <!-- iVoz Deep Dive -->
 <div class="max-w-[1440px] mx-auto px-margin-desktop flex flex-col md:flex-row items-center gap-xl">
 <div class="flex-1">
-<span class="text-primary font-label-md text-label-md mb-xs block">AI-POWERED AUDIO</span>
-<h2 class="font-headline-lg text-headline-lg mb-md">iVoz: Talk to your Mac like never before.</h2>
+<span class="text-primary font-label-md text-label-md mb-xs block">AUDIO IMPULSADO POR IA</span>
+<h2 class="font-headline-lg text-headline-lg mb-md">iVoz: Habla con tu Mac como nunca.</h2>
 <ul class="space-y-md">
 <li class="flex items-start gap-md">
 <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
 <div>
 <h4 class="font-title-lg text-body-lg font-bold">Inteligencia en el Dispositivo</h4>
-<p class="text-on-surface-variant">Your voice stays on your machine. Fast, private, and secure transcription processing.</p>
+<p class="text-on-surface-variant">Tu voz permanece en tu máquina. Procesamiento de transcripción rápido, privado y seguro.</p>
 </div>
 </li>
 <li class="flex items-start gap-md">
 <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
 <div>
-<h4 class="font-title-lg text-body-lg font-bold">Write Faster Without Typing</h4>
-<p class="text-on-surface-variant">Dictate directly into any app. Works completely offline with 10+ language support.</p>
+<h4 class="font-title-lg text-body-lg font-bold">Escribe Más Rápido Sin Tipear</h4>
+<p class="text-on-surface-variant">Dicta directamente en cualquier aplicación. Funciona completamente sin conexión con soporte para 10+ idiomas.</p>
 </div>
 </li>
 </ul>
 </div>
 <div class="flex-1 w-full">
-<img class="rounded-xl app-preview-shadow border border-outline-variant/30" alt="iVoz transcription interface showing real-time voice-to-text processing with professional UI design" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwHd_8Xi4cC_c_DOl35xzJDlF3CCuNVGuwNz8UUdEtYJuQeZ1uiFmS6rgG8al7Kk7G1RRm3eoqCpKOK0jBIseIIfKNs4Jm_jP5zptGtJftZo43pe7pjjMnO6VfyVWOgPoCWCSSHOArxU-Hpll7QThyzA9H63vzz1c-rkgN0u9WDICuKBG2H54FI4FkU5cc5XhbPJYV7sqsMxdHk_73CVgzOqc8UDeI8kyWXwXuZstbRuSA0jdSCJKd"/>
+<img class="rounded-xl app-preview-shadow border border-outline-variant/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwHd_8Xi4cC_c_DOl35xzJDlF3CCuNVGuwNz8UUdEtYJuQeZ1uiFmS6rgG8al7Kk7G1RRm3eoqCpKOK0jBIseIIfKNs4Jm_jP5zptGtJftZo43pe7pjjMnO6VfyVWOgPoCWCSSHOArxU-Hpll7QThyzA9H63vzz1c-rkgN0u9WDICuKBG2H54FI4FkU5cc5XhbPJYV7sqsMxdHk_73CVgzOqc8UDeI8kyWXwXuZstbRuSA0jdSCJKd"/>
 </div>
 </div>
 <!-- iOrganize Deep Dive -->
 <div class="max-w-[1440px] mx-auto px-margin-desktop flex flex-col md:flex-row-reverse items-center gap-xl">
 <div class="flex-1">
-<span class="text-secondary font-label-md text-label-md mb-xs block">FILE MANAGEMENT</span>
-<h2 class="font-headline-lg text-headline-lg mb-md">iOrganize: The clutter-free workspace.</h2>
+<span class="text-secondary font-label-md text-label-md mb-xs block">GESTIÓN DE ARCHIVOS</span>
+<h2 class="font-headline-lg text-headline-lg mb-md">iOrganize: El espacio de trabajo sin desorden.</h2>
 <ul class="space-y-md">
 <li class="flex items-start gap-md">
 <span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
@@ -411,77 +265,14 @@
 </ul>
 </div>
 <div class="flex-1 w-full">
-<!-- iOrganize MacBook Mockup with Demo Animation -->
-<div class="macbook-mockup">
-<div class="macbook-frame">
-<div class="macbook-screen">
-<div class="screen-header">
-<div class="screen-dots">
-<span></span><span></span><span></span>
-</div>
-<span class="screen-title">iOrganize</span>
-</div>
-<div class="screen-content">
-<div class="demo-animation">
-<div class="demo-state active" id="iorg-state-1">
-<div class="demo-dot"></div>
-<div class="demo-label">Scanning Downloads...</div>
-</div>
-<div class="demo-state" id="iorg-state-2">
-<div class="demo-file-match">
-<svg class="demo-file-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/>
-<path d="M14 2v6h6"/>
-</svg>
-<div class="demo-file-info">
-<span class="demo-file-name">invoice_2024.dmg</span>
-<span class="demo-file-tags">.dmg · 9 days old</span>
-</div>
-</div>
-<div class="demo-label">Rule matched</div>
-</div>
-<div class="demo-state" id="iorg-state-3">
-<div class="demo-file-move">
-<svg class="demo-move-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-<path d="M3 7a2 2 0 0 1 2-2h4l2 2.5h8a2 2 0 0 1 2 2V17a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/>
-</svg>
-<div class="demo-move-track">
-<span class="demo-move-file"></span>
-</div>
-<svg class="demo-move-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-<path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m2 0-1 14a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L6 6"/>
-</svg>
-</div>
-<div class="demo-label done">Moving to Trash</div>
-</div>
-<div class="demo-state" id="iorg-state-4">
-<div class="demo-done">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5">
-<polyline points="20 6 9 17 4 12"/>
-</svg>
-<span>Cleanup freed 138.5 MB</span>
-</div>
-</div>
-</div>
-<div class="screen-meta">
-<span class="screen-tag">Auto-Flow rule</span>
-<span class="screen-accuracy">Running in background</span>
-</div>
-</div>
-</div>
-<div class="macbook-hinge"></div>
-<div class="macbook-base">
-<div class="macbook-notch"></div>
-</div>
-</div>
-</div>
+<img class="rounded-xl app-preview-shadow border border-outline-variant/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaIEp7t1xGTtxobo-LGuTgmkLnp5S_Mr-TdqJGv00hBGt5Lex9RR1AD1LvHWkCbwGo1-T0kHr_cg1ZOtKmEpRwBoYXr1FvL7YfyUPb_WFVVre-N68oTgTkZaIcn1FwRcxK5IV-iouZq8cKSSQxJ15EgLN27Q9Fmg89UQkYQem9FIZmz2WVYW5V_H3-VLii1uqWj_1Xd9hJpxKzzAhdSVZ9oiWIt2BtRUoA7-gGj5C-ZLFhQe_ICKay"/>
 </div>
 </div>
 <!-- iScreen Share Deep Dive -->
 <div class="max-w-[1440px] mx-auto px-margin-desktop flex flex-col md:flex-row items-center gap-xl">
 <div class="flex-1">
-<span class="text-tertiary font-label-md text-label-md mb-xs block">UNIVERSAL CONNECTIVITY</span>
-<h2 class="font-headline-lg text-headline-lg mb-md">iScreen Share: Bridging the gap.</h2>
+<span class="text-tertiary font-label-md text-label-md mb-xs block">CONECTIVIDAD UNIVERSAL</span>
+<h2 class="font-headline-lg text-headline-lg mb-md">iScreen Share: Cerrando la brecha.</h2>
 <ul class="space-y-md">
 <li class="flex items-start gap-md">
 <span class="material-symbols-outlined text-tertiary mt-1">check_circle</span>
@@ -500,151 +291,83 @@
 </ul>
 </div>
 <div class="flex-1 w-full">
-<!-- iMonitor MacBook Mockup with Demo Animation -->
-<div class="macbook-mockup">
-<div class="macbook-frame">
-<div class="macbook-screen">
-<div class="screen-header">
-<div class="screen-dots">
-<span></span><span></span><span></span>
-</div>
-<span class="screen-title">iMonitor</span>
-</div>
-<div class="screen-content">
-<div class="demo-animation">
-<div class="demo-state active" id="imon-state-1">
-<div class="demo-label">📊 System Status Active</div>
-<div class="demo-file-match" style="background: #ecfdf5; border-color: #10b981;">
-<svg class="demo-file-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2">
-<circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/>
-</svg>
-<div class="demo-file-info">
-<span class="demo-file-name" style="color: #065f46;">All Systems Nominal</span>
-<span class="demo-file-tags" style="color: #10b981; background: rgba(16, 185, 129, 0.1);">Running 24/7</span>
-</div>
-</div>
-</div>
-<div class="demo-state" id="imon-state-2">
-<div class="demo-label">🔗 Display Connected</div>
-<div class="demo-file-match" style="background: #e0e7ff; border-color: #6366f1;">
-<svg class="demo-file-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2">
-<rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/>
-</svg>
-<div class="demo-file-info">
-<span class="demo-file-name" style="color: #312e81;">iPad Air (192.168.1.42)</span>
-<span class="demo-file-tags" style="color: #6366f1; background: rgba(99, 102, 241, 0.1);">2ms latency</span>
-</div>
-</div>
-</div>
-<div class="demo-state" id="imon-state-3">
-<div class="demo-label">⚡ Performance Peak</div>
-<div class="demo-file-move">
-<svg class="demo-move-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2">
-<path d="M13 2L3 14h9l-1 8 10-12h-9l1-8Z"/>
-</svg>
-<div class="demo-move-track">
-<span class="demo-move-file" style="animation-duration: 1.6s;"></span>
-</div>
-<span style="color: #f59e0b; font-weight: 600;">CPU 78%</span>
-</div>
-</div>
-<div class="demo-state" id="imon-state-4">
-<div class="demo-done">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5">
-<polyline points="20 6 9 17 4 12"/>
-</svg>
-<span style="color: #10b981;">Zero Lag Connection</span>
-</div>
-</div>
-</div>
-<div class="screen-meta">
-<span class="screen-tag">Real-time Monitoring</span>
-<span class="screen-accuracy">Always in sync</span>
-</div>
-</div>
-</div>
-<div class="macbook-hinge"></div>
-<div class="macbook-base">
-<div class="macbook-notch"></div>
-</div>
-</div>
-</div>
+<img class="rounded-xl app-preview-shadow border border-outline-variant/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo-k3RNnFtMkvzPhBECH615bglsPdPi0_sq2QCPqD8SSMDyXz4mQVc4e_KavRucU9PUEUWzBv3BiZdMkuicgPupWv4mwNHIRPUaF09HmuHeIxVsFtfGXT6AC01b8UBc4B471qx1bNidoDNauBDEkc9eHMJDhfxsZJNXrwziVGOmGu25oO-8LHPuaIo0bmCYmtbXP7lSX57KaPMqlZtaPJ_MxvHu3mBupqZ4gdzrYR1bYRKGQqfiW7q"/>
 </div>
 </div>
 </section>
 <!-- Testimonials Section -->
-<section class="py-lg bg-white">
+<section class="py-xl bg-white">
 <div class="max-w-[1440px] mx-auto px-margin-desktop">
-<div class="text-center mb-lg">
-<h2 class="font-headline-lg text-headline-lg mb-md">What Our Users Say.</h2>
-<p class="font-body-md text-body-md text-on-surface-variant">Professionals who trust iSuite to get work done.</p>
+<div class="text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg mb-md">Lo Que Dicen Nuestros Usuarios.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Profesionales que confían en iSuite para trabajar.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
 <!-- Testimonial 1 -->
 <div class="glass-card p-lg rounded-xl">
 <div class="flex items-center gap-md mb-lg">
-<div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold text-2xl">SM</div>
+<div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold text-2xl">MD</div>
 <div>
-<h4 class="font-title-lg text-title-lg">Sarah Martinez</h4>
-<p class="font-label-md text-label-md text-on-surface-variant">Content Producer</p>
+<h4 class="font-title-lg text-title-lg">Mariana Díaz</h4>
+<p class="font-label-md text-label-md text-on-surface-variant">Productora de Contenido</p>
 </div>
 </div>
-<p class="font-body-md text-body-md text-on-surface-variant italic">"iVoz transformed my workflow. I can capture ideas while driving without worrying who's listening. Everything stays on my Mac."</p>
+<p class="font-body-md text-body-md text-on-surface-variant italic">"iVoz cambió mi flujo de trabajo. Ahora puedo capturar ideas mientras conduzco, sin preocuparme por quién escucha. Todo permanece en mi Mac."</p>
 <div class="flex gap-xs mt-md">⭐⭐⭐⭐⭐</div>
 </div>
 <!-- Testimonial 2 -->
 <div class="glass-card p-lg rounded-xl">
 <div class="flex items-center gap-md mb-lg">
-<div class="w-16 h-16 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center text-white font-bold text-2xl">JW</div>
+<div class="w-16 h-16 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center text-white font-bold text-2xl">JC</div>
 <div>
-<h4 class="font-title-lg text-title-lg">James Wilson</h4>
-<p class="font-label-md text-label-md text-on-surface-variant">Data Engineer</p>
+<h4 class="font-title-lg text-title-lg">Juan Castillo</h4>
+<p class="font-label-md text-label-md text-on-surface-variant">Ingeniero de Datos</p>
 </div>
 </div>
-<p class="font-body-md text-body-md text-on-surface-variant italic">"iOrganize recovered 287GB of my SSD. Now my Mac runs like new, without me doing anything manually. Impressive."</p>
+<p class="font-body-md text-body-md text-on-surface-variant italic">"iOrganize recuperó 287GB de mi SSD. Ahora mi Mac corre como nuevo, sin hacer nada manualmente. Impresionante."</p>
 <div class="flex gap-xs mt-md">⭐⭐⭐⭐⭐</div>
 </div>
 <!-- Testimonial 3 -->
 <div class="glass-card p-lg rounded-xl">
 <div class="flex items-center gap-md mb-lg">
-<div class="w-16 h-16 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-white font-bold text-2xl">AK</div>
+<div class="w-16 h-16 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-white font-bold text-2xl">AB</div>
 <div>
-<h4 class="font-title-lg text-title-lg">Alexandra Kim</h4>
-<p class="font-label-md text-label-md text-on-surface-variant">Design Director</p>
+<h4 class="font-title-lg text-title-lg">Ana Barrera</h4>
+<p class="font-label-md text-label-md text-on-surface-variant">Directora de Diseño</p>
 </div>
 </div>
-<p class="font-body-md text-body-md text-on-surface-variant italic">"The combo of apps let me optimize my setup across 3 Macs. No friction, always works. Money well spent."</p>
+<p class="font-body-md text-body-md text-on-surface-variant italic">"El combo de apps me permitió optimizar mi setup en 3 Macs. No hay fricción, siempre funcionan. Dinero bien gastado."</p>
 <div class="flex gap-xs mt-md">⭐⭐⭐⭐⭐</div>
 </div>
 <!-- Testimonial 4 -->
 <div class="glass-card p-lg rounded-xl">
 <div class="flex items-center gap-md mb-lg">
-<div class="w-16 h-16 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center text-white font-bold text-2xl">DR</div>
+<div class="w-16 h-16 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center text-white font-bold text-2xl">CR</div>
 <div>
-<h4 class="font-title-lg text-title-lg">David Rodriguez</h4>
-<p class="font-label-md text-label-md text-on-surface-variant">Business Consultant</p>
+<h4 class="font-title-lg text-title-lg">Carlos Ramírez</h4>
+<p class="font-label-md text-label-md text-on-surface-variant">Consultor Empresarial</p>
 </div>
 </div>
-<p class="font-body-md text-body-md text-on-surface-variant italic">"iScreen Share turns my iPad into a real second monitor. Zero lag, zero setup complexity. Perfect for meetings."</p>
+<p class="font-body-md text-body-md text-on-surface-variant italic">"iScreen Share convierte mi iPad en un segundo monitor real. Sin lag, sin configuración complicada. Perfecto para reuniones."</p>
 <div class="flex gap-xs mt-md">⭐⭐⭐⭐⭐</div>
 </div>
 </div>
 </div>
 </section>
-<!-- Designed for Mac Professionals - Mobile Header -->
+<!-- Diseñado para Profesionales Mac - Mobile Header -->
 <section class="py-lg bg-surface-container-low md:hidden">
 <div class="max-w-[1440px] mx-auto px-margin-desktop text-center">
-<h2 class="font-headline-lg text-headline-lg mb-md">Designed for Mac Professionals</h2>
-<p class="font-body-md text-body-md text-on-surface-variant">Zero internet. No API rate limits. 4x productivity.</p>
+<h2 class="font-headline-lg text-headline-lg mb-md">Diseñado para Profesionales Mac</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Sin internet. Sin límites de API. 4x productividad.</p>
 </div>
 </section>
 
-<!-- Designed for Mac Professionals - Unified Grid -->
+<!-- Diseñado para Profesionales Mac - Unified Grid -->
 <section class="py-xl bg-surface-container-low">
 <div class="max-w-[1440px] mx-auto px-margin-desktop">
 <div class="text-center mb-xl">
-<h2 class="text-display text-center mb-md font-headline-lg">Designed for Mac Professionals</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-md">Zero internet. No API rate limits. 4x productivity.</p>
+<h2 class="font-headline-lg text-headline-lg mb-md">Diseñado para Profesionales Mac</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-md">Sin internet. Sin límites de API. 4x productividad.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
 <!-- iVoz Card -->
@@ -653,15 +376,15 @@
 <img src="assets/ivoz-icon.png" alt="iVoz icon" class="w-16 h-16 rounded-lg" loading="lazy"/>
 <h3 class="font-title-lg text-title-lg">iVoz</h3>
 </div>
-<p class="font-body-md text-on-surface-variant mb-lg">Discover all the smart transcription features and how iVoz transforms the way you capture ideas.</p>
+<p class="font-body-md text-on-surface-variant mb-lg">Descubre todas las características de transcripción inteligente y cómo iVoz transforma tu forma de capturar ideas.</p>
 <div class="flex items-center justify-between mb-lg mt-auto">
-<a href="https://ivoz.vercel.app/" target="_blank" class="flex items-center gap-sm text-primary font-title-lg hover:gap-md transition-all">Learn More <span class="material-symbols-outlined">arrow_outward</span></a>
+<a href="https://ivoz.vercel.app/" target="_blank" class="flex items-center gap-sm text-primary font-title-lg hover:gap-md transition-all">Descubre Más <span class="material-symbols-outlined">arrow_outward</span></a>
 <div class="flex items-baseline gap-xs">
 <span class="text-headline-md font-bold text-primary">$</span>
 <span class="text-2xl font-display text-primary">24.99</span>
 </div>
 </div>
-<button onclick="startCheckout('ivoz')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all">Get iVoz</button>
+<button onclick="startCheckout('ivoz')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all">Obtener iVoz</button>
 </div>
 
 <!-- iOrganize Card -->
@@ -670,15 +393,15 @@
 <img src="assets/iorganize-icon.png" alt="iOrganize icon" class="w-16 h-16 rounded-lg" loading="lazy"/>
 <h3 class="font-title-lg text-title-lg">iOrganize</h3>
 </div>
-<p class="font-body-md text-on-surface-variant mb-lg">Learn how iOrganize automates system cleanup and keeps your workspace pristine.</p>
+<p class="font-body-md text-on-surface-variant mb-lg">Aprende cómo iOrganize automatiza la limpieza de tu sistema y mantiene tu espacio de trabajo impecable.</p>
 <div class="flex items-center justify-between mb-lg mt-auto">
-<a href="https://iorganize.vercel.app/" target="_blank" class="flex items-center gap-sm text-primary font-title-lg hover:gap-md transition-all">Learn More <span class="material-symbols-outlined">arrow_outward</span></a>
+<a href="https://iorganize.vercel.app/" target="_blank" class="flex items-center gap-sm text-primary font-title-lg hover:gap-md transition-all">Descubre Más <span class="material-symbols-outlined">arrow_outward</span></a>
 <div class="flex items-baseline gap-xs">
 <span class="text-headline-md font-bold text-primary">$</span>
 <span class="text-2xl font-display text-primary">12.99</span>
 </div>
 </div>
-<button onclick="startCheckout('iorganize')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all">Get iOrganize</button>
+<button onclick="startCheckout('iorganize')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all">Obtener iOrganize</button>
 </div>
 
 <!-- Screen Bridge Card -->
@@ -687,61 +410,43 @@
 <img src="assets/imonitor-icon.png" alt="Screen Bridge icon" class="w-16 h-16 rounded-lg" loading="lazy"/>
 <h3 class="font-title-lg text-title-lg">Screen Bridge</h3>
 </div>
-<p class="font-body-md text-on-surface-variant mb-lg">Explore how Screen Bridge turns any device into a low-latency second monitor.</p>
+<p class="font-body-md text-on-surface-variant mb-lg">Explora cómo Screen Bridge convierte cualquier dispositivo en un segundo monitor de baja latencia.</p>
 <div class="flex items-center justify-between mb-lg mt-auto">
-<a href="https://imonitor-xi.vercel.app/" target="_blank" class="flex items-center gap-sm text-primary font-title-lg hover:gap-md transition-all">Learn More <span class="material-symbols-outlined">arrow_outward</span></a>
+<a href="https://imonitor-xi.vercel.app/" target="_blank" class="flex items-center gap-sm text-primary font-title-lg hover:gap-md transition-all">Descubre Más <span class="material-symbols-outlined">arrow_outward</span></a>
 <div class="flex items-baseline gap-xs">
 <span class="text-headline-md font-bold text-primary">$</span>
 <span class="text-2xl font-display text-primary">9.99</span>
 </div>
 </div>
-<button onclick="startCheckout('imonitor')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all">Get Screen Bridge</button>
+<button onclick="startCheckout('imonitor')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all">Obtener Screen Bridge</button>
 </div>
 </div>
 </div>
 </section>
-
-<!-- Works With Section -->
-<section class="py-lg bg-surface-container-low border-y border-outline-variant/30">
-<div class="max-w-[1440px] mx-auto px-margin-desktop">
-<p class="text-center font-label-md text-label-md text-on-surface-variant mb-lg uppercase tracking-widest">Works Seamlessly With Tools You Already Use</p>
-<div class="flex flex-wrap justify-center items-center gap-lg opacity-70 hover:opacity-100 transition-all">
-<span class="font-semibold text-body-lg">Gmail</span>
-<span class="font-semibold text-body-lg">Notion</span>
-<span class="font-semibold text-body-lg">Microsoft Word</span>
-<span class="font-semibold text-body-lg">Slack</span>
-<span class="font-semibold text-body-lg">Zoom</span>
-<span class="font-semibold text-body-lg">Figma</span>
-<span class="font-semibold text-body-lg">VS Code</span>
-<span class="font-semibold text-body-lg">Final Cut Pro</span>
-</div>
-</div>
-</section>
-
 <!-- Pricing Section -->
 <section class="py-lg bg-white relative overflow-hidden" id="pricing">
 <div class="max-w-[1440px] mx-auto px-margin-desktop text-center relative z-10">
-<h2 class="font-headline-lg text-headline-lg mb-lg">Simple, Transparent Pricing.</h2>
+<h2 class="font-headline-lg text-headline-lg mb-lg">Precios Simples y Transparentes.</h2>
 <div class="max-w-md mx-auto">
 <div class="glass-card p-xl rounded-full border-2 border-primary relative">
-<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-on-primary px-md py-xs rounded-full font-label-md text-label-md shadow-lg">BEST VALUE</div>
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-on-primary px-md py-xs rounded-full font-label-md text-label-md shadow-lg">MEJOR VALOR</div>
 <h3 class="font-display text-headline-lg mb-xs">iSuite Bundle</h3>
-<p class="text-on-surface-variant mb-lg">All three professional apps for one price.</p>
+<p class="text-on-surface-variant mb-lg">Las tres apps profesionales por un precio.</p>
 <div class="flex items-center justify-center gap-xs mb-xl">
 <span class="text-headline-md font-bold text-on-surface">$</span>
 <span class="text-display font-display text-primary leading-none">44.99</span>
-<span class="text-on-surface-variant font-label-md">· Save $5</span>
+<span class="text-on-surface-variant font-label-md">· Ahorra $5</span>
 </div>
 <ul class="text-left space-y-sm mb-xl">
-<li class="flex items-center gap-sm font-body-md"><span class="material-symbols-outlined text-primary">done</span> Lifetime Access to iVoz</li>
-<li class="flex items-center gap-sm font-body-md"><span class="material-symbols-outlined text-primary">done</span> Lifetime Access to iOrganize</li>
-<li class="flex items-center gap-sm font-body-md"><span class="material-symbols-outlined text-primary">done</span> Lifetime Access to iScreen Share</li>
-<li class="flex items-center gap-sm font-body-md"><span class="material-symbols-outlined text-primary">done</span> Universal License for 3 Macs</li>
+<li class="flex items-center gap-sm font-body-md"><span class="material-symbols-outlined text-primary">done</span> Acceso de Por Vida a iVoz</li>
+<li class="flex items-center gap-sm font-body-md"><span class="material-symbols-outlined text-primary">done</span> Acceso de Por Vida a iOrganize</li>
+<li class="flex items-center gap-sm font-body-md"><span class="material-symbols-outlined text-primary">done</span> Acceso de Por Vida a iScreen Share</li>
+<li class="flex items-center gap-sm font-body-md"><span class="material-symbols-outlined text-primary">done</span> Licencia Universal para 3 Macs</li>
 </ul>
-<button onclick="startCheckout('bundle')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg text-title-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all">Get Started Now</button>
+<button onclick="startCheckout('bundle')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg text-title-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all">Comenzar Ahora</button>
 </div>
 </div>
-<p class="mt-lg text-on-surface-variant font-label-md">No subscriptions. No hidden fees. Just great software.</p>
+<p class="mt-lg text-on-surface-variant font-label-md">Sin suscripciones. Sin tarifas ocultas. Solo software excelente.</p>
 </div>
 <!-- Decorative Background Element -->
 <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[100px] -z-0"></div>
@@ -752,23 +457,23 @@
 <div class="max-w-[1440px] mx-auto px-margin-desktop py-xl">
 <!-- Footer Grid - 3 Columns -->
 <div class="grid grid-cols-1 md:grid-cols-3 gap-lg md:gap-xl mb-xl md:text-left text-center">
-<!-- Column 1: The Apps -->
+<!-- Column 1: Las Apps -->
 <div>
-<h4 class="font-label-md text-label-md font-bold text-on-surface mb-md uppercase tracking-wider opacity-70">The Apps</h4>
+<h4 class="font-label-md text-label-md font-bold text-on-surface mb-md uppercase tracking-wider opacity-70">Las Apps</h4>
 <ul class="space-y-sm">
-<li><a href="#features" class="font-body-md text-on-surface-variant hover:text-primary transition-colors">Features</a></li>
+<li><a href="#features" class="font-body-md text-on-surface-variant hover:text-primary transition-colors">Características</a></li>
 </ul>
 </div>
-<!-- Column 2: Pricing -->
+<!-- Column 2: Precios -->
 <div>
-<h4 class="font-label-md text-label-md font-bold text-on-surface mb-md uppercase tracking-wider opacity-70">Pricing</h4>
+<h4 class="font-label-md text-label-md font-bold text-on-surface mb-md uppercase tracking-wider opacity-70">Precios</h4>
 <ul class="space-y-sm">
-<li><a href="#pricing" class="font-body-md text-on-surface-variant hover:text-primary transition-colors">View Plans</a></li>
+<li><a href="#pricing" class="font-body-md text-on-surface-variant hover:text-primary transition-colors">Ver Planes</a></li>
 </ul>
 </div>
-<!-- Column 3: Support -->
+<!-- Column 3: Soporte -->
 <div>
-<h4 class="font-label-md text-label-md font-bold text-on-surface mb-md uppercase tracking-wider opacity-70">Support</h4>
+<h4 class="font-label-md text-label-md font-bold text-on-surface mb-md uppercase tracking-wider opacity-70">Soporte</h4>
 <ul class="space-y-sm">
 <li><a href="tel:+351212260" class="font-body-md text-primary hover:text-primary/80 transition-colors font-semibold">(351) 212-2600</a></li>
 </ul>
@@ -779,8 +484,8 @@
 <div class="border-t border-outline-variant/10 py-lg">
 <!-- Bottom Bar -->
 <div class="flex flex-col md:flex-row items-center justify-between gap-md text-center md:text-left">
-<p class="font-label-sm text-label-sm text-on-surface-variant opacity-60">Secured • 100% Local • One-Time Purchase</p>
-<p class="font-label-sm text-label-sm text-on-surface-variant opacity-60">© 2026 iSuite Office. All rights reserved.</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant opacity-60">Seguro • 100% Local • Compra Única</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant opacity-60">© 2026 iSuite Office. Todos los derechos reservados.</p>
 </div>
 </div>
 </div>
@@ -789,7 +494,7 @@
 <!-- Checkout Modal -->
 <div id="checkoutModal" class="hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
     <div class="bg-white rounded-2xl p-xl max-w-md w-full mx-4">
-        <h2 class="font-headline-lg text-headline-lg mb-lg">Checkout</h2>
+        <h2 class="font-headline-lg text-headline-lg mb-lg">Pago</h2>
         <div id="checkoutContent"></div>
     </div>
 </div>
@@ -827,28 +532,28 @@
                         <div class="flex items-center gap-md pb-lg border-b border-outline-variant">
                             <span class="material-symbols-outlined text-primary text-2xl">shopping_cart</span>
                             <div>
-                                <p class="font-body-sm text-on-surface-variant">Complete Your Purchase</p>
+                                <p class="font-body-sm text-on-surface-variant">Completa Tu Compra</p>
                                 <h3 class="font-title-lg text-title-lg">iSuite Bundle</h3>
                             </div>
                         </div>
 
                         <div class="bg-primary/5 p-md rounded-xl">
                             <div class="flex justify-between items-baseline">
-                                <span class="font-body-md text-on-surface-variant">3 Professional Apps</span>
+                                <span class="font-body-md text-on-surface-variant">3 Aplicaciones Profesionales</span>
                                 <span class="text-3xl font-headline-lg text-primary">$44.99</span>
                             </div>
-                            <p class="text-on-surface-variant font-body-sm mt-sm">One-time purchase, lifetime access</p>
+                            <p class="text-on-surface-variant font-body-sm mt-sm">Compra única, acceso de por vida</p>
                         </div>
 
                         <div class="space-y-sm pt-lg">
                             <button onclick="payWithPayPal('bundle')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:bg-primary/90 active:scale-95 transition-all shadow-md hover:shadow-lg">
-                                <span class="material-symbols-outlined align-text-bottom mr-xs">payment</span> Pay with PayPal
+                                <span class="material-symbols-outlined align-text-bottom mr-xs">payment</span> Pagar con PayPal
                             </button>
                             <button onclick="payWithMercadoPago('bundle')" class="w-full bg-yellow-400 text-black py-md rounded-full font-title-lg hover:bg-yellow-500 active:scale-95 transition-all shadow-md hover:shadow-lg">
                                 <span class="material-symbols-outlined align-text-bottom mr-xs">shopping_bag</span> Mercado Pago
                             </button>
                             <button onclick="closeCheckout()" class="w-full border border-outline-variant text-on-surface py-md rounded-full font-title-lg hover:bg-surface-container transition-all">
-                                Cancel
+                                Cancelar
                             </button>
                         </div>
                     </div>
@@ -859,28 +564,28 @@
                         <div class="flex items-center gap-md pb-lg border-b border-outline-variant">
                             <img src="assets/ivoz-icon.png" alt="iVoz" class="w-12 h-12 rounded-lg" />
                             <div>
-                                <p class="font-body-sm text-on-surface-variant">Complete Your Purchase</p>
+                                <p class="font-body-sm text-on-surface-variant">Completa Tu Compra</p>
                                 <h3 class="font-title-lg text-title-lg">iVoz</h3>
                             </div>
                         </div>
 
                         <div class="bg-primary/5 p-md rounded-xl">
                             <div class="flex justify-between items-baseline">
-                                <span class="font-body-md text-on-surface-variant">Professional Transcription</span>
+                                <span class="font-body-md text-on-surface-variant">Transcripción Profesional</span>
                                 <span class="text-3xl font-headline-lg text-primary">$24.99</span>
                             </div>
-                            <p class="text-on-surface-variant font-body-sm mt-sm">One-time purchase, lifetime access</p>
+                            <p class="text-on-surface-variant font-body-sm mt-sm">Compra única, acceso de por vida</p>
                         </div>
 
                         <div class="space-y-sm pt-lg">
                             <button onclick="payWithPayPal('ivoz')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:bg-primary/90 active:scale-95 transition-all shadow-md hover:shadow-lg">
-                                <span class="material-symbols-outlined align-text-bottom mr-xs">payment</span> Pay with PayPal
+                                <span class="material-symbols-outlined align-text-bottom mr-xs">payment</span> Pagar con PayPal
                             </button>
                             <button onclick="payWithMercadoPago('ivoz')" class="w-full bg-yellow-400 text-black py-md rounded-full font-title-lg hover:bg-yellow-500 active:scale-95 transition-all shadow-md hover:shadow-lg">
                                 <span class="material-symbols-outlined align-text-bottom mr-xs">shopping_bag</span> Mercado Pago
                             </button>
                             <button onclick="closeCheckout()" class="w-full border border-outline-variant text-on-surface py-md rounded-full font-title-lg hover:bg-surface-container transition-all">
-                                Cancel
+                                Cancelar
                             </button>
                         </div>
                     </div>
@@ -891,28 +596,28 @@
                         <div class="flex items-center gap-md pb-lg border-b border-outline-variant">
                             <img src="assets/iorganize-icon.png" alt="iOrganize" class="w-12 h-12 rounded-lg" />
                             <div>
-                                <p class="font-body-sm text-on-surface-variant">Complete Your Purchase</p>
+                                <p class="font-body-sm text-on-surface-variant">Completa Tu Compra</p>
                                 <h3 class="font-title-lg text-title-lg">iOrganize</h3>
                             </div>
                         </div>
 
                         <div class="bg-primary/5 p-md rounded-xl">
                             <div class="flex justify-between items-baseline">
-                                <span class="font-body-md text-on-surface-variant">Smart GESTIÓN DE ARCHIVOS</span>
+                                <span class="font-body-md text-on-surface-variant">Gestión Inteligente de Archivos</span>
                                 <span class="text-3xl font-headline-lg text-primary">$12.99</span>
                             </div>
-                            <p class="text-on-surface-variant font-body-sm mt-sm">One-time purchase, lifetime access</p>
+                            <p class="text-on-surface-variant font-body-sm mt-sm">Compra única, acceso de por vida</p>
                         </div>
 
                         <div class="space-y-sm pt-lg">
                             <button onclick="payWithPayPal('iorganize')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:bg-primary/90 active:scale-95 transition-all shadow-md hover:shadow-lg">
-                                <span class="material-symbols-outlined align-text-bottom mr-xs">payment</span> Pay with PayPal
+                                <span class="material-symbols-outlined align-text-bottom mr-xs">payment</span> Pagar con PayPal
                             </button>
                             <button onclick="payWithMercadoPago('iorganize')" class="w-full bg-yellow-400 text-black py-md rounded-full font-title-lg hover:bg-yellow-500 active:scale-95 transition-all shadow-md hover:shadow-lg">
                                 <span class="material-symbols-outlined align-text-bottom mr-xs">shopping_bag</span> Mercado Pago
                             </button>
                             <button onclick="closeCheckout()" class="w-full border border-outline-variant text-on-surface py-md rounded-full font-title-lg hover:bg-surface-container transition-all">
-                                Cancel
+                                Cancelar
                             </button>
                         </div>
                     </div>
@@ -923,28 +628,28 @@
                         <div class="flex items-center gap-md pb-lg border-b border-outline-variant">
                             <img src="assets/imonitor-icon.png" alt="Screen Bridge" class="w-12 h-12 rounded-lg" />
                             <div>
-                                <p class="font-body-sm text-on-surface-variant">Complete Your Purchase</p>
+                                <p class="font-body-sm text-on-surface-variant">Completa Tu Compra</p>
                                 <h3 class="font-title-lg text-title-lg">Screen Bridge</h3>
                             </div>
                         </div>
 
                         <div class="bg-primary/5 p-md rounded-xl">
                             <div class="flex justify-between items-baseline">
-                                <span class="font-body-md text-on-surface-variant">Universal Display Streaming</span>
+                                <span class="font-body-md text-on-surface-variant">Transmisión Universal de Pantalla</span>
                                 <span class="text-3xl font-headline-lg text-primary">$9.99</span>
                             </div>
-                            <p class="text-on-surface-variant font-body-sm mt-sm">One-time purchase, lifetime access</p>
+                            <p class="text-on-surface-variant font-body-sm mt-sm">Compra única, acceso de por vida</p>
                         </div>
 
                         <div class="space-y-sm pt-lg">
                             <button onclick="payWithPayPal('imonitor')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:bg-primary/90 active:scale-95 transition-all shadow-md hover:shadow-lg">
-                                <span class="material-symbols-outlined align-text-bottom mr-xs">payment</span> Pay with PayPal
+                                <span class="material-symbols-outlined align-text-bottom mr-xs">payment</span> Pagar con PayPal
                             </button>
                             <button onclick="payWithMercadoPago('imonitor')" class="w-full bg-yellow-400 text-black py-md rounded-full font-title-lg hover:bg-yellow-500 active:scale-95 transition-all shadow-md hover:shadow-lg">
                                 <span class="material-symbols-outlined align-text-bottom mr-xs">shopping_bag</span> Mercado Pago
                             </button>
                             <button onclick="closeCheckout()" class="w-full border border-outline-variant text-on-surface py-md rounded-full font-title-lg hover:bg-surface-container transition-all">
-                                Cancel
+                                Cancelar
                             </button>
                         </div>
                     </div>
@@ -955,22 +660,16 @@
             modal.classList.remove('hidden');
         }
 
-        function processPayment(method, amount) {
-            alert(`Processing ${method.toUpperCase()} payment for $${amount}\n\nThis will redirect to ${method === 'paypal' ? 'PayPal' : 'Mercado Pago'} checkout.`);
-            closeCheckout();
-        }
-
         function closeCheckout() {
             document.getElementById('checkoutModal').classList.add('hidden');
         }
     </script>
     <script src="checkout.js"></script>
-<!-- Sticky Floating CTA Button - v2 -->
-
-<div id="floatingCTA" class="hidden md:block fixed bottom-24 right-8 z-40 opacity-0 translate-y-8 transition-all duration-500 pointer-events-none">
+<!-- Sticky Floating CTA Button -->
+<div id="floatingCTA" class="fixed bottom-24 right-8 z-40 opacity-0 translate-y-8 transition-all duration-500 pointer-events-none">
     <button onclick="startCheckout('bundle')" class="bg-primary text-on-primary px-md py-sm rounded-full font-body-lg text-body-lg hover:shadow-lg hover:scale-105 active:scale-95 transition-all shadow-md flex items-center gap-xs pointer-events-auto">
         <span class="material-symbols-outlined text-lg">shopping_cart</span>
-        Get Suite
+        Obtener Suite
     </button>
 </div>
 <script>
@@ -987,51 +686,5 @@
             floatingCTA.classList.add('opacity-0', 'translate-y-8', 'pointer-events-none');
         }
     });
-
-    // Demo Animation Cycle - Real animations extracted from iOrganize & iMonitor repos
-    function initDemoAnimation(prefix, stateCount = 4) {
-        let currentState = 1;
-
-        function showState(index) {
-            for (let i = 1; i <= stateCount; i++) {
-                const el = document.getElementById(`${prefix}-state-${i}`);
-                if (el) {
-                    if (i === index) {
-                        el.classList.add('active');
-                    } else {
-                        el.classList.remove('active');
-                    }
-                }
-            }
-        }
-
-        function cycle() {
-            showState(currentState);
-            const durations = [2500, 2500, 2500, 2500];
-            currentState = currentState < stateCount ? currentState + 1 : 1;
-            setTimeout(cycle, durations[currentState - 1] || 2500);
-        }
-
-        cycle();
-    }
-
-    // Start demo animations (iOrganize & iMonitor MacBook mockups)
-    initDemoAnimation('iorg', 4);
-    initDemoAnimation('imon', 4);
-
-    // Mobile Hero — Animated App Showcase cycle
-    (function() {
-        const cards = document.querySelectorAll('.hero-app-card');
-        const dots = document.querySelectorAll('.hero-dot');
-        if (!cards.length) return;
-        let heroIdx = 0;
-        setInterval(() => {
-            cards[heroIdx].classList.remove('active');
-            dots[heroIdx].classList.remove('active');
-            heroIdx = (heroIdx + 1) % cards.length;
-            cards[heroIdx].classList.add('active');
-            dots[heroIdx].classList.add('active');
-        }, 2800);
-    })();
 </script>
 </body></html>
