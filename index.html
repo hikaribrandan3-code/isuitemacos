@@ -736,14 +736,64 @@
 </section>
 
 <!-- Pricing Section -->
-<section class="py-lg bg-white relative overflow-hidden" id="pricing">
-<div class="max-w-[1440px] mx-auto px-margin-desktop text-center relative z-10">
+<section class="py-xl bg-white relative overflow-hidden" id="pricing">
+<div class="max-w-[1440px] mx-auto px-margin-desktop relative z-10">
+<!-- Individual Apps Grid -->
+<h2 class="text-center font-headline-lg text-headline-lg mb-xl">Or Pick Individual Apps</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg mb-2xl">
+<!-- iVoz Card -->
+<div class="glass-card p-xl rounded-xl flex flex-col">
+<div class="flex items-center gap-md mb-lg">
+<div class="w-16 h-16 rounded-lg bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-2xl">graphic_eq</span>
+</div>
+<h3 class="font-title-lg text-title-lg">iVoz</h3>
+</div>
+<p class="font-body-md text-on-surface-variant mb-lg">AI transcription. Talk to your Mac.</p>
+<div class="flex items-baseline gap-xs mb-lg">
+<span class="text-headline-md font-bold text-primary">$</span>
+<span class="text-headline-lg font-display text-primary">24.99</span>
+</div>
+<button onclick="startCheckout('ivoz')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg text-title-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all mt-auto">Get iVoz</button>
+</div>
+<!-- iOrganize Card -->
+<div class="glass-card p-xl rounded-xl flex flex-col">
+<div class="flex items-center gap-md mb-lg">
+<div class="w-16 h-16 rounded-lg bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-2xl">folder_open</span>
+</div>
+<h3 class="font-title-lg text-title-lg">iOrganize</h3>
+</div>
+<p class="font-body-md text-on-surface-variant mb-lg">Smart cleanup. Organize files auto.</p>
+<div class="flex items-baseline gap-xs mb-lg">
+<span class="text-headline-md font-bold text-primary">$</span>
+<span class="text-headline-lg font-display text-primary">12.99</span>
+</div>
+<button onclick="startCheckout('iorganize')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg text-title-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all mt-auto">Get iOrganize</button>
+</div>
+<!-- Screen Bridge Card -->
+<div class="glass-card p-xl rounded-xl flex flex-col">
+<div class="flex items-center gap-md mb-lg">
+<div class="w-16 h-16 rounded-lg bg-gradient-to-br from-cyan-500 to-cyan-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-2xl">desktop_mac</span>
+</div>
+<h3 class="font-title-lg text-title-lg">Screen Bridge</h3>
+</div>
+<p class="font-body-md text-on-surface-variant mb-lg">Display streaming. Mac control.</p>
+<div class="flex items-baseline gap-xs mb-lg">
+<span class="text-headline-md font-bold text-primary">$</span>
+<span class="text-headline-lg font-display text-primary">9.99</span>
+</div>
+<button onclick="startCheckout('imonitor')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg text-title-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all mt-auto">Get Screen Bridge</button>
+</div>
+</div>
+
+<!-- Bundle Section -->
+<div class="text-center mt-2xl pt-xl border-t border-outline-variant/20">
 <h2 class="font-headline-lg text-headline-lg mb-lg">Simple, Transparent Pricing.</h2>
 <div class="max-w-md mx-auto">
 <div class="glass-card p-xl rounded-full border-2 border-primary relative">
-<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-on-primary px-md py-xs rounded-full font-label-md text-label-md shadow-lg">
-                            BEST VALUE
-                        </div>
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-on-primary px-md py-xs rounded-full font-label-md text-label-md shadow-lg">BEST VALUE</div>
 <h3 class="font-display text-headline-lg mb-xs">iSuite Bundle</h3>
 <p class="text-on-surface-variant mb-lg">All three professional apps for one price.</p>
 <div class="flex items-center justify-center gap-xs mb-xl">

@@ -121,6 +121,63 @@
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+            25% { transform: translateY(-20px) rotateX(10deg) rotateY(10deg) rotateZ(5deg); }
+            50% { transform: translateY(-40px) rotateX(-10deg) rotateY(-10deg) rotateZ(-5deg); }
+            75% { transform: translateY(-20px) rotateX(10deg) rotateY(-10deg) rotateZ(5deg); }
+        }
+        .floating-icon {
+            animation: float 6s ease-in-out infinite;
+            perspective: 1000px;
+        }
+        .floating-icon:nth-child(2) {
+            animation-delay: -2s;
+        }
+        .floating-icon:nth-child(3) {
+            animation-delay: -4s;
+        }
+        @keyframes mockupFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .macbook-mockup { width: 100%; max-width: 720px; animation: mockupFloat 6s ease-in-out infinite; margin: 0 auto; }
+        .macbook-frame { position: relative; }
+        .macbook-screen { background: #fff; border: 2px solid #d1d1d6; border-radius: 16px 16px 0 0; padding: 8px; box-shadow: 0 24px 80px rgba(0,0,0,0.1); }
+        .screen-header { display: flex; align-items: center; gap: 10px; padding: 8px 12px; background: #f5f5f7; border-radius: 10px 10px 0 0; border-bottom: 1px solid rgba(0,0,0,0.08); }
+        .screen-dots { display: flex; gap: 6px; }
+        .screen-dots span { width: 10px; height: 10px; border-radius: 50%; }
+        .screen-dots span:nth-child(1) { background: #FF5F57; }
+        .screen-dots span:nth-child(2) { background: #FFBD2E; }
+        .screen-dots span:nth-child(3) { background: #28C840; }
+        .screen-title { font-size: 0.75rem; color: #6b7280; font-weight: 600; flex: 1; text-align: center; margin-right: 32px; }
+        .screen-content { padding: 24px 20px; background: #fff; min-height: 180px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 0 0 12px 12px; }
+        .macbook-hinge { height: 8px; background: linear-gradient(180deg, #c1c1c6 0%, #d1d1d6 100%); border-radius: 0 0 4px 4px; margin: 0 12px; }
+        .macbook-base { height: 14px; background: linear-gradient(180deg, #d1d1d6 0%, #e1e1e6 40%, #c1c1c6 100%); border-radius: 0 0 12px 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); margin: 0 -8px; }
+        .macbook-notch { width: 60px; height: 4px; background: #a1a1a6; border-radius: 0 0 3px 3px; position: absolute; top: 0; left: 50%; transform: translateX(-50%); }
+        .screen-meta { display: flex; gap: 12px; font-size: 0.7rem; margin-top: 16px; }
+        .screen-tag { background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 4px 10px; border-radius: 100px; font-weight: 600; }
+        @keyframes demoFadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+        .demo-animation { min-height: 100px; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; }
+        .demo-state { display: none; flex-direction: column; align-items: center; gap: 10px; animation: demoFadeIn 0.4s ease forwards; }
+        .demo-state.active { display: flex; }
+        @keyframes demoPulse { 0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.3); } 50% { transform: scale(1.15); box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); } }
+        .demo-dot { width: 14px; height: 14px; background: #ef4444; border-radius: 50%; animation: demoPulse 1.2s ease-in-out infinite; }
+        .demo-file-match { display: flex; align-items: center; gap: 12px; background: #f9f9fb; border: 1px solid rgba(0,0,0,0.04); border-radius: 12px; padding: 10px 16px; min-width: 240px; }
+        .demo-file-icon { flex-shrink: 0; color: #9ca3af; }
+        .demo-file-info { display: flex; flex-direction: column; gap: 2px; }
+        .demo-file-name { font-size: 0.85rem; font-weight: 600; color: #1f2937; }
+        .demo-file-tags { font-size: 0.72rem; color: #b45309; background: rgba(245, 158, 11, 0.1); padding: 1px 8px; border-radius: 100px; font-weight: 500; }
+        @keyframes fileSlide { 0% { left: 0; } 100% { left: calc(100% - 10px); } }
+        .demo-file-move { display: flex; align-items: center; gap: 10px; min-width: 260px; }
+        .demo-move-icon { flex-shrink: 0; color: #9ca3af; }
+        .demo-move-track { position: relative; flex: 1; height: 2px; background: repeating-linear-gradient(90deg, rgba(0,0,0,0.08) 0 6px, transparent 6px 12px); }
+        .demo-move-file { position: absolute; top: 50%; left: 0; width: 10px; height: 12px; background: #f59e0b; border-radius: 2px; transform: translate(0, -50%); animation: fileSlide 1.4s ease-in-out infinite; }
+        @keyframes checkPop { 0% { transform: scale(0); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
+        .demo-done { display: flex; align-items: center; gap: 12px; font-weight: 600; color: #10b981; }
+        .demo-done svg { animation: checkPop 0.6s ease-out; }
+        .demo-label { font-size: 0.9rem; font-weight: 500; color: #6b7280; }
+        .demo-label.done { color: #10b981; }
     </style>
 </head>
 <body class="bg-background text-on-surface font-body-md">
@@ -138,7 +195,7 @@
 <a href="index.html" class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md">EN</a>
 <button onclick="startCheckout('bundle')" class="bg-primary text-on-primary px-lg py-sm rounded-full font-label-md text-label-md hover:opacity-90 active:scale-95 transition-all">Obtener Suite</button>
 </div>
-<button class="md:hidden material-symbols-outlined text-on-surface">menu</button>
+<button onclick="document.getElementById('mobileNav').classList.add('active')" class="md:hidden material-symbols-outlined text-on-surface">menu</button>
 </div>
 </nav>
 <main class="pt-16">
@@ -348,19 +405,69 @@ Obtener Suite
 </section>
 <!-- Pricing Section -->
 <section class="py-xl bg-white relative overflow-hidden" id="pricing">
-<div class="max-w-[1440px] mx-auto px-margin-desktop text-center relative z-10">
-<h2 class="font-headline-lg text-headline-lg mb-xl">Precios Simples y Transparentes.</h2>
+<div class="max-w-[1440px] mx-auto px-margin-desktop relative z-10">
+<!-- Individual Apps Grid -->
+<h2 class="text-center font-headline-lg text-headline-lg mb-xl">O Elige Apps Individuales</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg mb-2xl">
+<!-- iVoz Card -->
+<div class="glass-card p-xl rounded-xl flex flex-col">
+<div class="flex items-center gap-md mb-lg">
+<div class="w-16 h-16 rounded-lg bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-2xl">graphic_eq</span>
+</div>
+<h3 class="font-title-lg text-title-lg">iVoz</h3>
+</div>
+<p class="font-body-md text-on-surface-variant mb-lg">Transcripción por IA. Habla con tu Mac.</p>
+<div class="flex items-baseline gap-xs mb-lg">
+<span class="text-headline-md font-bold text-primary">$</span>
+<span class="text-headline-lg font-display text-primary">24.99</span>
+</div>
+<button onclick="startCheckout('ivoz')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg text-title-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all mt-auto">Obtener iVoz</button>
+</div>
+<!-- iOrganize Card -->
+<div class="glass-card p-xl rounded-xl flex flex-col">
+<div class="flex items-center gap-md mb-lg">
+<div class="w-16 h-16 rounded-lg bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-2xl">folder_open</span>
+</div>
+<h3 class="font-title-lg text-title-lg">iOrganize</h3>
+</div>
+<p class="font-body-md text-on-surface-variant mb-lg">Limpieza inteligente. Organiza automático.</p>
+<div class="flex items-baseline gap-xs mb-lg">
+<span class="text-headline-md font-bold text-primary">$</span>
+<span class="text-headline-lg font-display text-primary">12.99</span>
+</div>
+<button onclick="startCheckout('iorganize')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg text-title-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all mt-auto">Obtener iOrganize</button>
+</div>
+<!-- Screen Bridge Card -->
+<div class="glass-card p-xl rounded-xl flex flex-col">
+<div class="flex items-center gap-md mb-lg">
+<div class="w-16 h-16 rounded-lg bg-gradient-to-br from-cyan-500 to-cyan-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-2xl">desktop_mac</span>
+</div>
+<h3 class="font-title-lg text-title-lg">Screen Bridge</h3>
+</div>
+<p class="font-body-md text-on-surface-variant mb-lg">Streaming de pantalla. Control de Mac.</p>
+<div class="flex items-baseline gap-xs mb-lg">
+<span class="text-headline-md font-bold text-primary">$</span>
+<span class="text-headline-lg font-display text-primary">9.99</span>
+</div>
+<button onclick="startCheckout('imonitor')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg text-title-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all mt-auto">Obtener Screen Bridge</button>
+</div>
+</div>
+
+<!-- Bundle Section -->
+<div class="text-center mt-2xl pt-xl border-t border-outline-variant/20">
+<h2 class="font-headline-lg text-headline-lg mb-lg">Precios Simples y Transparentes.</h2>
 <div class="max-w-md mx-auto">
 <div class="glass-card p-xl rounded-full border-2 border-primary relative">
-<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-on-primary px-md py-xs rounded-full font-label-md text-label-md shadow-lg">
-                            MEJOR VALOR
-                        </div>
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-on-primary px-md py-xs rounded-full font-label-md text-label-md shadow-lg">MEJOR VALOR</div>
 <h3 class="font-display text-headline-lg mb-xs">iSuite Bundle</h3>
 <p class="text-on-surface-variant mb-lg">Las tres apps profesionales por un precio.</p>
 <div class="flex items-center justify-center gap-xs mb-xl">
 <span class="text-headline-md font-bold text-on-surface">$</span>
-<span class="text-display font-display text-primary leading-none">34.99</span>
-<span class="text-on-surface-variant font-label-md">· Pago Único</span>
+<span class="text-display font-display text-primary leading-none">44.99</span>
+<span class="text-on-surface-variant font-label-md">· Ahorra $5</span>
 </div>
 <ul class="text-left space-y-sm mb-xl">
 <li class="flex items-center gap-sm font-body-md"><span class="material-symbols-outlined text-primary">done</span> Acceso de Por Vida a iVoz</li>
@@ -380,24 +487,22 @@ Obtener Suite
 <!-- Footer -->
 <footer class="w-full bg-surface-container-lowest border-t border-outline-variant/10">
 <div class="max-w-[1440px] mx-auto px-margin-desktop py-xl">
-<!-- Footer Grid - 4 Columns -->
-<div class="grid grid-cols-1 md:grid-cols-4 gap-lg mb-xl">
-<!-- Column 1: Product -->
+<!-- Footer Grid - 3 Columns -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg md:gap-xl mb-xl md:text-left text-center">
+<!-- Column 1: Las Apps -->
+<div>
+<h4 class="font-label-md text-label-md font-bold text-on-surface mb-md uppercase tracking-wider opacity-70">Las Apps</h4>
+<ul class="space-y-sm">
+<li><a href="#features" class="font-body-md text-on-surface-variant hover:text-primary transition-colors">Características</a></li>
+<li><a href="#apps" class="font-body-md text-on-surface-variant hover:text-primary transition-colors">Todas las Apps</a></li>
+</ul>
+</div>
+<!-- Column 2: Product -->
 <div>
 <h4 class="font-label-md text-label-md font-bold text-on-surface mb-md uppercase tracking-wider opacity-70">Producto</h4>
 <ul class="space-y-sm">
-<li><a href="#features" class="font-body-md text-on-surface-variant hover:text-primary transition-colors">Características</a></li>
-<li><a href="#apps" class="font-body-md text-on-surface-variant hover:text-primary transition-colors">Las Apps</a></li>
 <li><a href="#pricing" class="font-body-md text-on-surface-variant hover:text-primary transition-colors">Precios</a></li>
-</ul>
-</div>
-<!-- Column 2: Support -->
-<div>
-<h4 class="font-label-md text-label-md font-bold text-on-surface mb-md uppercase tracking-wider opacity-70">Soporte</h4>
-<ul class="space-y-sm">
-<li><a href="#" class="font-body-md text-on-surface-variant hover:text-primary transition-colors">Ayuda</a></li>
-<li><a href="#" class="font-body-md text-on-surface-variant hover:text-primary transition-colors">Privacidad</a></li>
-<li><a href="#" class="font-body-md text-on-surface-variant hover:text-primary transition-colors">Términos</a></li>
+<li><a href="#" class="font-body-md text-on-surface-variant hover:text-primary transition-colors">Soporte</a></li>
 </ul>
 </div>
 <!-- Column 3: Company -->
@@ -407,20 +512,6 @@ Obtener Suite
 <li><p class="font-body-md text-on-surface-variant">Córdoba, Argentina</p></li>
 <li><a href="tel:+351212260" class="font-body-md text-primary hover:text-primary/80 transition-colors font-semibold">(351) 212-2600</a></li>
 </ul>
-</div>
-<!-- Column 4: Payments -->
-<div>
-<h4 class="font-label-md text-label-md font-bold text-on-surface mb-md uppercase tracking-wider opacity-70">Pago</h4>
-<div class="space-y-xs">
-<div class="flex items-center gap-sm p-sm rounded-lg hover:bg-white/5 transition-colors">
-<span class="material-symbols-outlined text-primary text-lg">payment</span>
-<span class="font-body-md text-on-surface">PayPal</span>
-</div>
-<div class="flex items-center gap-sm p-sm rounded-lg hover:bg-white/5 transition-colors">
-<span class="material-symbols-outlined text-primary text-lg">payments</span>
-<span class="font-body-md text-on-surface">Mercado Pago</span>
-</div>
-</div>
 </div>
 </div>
 
