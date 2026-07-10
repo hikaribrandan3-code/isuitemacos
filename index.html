@@ -137,87 +137,6 @@
         .floating-icon:nth-child(3) {
             animation-delay: -4s;
         }
-        /* Demo Animation Styles */
-        .demo-mockup {
-            background: white;
-            border-radius: 16px;
-            padding: 12px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(0, 0, 0, 0.06);
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-        }
-        .demo-header {
-            display: flex;
-            gap: 8px;
-            padding: 12px;
-            background: #f5f5f7;
-            border-radius: 10px;
-            margin-bottom: 16px;
-        }
-        .demo-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-        }
-        .demo-dot-red { background: #ff5f57; }
-        .demo-dot-yellow { background: #ffbd2e; }
-        .demo-dot-green { background: #28c840; }
-        .demo-content {
-            flex: 1;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 16px;
-            min-height: 300px;
-            position: relative;
-        }
-        .demo-state {
-            position: absolute;
-            inset: 0;
-            opacity: 0;
-            transition: opacity 0.8s ease-in-out;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 16px;
-        }
-        .demo-state.active {
-            opacity: 1;
-            position: relative;
-            inset: auto;
-        }
-        .demo-item {
-            padding: 12px;
-            border-radius: 8px;
-            background: #f9f9fb;
-            border: 1px solid rgba(0, 0, 0, 0.04);
-            font-size: 13px;
-            color: #1f2937;
-            animation: slideIn 0.5s ease-out;
-        }
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateX(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        .demo-label {
-            font-size: 12px;
-            font-weight: 600;
-            color: #6b7280;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 8px;
-        }
     </style>
 </head>
 <body class="bg-background text-on-surface font-body-md">
@@ -300,38 +219,7 @@
 </ul>
 </div>
 <div class="flex-1 w-full">
-<!-- iOrganize Demo Animation -->
-<div class="demo-mockup">
-<div class="demo-header">
-<div class="demo-dot demo-dot-red"></div>
-<div class="demo-dot demo-dot-yellow"></div>
-<div class="demo-dot demo-dot-green"></div>
-<span style="flex: 1; text-align: center; font-size: 11px; color: #6b7280; font-weight: 500;">iOrganize</span>
-</div>
-<div class="demo-content">
-<div class="demo-state active" id="organize-state-1">
-<div class="demo-label">📁 Scanning Downloads...</div>
-<div class="demo-item">invoice_2024.dmg</div>
-<div class="demo-item">screenshot_backup.png</div>
-<div class="demo-item">old_project_files.zip</div>
-</div>
-<div class="demo-state" id="organize-state-2">
-<div class="demo-label">✓ Rule Matched</div>
-<div class="demo-item" style="background: #ecfdf5; border-color: #10b981;">Move to Trash: invoice_2024.dmg</div>
-<div class="demo-item" style="background: #ecfdf5; border-color: #10b981;">Archive: old_project_files.zip</div>
-</div>
-<div class="demo-state" id="organize-state-3">
-<div class="demo-label">🧹 Cleaning Up</div>
-<div class="demo-item" style="background: #fef3c7; border-color: #f59e0b;">Processing 3 files...</div>
-<div class="demo-item" style="background: #fef3c7; border-color: #f59e0b;">Removed: 1.2 GB</div>
-</div>
-<div class="demo-state" id="organize-state-4">
-<div class="demo-label">✓ Complete</div>
-<div class="demo-item" style="background: #ecfdf5; border-color: #10b981;">Cleanup freed 1.2 GB</div>
-<div class="demo-item" style="background: #ecfdf5; border-color: #10b981;">Auto-Flow running 24/7</div>
-</div>
-</div>
-</div>
+<img class="rounded-xl app-preview-shadow border border-outline-variant/30" data-alt="A detailed screen of the iOrganize application, displaying a bento-style grid of file categories and smart folders. The interface uses a soft blue and white color scheme, with smooth gradients and high-contrast text that makes the complex organization system feel intuitive and calm." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaIEp7t1xGTtxobo-LGuTgmkLnp5S_Mr-TdqJGv00hBGt5Lex9RR1AD1LvHWkCbwGo1-T0kHr_cg1ZOtKmEpRwBoYXr1FvL7YfyUPb_WFVVre-N68oTgTkZaIcn1FwRcxK5IV-iouZq8cKSSQxJ15EgLN27Q9Fmg89UQkYQem9FIZmz2WVYW5V_H3-VLii1uqWj_1Xd9hJpxKzzAhdSVZ9oiWIt2BtRUoA7-gGj5C-ZLFhQe_ICKay"/>
 </div>
 </div>
 <!-- iScreen Share Deep Dive -->
@@ -357,39 +245,7 @@
 </ul>
 </div>
 <div class="flex-1 w-full">
-<!-- iMonitor Demo Animation -->
-<div class="demo-mockup" style="background: linear-gradient(135deg, #fef3c7 0%, #fef9e7 100%);">
-<div class="demo-header">
-<div class="demo-dot demo-dot-red"></div>
-<div class="demo-dot demo-dot-yellow"></div>
-<div class="demo-dot demo-dot-green"></div>
-<span style="flex: 1; text-align: center; font-size: 11px; color: #92400e; font-weight: 500;">iMonitor</span>
-</div>
-<div class="demo-content">
-<div class="demo-state active" id="monitor-state-1">
-<div class="demo-label">📊 System Status</div>
-<div class="demo-item" style="background: #fff8dc; border-color: #f59e0b; color: #92400e;">CPU: 45% — Running smoothly</div>
-<div class="demo-item" style="background: #fff8dc; border-color: #f59e0b; color: #92400e;">RAM: 62% — 9.8 GB available</div>
-<div class="demo-item" style="background: #fff8dc; border-color: #f59e0b; color: #92400e;">Network: 28 Mbps ↓ 12 Mbps ↑</div>
-</div>
-<div class="demo-state" id="monitor-state-2">
-<div class="demo-label">🔗 Connected Display</div>
-<div class="demo-item" style="background: #ecfdf5; border-color: #10b981; color: #065f46;">iPad Air (192.168.1.42)</div>
-<div class="demo-item" style="background: #ecfdf5; border-color: #10b981; color: #065f46;">Latency: 2ms — Perfect sync</div>
-<div class="demo-item" style="background: #ecfdf5; border-color: #10b981; color: #065f46;">Resolution: 2732×2048</div>
-</div>
-<div class="demo-state" id="monitor-state-3">
-<div class="demo-label">⚡ Performance Peak</div>
-<div class="demo-item" style="background: #e0e7ff; border-color: #6366f1; color: #312e81;">GPU Load: 78%</div>
-<div class="demo-item" style="background: #e0e7ff; border-color: #6366f1; color: #312e81;">Temp: 68°C — Optimal</div>
-</div>
-<div class="demo-state" id="monitor-state-4">
-<div class="demo-label">✓ All Systems Nominal</div>
-<div class="demo-item" style="background: #ecfdf5; border-color: #10b981; color: #065f46;">Monitoring 24/7</div>
-<div class="demo-item" style="background: #ecfdf5; border-color: #10b981; color: #065f46;">Zero lag — Always ready</div>
-</div>
-</div>
-</div>
+<img class="rounded-xl app-preview-shadow border border-outline-variant/30" data-alt="The iScreen Share interface demonstrating its 'Universal Bridge' feature. The UI is modern and professional, featuring dark typography on a pristine white background. Status indicators for latency and connectivity are rendered in a minimal, high-fidelity style characteristic of pro macOS tools." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo-k3RNnFtMkvzPhBECH615bglsPdPi0_sq2QCPqD8SSMDyXz4mQVc4e_KavRucU9PUEUWzBv3BiZdMkuicgPupWv4mwNHIRPUaF09HmuHeIxVsFtfGXT6AC01b8UBc4B471qx1bNidoDNauBDEkc9eHMJDhfxsZJNXrwziVGOmGu25oO-8LHPuaIo0bmCYmtbXP7lSX57KaPMqlZtaPJ_MxvHu3mBupqZ4gdzrYR1bYRKGQqfiW7q"/>
 </div>
 </div>
 </section>
@@ -760,35 +616,5 @@
             floatingCTA.classList.add('opacity-0', 'translate-y-8', 'pointer-events-none');
         }
     });
-
-    // Demo Animation Cycle
-    function initDemoAnimation(prefix, stateCount = 4) {
-        let currentState = 1;
-
-        function showState(index) {
-            for (let i = 1; i <= stateCount; i++) {
-                const el = document.getElementById(`${prefix}-state-${i}`);
-                if (el) {
-                    if (i === index) {
-                        el.classList.add('active');
-                    } else {
-                        el.classList.remove('active');
-                    }
-                }
-            }
-        }
-
-        function cycle() {
-            showState(currentState);
-            currentState = currentState < stateCount ? currentState + 1 : 1;
-            setTimeout(cycle, 3000);
-        }
-
-        cycle();
-    }
-
-    // Start animations for both demos
-    initDemoAnimation('organize', 4);
-    initDemoAnimation('monitor', 4);
 </script>
 </body></html>
