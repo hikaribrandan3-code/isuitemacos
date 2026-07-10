@@ -142,13 +142,21 @@
 </div>
 </nav>
 <main class="pt-16">
-<!-- Hero Section -->
+<!-- Hero Section (Desktop) -->
+<section class="bg-white pt-xl pb-md overflow-hidden relative">
+<div class="max-w-[1440px] mx-auto px-margin-desktop relative">
+<img src="assets/hero-es.png" alt="La suite de oficina que le falta a macOS" class="hidden md:block w-full h-auto"/>
+<button onclick="startCheckout('bundle')" class="hidden md:block absolute top-[28%] left-1/2 -translate-x-1/2 w-32 h-12 bg-transparent cursor-pointer" title="Obtener iSuite Office"></button>
+</div>
+</section>
+
+<!-- Hero Section (Mobile) -->
 <section class="bg-white pt-lg pb-lg overflow-hidden">
 <div class="max-w-[1440px] mx-auto px-margin-desktop text-center mb-lg">
 <h1 class="font-display text-display text-on-surface mb-md">La suite de oficina que le falta a macOS</h1>
 <p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">Tres herramientas enfocadas y potentes, con sensación nativa, que funcionan perfectamente juntas.</p>
 </div>
-<div class="max-w-[1440px] mx-auto px-margin-desktop">
+<div class="max-w-[1440px] mx-auto px-margin-desktop md:hidden">
 <img src="assets/hero.png" alt="La suite de oficina que le falta a macOS" class="w-full h-auto rounded-lg"/>
 </div>
 </section>
