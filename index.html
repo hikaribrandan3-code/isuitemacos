@@ -207,7 +207,7 @@
 <div class="max-w-[1440px] mx-auto px-margin-desktop relative">
 <img src="assets/hero-en.png" alt="The Missing Office Suite for macOS" class="w-full h-auto"/>
 <!-- Hidden CTA Overlay (positioned over the "Get iSuite Office" button in the image) -->
-<button onclick="startCheckout('bundle')" class="absolute top-[28%] left-1/2 -translate-x-1/2 w-32 h-12 bg-transparent hover:bg-blue-500/10 rounded-full transition-all cursor-pointer" title="Get iSuite Office"></button>
+<button onclick="startCheckout('bundle')" class="absolute top-[28%] left-1/2 -translate-x-1/2 w-32 h-12 bg-transparent cursor-pointer" title="Get iSuite Office"></button>
 </div>
 </section>
 <!-- Deep Dives -->
@@ -666,26 +666,30 @@ Get Suite
             if (type === 'bundle') {
                 html = `
                     <div class="space-y-lg">
-                        <div class="bg-surface-container p-md rounded-lg">
-                            <div class="flex justify-between mb-sm">
-                                <span class="font-body-md">iSuite Bundle (3 Apps)</span>
-                                <span class="font-title-lg text-primary">$89.00</span>
+                        <div class="flex items-center gap-md pb-lg border-b border-outline-variant">
+                            <span class="material-symbols-outlined text-primary text-2xl">shopping_cart</span>
+                            <div>
+                                <p class="font-body-sm text-on-surface-variant">Complete Your Purchase</p>
+                                <h3 class="font-title-lg text-title-lg">iSuite Bundle</h3>
                             </div>
                         </div>
-                        <div class="border-t border-outline-variant pt-lg">
-                            <div class="flex justify-between mb-lg font-title-lg">
-                                <span>Total:</span>
-                                <span class="text-primary">$89.00</span>
+
+                        <div class="bg-primary/5 p-md rounded-xl">
+                            <div class="flex justify-between items-baseline">
+                                <span class="font-body-md text-on-surface-variant">3 Professional Apps</span>
+                                <span class="text-3xl font-headline-lg text-primary">$89</span>
                             </div>
+                            <p class="text-on-surface-variant font-body-sm mt-sm">One-time purchase, lifetime access</p>
                         </div>
-                        <div class="space-y-sm">
-                            <button onclick="processPayment('paypal', 89)" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:opacity-90 transition-all">
-                                💙 Pay with PayPal
+
+                        <div class="space-y-sm pt-lg">
+                            <button onclick="processPayment('paypal', 89)" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:bg-primary/90 active:scale-95 transition-all shadow-md hover:shadow-lg">
+                                <span class="material-symbols-outlined align-text-bottom mr-xs">payment</span> Pay with PayPal
                             </button>
-                            <button onclick="processPayment('mercado', 89)" class="w-full bg-secondary text-on-secondary py-md rounded-full font-title-lg hover:opacity-90 transition-all">
-                                🟡 Mercado Pago
+                            <button onclick="processPayment('mercado', 89)" class="w-full bg-yellow-400 text-black py-md rounded-full font-title-lg hover:bg-yellow-500 active:scale-95 transition-all shadow-md hover:shadow-lg">
+                                <span class="material-symbols-outlined align-text-bottom mr-xs">shopping_bag</span> Mercado Pago
                             </button>
-                            <button onclick="closeCheckout()" class="w-full border border-outline py-md rounded-full font-title-lg">
+                            <button onclick="closeCheckout()" class="w-full border border-outline-variant text-on-surface py-md rounded-full font-title-lg hover:bg-surface-container transition-all">
                                 Cancel
                             </button>
                         </div>
