@@ -6,10 +6,39 @@ const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 
 // Products
 const PRODUCTS = {
+  ivoz: {
+    name: 'iVoz Pro - Lifetime License',
+    price: 19.99,
+    currency: 'USD',
+    downloads: [
+      { name: 'iVoz', url: 'https://github.com/hikaribrandan3-code/hikari-yaps-website/releases/download/v1.0/iVoz.app.zip', desc: 'Talk to your Mac' }
+    ]
+  },
+  iorganize: {
+    name: 'iOrganize Pro - Lifetime License',
+    price: 9.99,
+    currency: 'USD',
+    downloads: [
+      { name: 'iOrganize', url: 'https://github.com/hikaribrandan3-code/iorganize/releases/download/v1.0/iOrganize.app.zip', desc: 'Smart file cleanup' }
+    ]
+  },
+  imonitor: {
+    name: 'Screen Bridge Pro - Lifetime License',
+    price: 9.99,
+    currency: 'USD',
+    downloads: [
+      { name: 'Screen Bridge', url: 'https://github.com/hikaribrandan3-code/imonitor/releases/download/v1.0/Screen%20Bridge.app.zip', desc: 'Display streaming' }
+    ]
+  },
   bundle: {
-    name: 'iSuite Bundle (iVoz + iOrganize + iMonitor)',
+    name: 'iSuite Bundle (iVoz + iOrganize + Screen Bridge)',
     price: 34.99,
-    currency: 'USD'
+    currency: 'USD',
+    downloads: [
+      { name: 'iVoz', url: 'https://github.com/hikaribrandan3-code/hikari-yaps-website/releases/download/v1.0/iVoz.app.zip', desc: 'Talk to your Mac' },
+      { name: 'iOrganize', url: 'https://github.com/hikaribrandan3-code/iorganize/releases/download/v1.0/iOrganize.app.zip', desc: 'Smart file cleanup' },
+      { name: 'Screen Bridge', url: 'https://github.com/hikaribrandan3-code/imonitor/releases/download/v1.0/Screen%20Bridge.app.zip', desc: 'Display streaming' }
+    ]
   }
 };
 
@@ -57,7 +86,7 @@ async function payWithPayPal(productKey = 'bundle') {
   } catch (error) {
     console.error('PayPal error:', error);
     // Demo: show success screen for testing
-    showPaymentSuccess(generateLicenseCode());
+    showPaymentSuccess(generateLicenseCode(), productKey);
   }
 }
 
@@ -96,16 +125,28 @@ async function payWithMercadoPago(productKey = 'bundle') {
   } catch (error) {
     console.error('Mercado Pago error:', error);
     // Demo: show success screen for testing
-    showPaymentSuccess(generateLicenseCode());
+    showPaymentSuccess(generateLicenseCode(), productKey);
   }
 }
 
 /**
  * Show success screen after payment
  */
-function showPaymentSuccess(code) {
+function showPaymentSuccess(code, productKey = 'bundle') {
   const modal = document.getElementById('checkoutModal');
   const content = document.getElementById('checkoutContent');
+  const product = PRODUCTS[productKey] || PRODUCTS.bundle;
+  const downloads = product.downloads || [];
+
+  let downloadsHtml = downloads.map(app => `
+    <a href="${app.url}" class="flex items-center gap-sm p-sm rounded-lg border border-outline-variant hover:bg-surface-container transition-colors">
+      <span class="material-symbols-outlined text-primary">download</span>
+      <div>
+        <p class="font-body-sm font-semibold">${app.name}</p>
+        <p class="text-label-sm text-on-surface-variant">${app.desc}</p>
+      </div>
+    </a>
+  `).join('');
 
   const html = `
     <div class="space-y-lg">
@@ -127,27 +168,7 @@ function showPaymentSuccess(code) {
 
       <div class="space-y-sm">
         <p class="font-body-sm text-on-surface-variant font-semibold">Download & Install:</p>
-        <a href="https://github.com/hikaribrandan3-code/hikari-yaps-website/releases/download/v1.0/iVoz.app.zip" class="flex items-center gap-sm p-sm rounded-lg border border-outline-variant hover:bg-surface-container transition-colors">
-          <span class="material-symbols-outlined text-primary">download</span>
-          <div>
-            <p class="font-body-sm font-semibold">iVoz</p>
-            <p class="text-label-sm text-on-surface-variant">Talk to your Mac</p>
-          </div>
-        </a>
-        <a href="https://github.com/hikaribrandan3-code/iorganize/releases/download/v1.0/iOrganize.app.zip" class="flex items-center gap-sm p-sm rounded-lg border border-outline-variant hover:bg-surface-container transition-colors">
-          <span class="material-symbols-outlined text-primary">download</span>
-          <div>
-            <p class="font-body-sm font-semibold">iOrganize</p>
-            <p class="text-label-sm text-on-surface-variant">Smart file cleanup</p>
-          </div>
-        </a>
-        <a href="https://github.com/hikaribrandan3-code/imonitor/releases/download/v1.0/Screen%20Bridge.app.zip" class="flex items-center gap-sm p-sm rounded-lg border border-outline-variant hover:bg-surface-container transition-colors">
-          <span class="material-symbols-outlined text-primary">download</span>
-          <div>
-            <p class="font-body-sm font-semibold">Screen Bridge</p>
-            <p class="text-label-sm text-on-surface-variant">Display streaming</p>
-          </div>
-        </a>
+        ${downloadsHtml}
       </div>
 
       <div class="bg-blue-50 p-md rounded-lg">
