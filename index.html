@@ -4,6 +4,9 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>iSuite Office | The Missing Suite for macOS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="dns-prefetch" href="https://cdn.tailwindcss.com"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -180,6 +183,16 @@
         .demo-label { font-size: 0.9rem; font-weight: 500; color: #6b7280; }
         .demo-label.done { color: #10b981; }
     </style>
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="iSuite Office - The Missing Suite for macOS"/>
+    <meta property="og:description" content="Get iVoz, iOrganize, and iMonitor in one bundle. $34.99 lifetime access. Productivity and control, together."/>
+    <meta property="og:image" content="https://isuitemacos.vercel.app/assets/hero-en.png"/>
+    <meta property="og:url" content="https://isuitemacos.vercel.app"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="iSuite Office - The Missing Suite for macOS"/>
+    <meta name="twitter:description" content="Get iVoz, iOrganize, and iMonitor in one bundle. $34.99 lifetime access."/>
+    <meta name="twitter:image" content="https://isuitemacos.vercel.app/assets/hero-en.png"/>
 </head>
 <body class="bg-background text-on-surface font-body-md">
 <!-- Top Navigation Bar -->
@@ -235,7 +248,7 @@
 </ul>
 </div>
 <div class="flex-1 w-full">
-<img class="rounded-xl app-preview-shadow border border-outline-variant/30" data-alt="A close-up view of the iVoz software interface, highlighting its elegant dark-on-light contrast and meticulous layout. The screen shows active transcription happening in real-time, with a clean sidebar and rounded UI elements that echo the professional aesthetic of macOS Ventura." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwHd_8Xi4cC_c_DOl35xzJDlF3CCuNVGuwNz8UUdEtYJuQeZ1uiFmS6rgG8al7Kk7G1RRm3eoqCpKOK0jBIseIIfKNs4Jm_jP5zptGtJftZo43pe7pjjMnO6VfyVWOgPoCWCSSHOArxU-Hpll7QThyzA9H63vzz1c-rkgN0u9WDICuKBG2H54FI4FkU5cc5XhbPJYV7sqsMxdHk_73CVgzOqc8UDeI8kyWXwXuZstbRuSA0jdSCJKd"/>
+<img class="rounded-xl app-preview-shadow border border-outline-variant/30" alt="iVoz transcription interface showing real-time voice-to-text processing with professional UI design" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwHd_8Xi4cC_c_DOl35xzJDlF3CCuNVGuwNz8UUdEtYJuQeZ1uiFmS6rgG8al7Kk7G1RRm3eoqCpKOK0jBIseIIfKNs4Jm_jP5zptGtJftZo43pe7pjjMnO6VfyVWOgPoCWCSSHOArxU-Hpll7QThyzA9H63vzz1c-rkgN0u9WDICuKBG2H54FI4FkU5cc5XhbPJYV7sqsMxdHk_73CVgzOqc8UDeI8kyWXwXuZstbRuSA0jdSCJKd"/>
 </div>
 </div>
 <!-- iOrganize Deep Dive -->
@@ -492,21 +505,21 @@
 <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
 <!-- App Link 1 -->
 <a href="https://ivoz.vercel.app/" target="_blank" class="glass-card p-lg rounded-xl hover:translate-y-[-4px] transition-transform group">
-<img src="assets/ivoz-icon.png" alt="iVoz" class="w-20 h-20 rounded-lg mx-auto mb-md group-hover:scale-110 transition-transform"/>
+<img src="assets/ivoz-icon.png" alt="iVoz icon" class="w-20 h-20 rounded-lg mx-auto mb-md group-hover:scale-110 transition-transform" loading="lazy"/>
 <h3 class="font-title-lg text-title-lg mb-sm text-center">Visit iVoz</h3>
 <p class="font-body-md text-body-md text-on-surface-variant text-center">Discover all the smart transcription features and how iVoz transforms the way you capture ideas.</p>
 <div class="flex items-center justify-center gap-sm mt-lg text-primary font-title-lg group-hover:gap-md transition-all">Learn More <span class="material-symbols-outlined">arrow_outward</span></div>
 </a>
 <!-- App Link 2 -->
 <a href="https://iorganize.vercel.app/" target="_blank" class="glass-card p-lg rounded-xl hover:translate-y-[-4px] transition-transform group">
-<img src="assets/iorganize-icon.png" alt="iOrganize" class="w-20 h-20 rounded-lg mx-auto mb-md group-hover:scale-110 transition-transform"/>
+<img src="assets/iorganize-icon.png" alt="iOrganize icon" class="w-20 h-20 rounded-lg mx-auto mb-md group-hover:scale-110 transition-transform" loading="lazy"/>
 <h3 class="font-title-lg text-title-lg mb-sm text-center">iOrganize Website</h3>
 <p class="font-body-md text-body-md text-on-surface-variant text-center">Learn how iOrganize automates system cleanup and keeps your workspace pristine.</p>
 <div class="flex items-center justify-center gap-sm mt-lg text-primary font-title-lg group-hover:gap-md transition-all">Learn More <span class="material-symbols-outlined">arrow_outward</span></div>
 </a>
 <!-- App Link 3 -->
 <a href="https://imonitor-xi.vercel.app/" target="_blank" class="glass-card p-lg rounded-xl hover:translate-y-[-4px] transition-transform group">
-<img src="assets/imonitor-icon.png" alt="iMonitor" class="w-20 h-20 rounded-lg mx-auto mb-md group-hover:scale-110 transition-transform"/>
+<img src="assets/imonitor-icon.png" alt="iMonitor icon" class="w-20 h-20 rounded-lg mx-auto mb-md group-hover:scale-110 transition-transform" loading="lazy"/>
 <h3 class="font-title-lg text-title-lg mb-sm text-center">iMonitor Website</h3>
 <p class="font-body-md text-body-md text-on-surface-variant text-center">Explore how iMonitor turns any device into a low-latency second monitor.</p>
 <div class="flex items-center justify-center gap-sm mt-lg text-primary font-title-lg group-hover:gap-md transition-all">Learn More <span class="material-symbols-outlined">arrow_outward</span></div>
