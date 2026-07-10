@@ -2,7 +2,9 @@
 <!-- iSuite Office Landing Page v3 -->
 <html class="scroll-smooth" lang="en"><head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 <title>iSuite Office | The Missing Suite for macOS</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -182,6 +184,8 @@
         .demo-done svg { animation: checkPop 0.6s ease-out; }
         .demo-label { font-size: 0.9rem; font-weight: 500; color: #6b7280; }
         .demo-label.done { color: #10b981; }
+        /* Disable double-tap zoom on mobile */
+        button, a, input, textarea, select { touch-action: manipulation; }
     </style>
     <!-- Open Graph / Social Sharing -->
     <meta property="og:type" content="website"/>
@@ -583,24 +587,22 @@
 <!-- Footer -->
 <footer class="w-full bg-surface-container-lowest border-t border-outline-variant/10">
 <div class="max-w-[1440px] mx-auto px-margin-desktop py-xl">
-<!-- Footer Grid - 4 Columns Desktop, Centered on Mobile -->
-<div class="grid grid-cols-1 md:grid-cols-4 gap-lg md:gap-xl mb-xl md:text-left text-center">
-<!-- Column 1: Product -->
+<!-- Footer Grid - Simple 3 Columns -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg md:gap-xl mb-xl md:text-left text-center">
+<!-- Column 1: The Apps -->
+<div>
+<h4 class="font-label-md text-label-md font-bold text-on-surface mb-md uppercase tracking-wider opacity-70">The Apps</h4>
+<ul class="space-y-sm">
+<li><a href="#apps" class="font-body-md text-on-surface-variant hover:text-primary transition-colors">Features</a></li>
+<li><a href="#apps" class="font-body-md text-on-surface-variant hover:text-primary transition-colors">All Apps</a></li>
+</ul>
+</div>
+<!-- Column 2: Product -->
 <div>
 <h4 class="font-label-md text-label-md font-bold text-on-surface mb-md uppercase tracking-wider opacity-70">Product</h4>
 <ul class="space-y-sm">
-<li><a href="#features" class="font-body-md text-on-surface-variant hover:text-primary transition-colors">Features</a></li>
-<li><a href="#apps" class="font-body-md text-on-surface-variant hover:text-primary transition-colors">The Apps</a></li>
 <li><a href="#pricing" class="font-body-md text-on-surface-variant hover:text-primary transition-colors">Pricing</a></li>
-</ul>
-</div>
-<!-- Column 2: Support -->
-<div>
-<h4 class="font-label-md text-label-md font-bold text-on-surface mb-md uppercase tracking-wider opacity-70">Support</h4>
-<ul class="space-y-sm">
-<li><a href="#" class="font-body-md text-on-surface-variant hover:text-primary transition-colors">Help</a></li>
-<li><a href="#" class="font-body-md text-on-surface-variant hover:text-primary transition-colors">Privacy</a></li>
-<li><a href="#" class="font-body-md text-on-surface-variant hover:text-primary transition-colors">Terms</a></li>
+<li><a href="#" class="font-body-md text-on-surface-variant hover:text-primary transition-colors">Support</a></li>
 </ul>
 </div>
 <!-- Column 3: Company -->
@@ -610,20 +612,6 @@
 <li><p class="font-body-md text-on-surface-variant">Córdoba, Argentina</p></li>
 <li><a href="tel:+351212260" class="font-body-md text-primary hover:text-primary/80 transition-colors font-semibold">(351) 212-2600</a></li>
 </ul>
-</div>
-<!-- Column 4: Payments -->
-<div>
-<h4 class="font-label-md text-label-md font-bold text-on-surface mb-md uppercase tracking-wider opacity-70">Payment</h4>
-<div class="space-y-xs flex flex-col md:flex-col items-center md:items-start">
-<div class="flex items-center gap-sm p-sm rounded-lg hover:bg-white/5 transition-colors">
-<span class="material-symbols-outlined text-primary text-lg">payment</span>
-<span class="font-body-md text-on-surface">PayPal</span>
-</div>
-<div class="flex items-center gap-sm p-sm rounded-lg hover:bg-white/5 transition-colors">
-<span class="material-symbols-outlined text-primary text-lg">payments</span>
-<span class="font-body-md text-on-surface">Mercado Pago</span>
-</div>
-</div>
 </div>
 </div>
 
