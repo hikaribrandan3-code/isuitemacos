@@ -56,7 +56,7 @@ async function payWithMercadoPago(productKey = 'bundle') {
   const product = PRODUCTS[productKey];
 
   try {
-    const response = await fetch(`${SUPABASE_URL}/functions/v1/create-preference`, {
+    const response = await fetch(`${SUPABASE_URL}/functions/v1/create-preference-mercado`, {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
