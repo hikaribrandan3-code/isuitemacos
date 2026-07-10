@@ -852,6 +852,102 @@
                         </div>
                     </div>
                 `;
+            } else if (type === 'ivoz') {
+                html = `
+                    <div class="space-y-lg">
+                        <div class="flex items-center gap-md pb-lg border-b border-outline-variant">
+                            <img src="assets/ivoz-icon.png" alt="iVoz" class="w-12 h-12 rounded-lg" />
+                            <div>
+                                <p class="font-body-sm text-on-surface-variant">Complete Your Purchase</p>
+                                <h3 class="font-title-lg text-title-lg">iVoz</h3>
+                            </div>
+                        </div>
+
+                        <div class="bg-primary/5 p-md rounded-xl">
+                            <div class="flex justify-between items-baseline">
+                                <span class="font-body-md text-on-surface-variant">Professional Transcription</span>
+                                <span class="text-3xl font-headline-lg text-primary">$24.99</span>
+                            </div>
+                            <p class="text-on-surface-variant font-body-sm mt-sm">One-time purchase, lifetime access</p>
+                        </div>
+
+                        <div class="space-y-sm pt-lg">
+                            <button onclick="payWithPayPal('ivoz')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:bg-primary/90 active:scale-95 transition-all shadow-md hover:shadow-lg">
+                                <span class="material-symbols-outlined align-text-bottom mr-xs">payment</span> Pay with PayPal
+                            </button>
+                            <button onclick="payWithMercadoPago('ivoz')" class="w-full bg-yellow-400 text-black py-md rounded-full font-title-lg hover:bg-yellow-500 active:scale-95 transition-all shadow-md hover:shadow-lg">
+                                <span class="material-symbols-outlined align-text-bottom mr-xs">shopping_bag</span> Mercado Pago
+                            </button>
+                            <button onclick="closeCheckout()" class="w-full border border-outline-variant text-on-surface py-md rounded-full font-title-lg hover:bg-surface-container transition-all">
+                                Cancel
+                            </button>
+                        </div>
+                    </div>
+                `;
+            } else if (type === 'iorganize') {
+                html = `
+                    <div class="space-y-lg">
+                        <div class="flex items-center gap-md pb-lg border-b border-outline-variant">
+                            <img src="assets/iorganize-icon.png" alt="iOrganize" class="w-12 h-12 rounded-lg" />
+                            <div>
+                                <p class="font-body-sm text-on-surface-variant">Complete Your Purchase</p>
+                                <h3 class="font-title-lg text-title-lg">iOrganize</h3>
+                            </div>
+                        </div>
+
+                        <div class="bg-primary/5 p-md rounded-xl">
+                            <div class="flex justify-between items-baseline">
+                                <span class="font-body-md text-on-surface-variant">Smart File Management</span>
+                                <span class="text-3xl font-headline-lg text-primary">$12.99</span>
+                            </div>
+                            <p class="text-on-surface-variant font-body-sm mt-sm">One-time purchase, lifetime access</p>
+                        </div>
+
+                        <div class="space-y-sm pt-lg">
+                            <button onclick="payWithPayPal('iorganize')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:bg-primary/90 active:scale-95 transition-all shadow-md hover:shadow-lg">
+                                <span class="material-symbols-outlined align-text-bottom mr-xs">payment</span> Pay with PayPal
+                            </button>
+                            <button onclick="payWithMercadoPago('iorganize')" class="w-full bg-yellow-400 text-black py-md rounded-full font-title-lg hover:bg-yellow-500 active:scale-95 transition-all shadow-md hover:shadow-lg">
+                                <span class="material-symbols-outlined align-text-bottom mr-xs">shopping_bag</span> Mercado Pago
+                            </button>
+                            <button onclick="closeCheckout()" class="w-full border border-outline-variant text-on-surface py-md rounded-full font-title-lg hover:bg-surface-container transition-all">
+                                Cancel
+                            </button>
+                        </div>
+                    </div>
+                `;
+            } else if (type === 'imonitor') {
+                html = `
+                    <div class="space-y-lg">
+                        <div class="flex items-center gap-md pb-lg border-b border-outline-variant">
+                            <img src="assets/imonitor-icon.png" alt="Screen Bridge" class="w-12 h-12 rounded-lg" />
+                            <div>
+                                <p class="font-body-sm text-on-surface-variant">Complete Your Purchase</p>
+                                <h3 class="font-title-lg text-title-lg">Screen Bridge</h3>
+                            </div>
+                        </div>
+
+                        <div class="bg-primary/5 p-md rounded-xl">
+                            <div class="flex justify-between items-baseline">
+                                <span class="font-body-md text-on-surface-variant">Universal Display Streaming</span>
+                                <span class="text-3xl font-headline-lg text-primary">$9.99</span>
+                            </div>
+                            <p class="text-on-surface-variant font-body-sm mt-sm">One-time purchase, lifetime access</p>
+                        </div>
+
+                        <div class="space-y-sm pt-lg">
+                            <button onclick="payWithPayPal('imonitor')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:bg-primary/90 active:scale-95 transition-all shadow-md hover:shadow-lg">
+                                <span class="material-symbols-outlined align-text-bottom mr-xs">payment</span> Pay with PayPal
+                            </button>
+                            <button onclick="payWithMercadoPago('imonitor')" class="w-full bg-yellow-400 text-black py-md rounded-full font-title-lg hover:bg-yellow-500 active:scale-95 transition-all shadow-md hover:shadow-lg">
+                                <span class="material-symbols-outlined align-text-bottom mr-xs">shopping_bag</span> Mercado Pago
+                            </button>
+                            <button onclick="closeCheckout()" class="w-full border border-outline-variant text-on-surface py-md rounded-full font-title-lg hover:bg-surface-container transition-all">
+                                Cancel
+                            </button>
+                        </div>
+                    </div>
+                `;
             }
 
             content.innerHTML = html;
