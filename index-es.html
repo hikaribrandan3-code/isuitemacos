@@ -143,9 +143,11 @@
 </nav>
 <main class="pt-16">
 <!-- Hero Section -->
-<section class="bg-white pt-xl pb-md overflow-hidden">
-<div class="max-w-[1440px] mx-auto px-margin-desktop">
+<section class="bg-white pt-xl pb-md overflow-hidden relative">
+<div class="max-w-[1440px] mx-auto px-margin-desktop relative">
 <img src="assets/hero-es.png" alt="La suite de oficina que le falta a macOS" class="w-full h-auto"/>
+<!-- Hidden CTA Overlay (positioned over the "Obtener iSuite Office" button in the image) -->
+<button onclick="startCheckout('bundle')" class="absolute top-[35%] left-1/2 -translate-x-1/2 w-40 h-12 bg-transparent hover:bg-blue-500/10 rounded-full transition-all cursor-pointer" title="Obtener iSuite Office"></button>
 </div>
 </section><!-- Deep Dives -->
 <section class="py-xl space-y-32" id="features">
