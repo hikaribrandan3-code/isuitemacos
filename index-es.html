@@ -371,35 +371,64 @@ Obtener Suite
 </div>
 </div>
 </section>
-<!-- Cross-Links & Support Section -->
+<!-- Diseñado para Profesionales Mac - Unified Grid -->
 <section class="py-xl bg-surface-container-low">
 <div class="max-w-[1440px] mx-auto px-margin-desktop">
 <div class="text-center mb-xl">
-<h2 class="font-headline-lg text-headline-lg mb-md">Explora Más Apps.</h2>
-<p class="font-body-md text-body-md text-on-surface-variant">Cada app tiene su propio espacio. Descubre las características completas en los sitios individuales.</p>
+<h2 class="font-headline-lg text-headline-lg mb-md">Diseñado para Profesionales Mac</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-md">Sin internet. Sin límites de API. 4x productividad.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
-<!-- App Link 1 -->
-<a href="https://ivoz.vercel.app/" target="_blank" class="glass-card p-lg rounded-xl hover:translate-y-[-4px] transition-transform group">
-<img src="assets/ivoz-icon.png" alt="iVoz" class="w-20 h-20 rounded-lg mx-auto mb-md group-hover:scale-110 transition-transform"/>
-<h3 class="font-title-lg text-title-lg mb-sm text-center">iVoz Visit</h3>
-<p class="font-body-md text-body-md text-on-surface-variant text-center">Descubre todas las características de transcripción inteligente y cómo iVoz transforma tu forma de capturar ideas.</p>
-<div class="flex items-center justify-center gap-sm mt-lg text-primary font-title-lg group-hover:gap-md transition-all">Ver Más <span class="material-symbols-outlined">arrow_outward</span></div>
-</a>
-<!-- App Link 2 -->
-<a href="https://iorganize.vercel.app/" target="_blank" class="glass-card p-lg rounded-xl hover:translate-y-[-4px] transition-transform group">
-<img src="assets/iorganize-icon.png" alt="iOrganize" class="w-20 h-20 rounded-lg mx-auto mb-md group-hover:scale-110 transition-transform"/>
-<h3 class="font-title-lg text-title-lg mb-sm text-center">iOrganize Visit</h3>
-<p class="font-body-md text-body-md text-on-surface-variant text-center">Aprende cómo iOrganize automatiza la limpieza de tu sistema y mantiene tu espacio de trabajo impecable.</p>
-<div class="flex items-center justify-center gap-sm mt-lg text-primary font-title-lg group-hover:gap-md transition-all">Ver Más <span class="material-symbols-outlined">arrow_outward</span></div>
-</a>
-<!-- App Link 3 -->
-<a href="https://imonitor-xi.vercel.app/" target="_blank" class="glass-card p-lg rounded-xl hover:translate-y-[-4px] transition-transform group">
-<img src="assets/imonitor-icon.png" alt="iMonitor" class="w-20 h-20 rounded-lg mx-auto mb-md group-hover:scale-110 transition-transform"/>
-<h3 class="font-title-lg text-title-lg mb-sm text-center">iMonitor Visit</h3>
-<p class="font-body-md text-body-md text-on-surface-variant text-center">Explora cómo iMonitor convierte cualquier dispositivo en un segundo monitor de baja latencia.</p>
-<div class="flex items-center justify-center gap-sm mt-lg text-primary font-title-lg group-hover:gap-md transition-all">Ver Más <span class="material-symbols-outlined">arrow_outward</span></div>
-</a>
+<!-- iVoz Card -->
+<div class="glass-card p-lg rounded-xl flex flex-col">
+<div class="flex items-center gap-md mb-md">
+<img src="assets/ivoz-icon.png" alt="iVoz icon" class="w-16 h-16 rounded-lg" loading="lazy"/>
+<h3 class="font-title-lg text-title-lg">iVoz</h3>
+</div>
+<p class="font-body-md text-on-surface-variant mb-lg">Descubre todas las características de transcripción inteligente y cómo iVoz transforma tu forma de capturar ideas.</p>
+<div class="flex items-center justify-between mb-lg mt-auto">
+<a href="https://ivoz.vercel.app/" target="_blank" class="flex items-center gap-sm text-primary font-title-lg hover:gap-md transition-all">Descubre Más <span class="material-symbols-outlined">arrow_outward</span></a>
+<div class="flex items-baseline gap-xs">
+<span class="text-headline-md font-bold text-primary">$</span>
+<span class="text-2xl font-display text-primary">24.99</span>
+</div>
+</div>
+<button onclick="startCheckout('ivoz')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all">Obtener iVoz</button>
+</div>
+
+<!-- iOrganize Card -->
+<div class="glass-card p-lg rounded-xl flex flex-col">
+<div class="flex items-center gap-md mb-md">
+<img src="assets/iorganize-icon.png" alt="iOrganize icon" class="w-16 h-16 rounded-lg" loading="lazy"/>
+<h3 class="font-title-lg text-title-lg">iOrganize</h3>
+</div>
+<p class="font-body-md text-on-surface-variant mb-lg">Aprende cómo iOrganize automatiza la limpieza de tu sistema y mantiene tu espacio de trabajo impecable.</p>
+<div class="flex items-center justify-between mb-lg mt-auto">
+<a href="https://iorganize.vercel.app/" target="_blank" class="flex items-center gap-sm text-primary font-title-lg hover:gap-md transition-all">Descubre Más <span class="material-symbols-outlined">arrow_outward</span></a>
+<div class="flex items-baseline gap-xs">
+<span class="text-headline-md font-bold text-primary">$</span>
+<span class="text-2xl font-display text-primary">12.99</span>
+</div>
+</div>
+<button onclick="startCheckout('iorganize')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all">Obtener iOrganize</button>
+</div>
+
+<!-- Screen Bridge Card -->
+<div class="glass-card p-lg rounded-xl flex flex-col">
+<div class="flex items-center gap-md mb-md">
+<img src="assets/imonitor-icon.png" alt="Screen Bridge icon" class="w-16 h-16 rounded-lg" loading="lazy"/>
+<h3 class="font-title-lg text-title-lg">Screen Bridge</h3>
+</div>
+<p class="font-body-md text-on-surface-variant mb-lg">Explora cómo Screen Bridge convierte cualquier dispositivo en un segundo monitor de baja latencia.</p>
+<div class="flex items-center justify-between mb-lg mt-auto">
+<a href="https://imonitor-xi.vercel.app/" target="_blank" class="flex items-center gap-sm text-primary font-title-lg hover:gap-md transition-all">Descubre Más <span class="material-symbols-outlined">arrow_outward</span></a>
+<div class="flex items-baseline gap-xs">
+<span class="text-headline-md font-bold text-primary">$</span>
+<span class="text-2xl font-display text-primary">9.99</span>
+</div>
+</div>
+<button onclick="startCheckout('imonitor')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all">Obtener Screen Bridge</button>
+</div>
 </div>
 </div>
 </section>
