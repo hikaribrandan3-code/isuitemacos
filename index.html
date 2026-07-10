@@ -126,7 +126,8 @@
 <body class="bg-background text-on-surface font-body-md">
 <!-- Top Navigation Bar -->
 <nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-surface-container-lowest/70 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm h-16">
-<div class="flex justify-between items-center h-16 px-margin-desktop max-w-[1440px] mx-auto">
+<div class="flex justify-center items-center h-16 px-margin-desktop">
+<div class="flex justify-between items-center w-full max-w-[1440px]">
 <div class="text-title-lg font-title-lg font-bold text-on-surface dark:text-surface-bright flex items-center gap-xs">
 <img src="assets/logo.svg" alt="iSuite" class="w-6 h-6 filter brightness-0"/>
                 iSuite Office
@@ -139,6 +140,7 @@
 <button onclick="startCheckout('bundle')" class="bg-primary text-on-primary px-lg py-sm rounded-full font-label-md text-label-md hover:opacity-90 active:scale-95 transition-all">Get the Suite</button>
 </div>
 <button class="md:hidden material-symbols-outlined text-on-surface">menu</button>
+</div>
 </div>
 </nav>
 <main class="pt-16">
@@ -456,17 +458,46 @@
 </main>
 <!-- Footer -->
 <footer class="w-full py-xl bg-surface-container-low dark:bg-surface-dim border-t border-outline-variant">
-<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop max-w-[1440px] mx-auto gap-md">
+<div class="max-w-[1440px] mx-auto px-margin-desktop">
+<!-- Footer Content -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-xl mb-xl">
+<!-- Left: Company Info -->
 <div class="flex flex-col gap-xs">
 <span class="font-headline-md text-headline-md text-on-surface">iSuite Office</span>
-<p class="font-label-md text-label-md text-secondary">© 2024 iSuite Office. All rights reserved.</p>
-<p class="font-label-md text-label-md text-on-surface-variant mt-sm">🔒 Secured • 📱 100% Local • 💰 One-Time Purchase</p>
+<p class="font-label-md text-label-md text-on-surface-variant">Productive Office Tools for macOS</p>
+<p class="font-label-md text-label-md text-secondary mt-md">📍 Córdoba, Argentina</p>
+<p class="font-label-md text-label-md text-secondary">📞 (351) 212-2600</p>
 </div>
+<!-- Center: Payment Methods -->
+<div class="flex flex-col gap-xs">
+<span class="font-label-md text-label-md font-bold text-on-surface mb-sm">We Accept</span>
+<div class="flex gap-md">
+<div class="flex items-center gap-xs p-sm bg-white/10 rounded-lg">
+<span class="material-symbols-outlined text-primary text-lg">payment</span>
+<span class="font-label-md text-label-md text-on-surface">PayPal</span>
+</div>
+<div class="flex items-center gap-xs p-sm bg-white/10 rounded-lg">
+<span class="material-symbols-outlined text-primary text-lg">payments</span>
+<span class="font-label-md text-label-md text-on-surface">Mercado Pago</span>
+</div>
+</div>
+</div>
+<!-- Right: Links -->
+<div class="flex flex-col gap-xs">
 <div class="flex gap-lg">
 <a class="font-label-md text-label-md text-on-secondary-fixed-variant hover:text-primary hover:underline transition-all" href="#">Privacy Policy</a>
-<a class="font-label-md text-label-md text-on-secondary-fixed-variant hover:text-primary hover:underline transition-all" href="#">Terms of Service</a>
+<a class="font-label-md text-label-md text-on-secondary-fixed-variant hover:text-primary hover:underline transition-all" href="#">Terms</a>
+</div>
+<div class="flex gap-lg">
 <a class="font-label-md text-label-md text-on-secondary-fixed-variant hover:text-primary hover:underline transition-all" href="#">Support</a>
 <a class="font-label-md text-label-md text-on-secondary-fixed-variant hover:text-primary hover:underline transition-all" href="#">Status</a>
+</div>
+</div>
+</div>
+<!-- Bottom: Security & Copyright -->
+<div class="border-t border-outline-variant pt-lg text-center">
+<p class="font-label-md text-label-md text-on-surface-variant mb-md">Secured • 100% Local • One-Time Purchase</p>
+<p class="font-label-md text-label-md text-secondary">© 2026 iSuite Office. All rights reserved.</p>
 </div>
 </div>
 </footer>
