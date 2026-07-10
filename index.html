@@ -121,18 +121,34 @@
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+            25% { transform: translateY(-20px) rotateX(10deg) rotateY(10deg) rotateZ(5deg); }
+            50% { transform: translateY(-40px) rotateX(-10deg) rotateY(-10deg) rotateZ(-5deg); }
+            75% { transform: translateY(-20px) rotateX(10deg) rotateY(-10deg) rotateZ(5deg); }
+        }
+        .floating-icon {
+            animation: float 6s ease-in-out infinite;
+            perspective: 1000px;
+        }
+        .floating-icon:nth-child(2) {
+            animation-delay: -2s;
+        }
+        .floating-icon:nth-child(3) {
+            animation-delay: -4s;
+        }
     </style>
 </head>
 <body class="bg-background text-on-surface font-body-md">
 <!-- Top Navigation Bar -->
 <nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-surface-container-lowest/70 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm h-16">
-<div class="flex justify-center items-center h-16 px-margin-desktop">
-<div class="flex justify-between items-center w-full max-w-[1440px]">
+<div class="flex justify-center items-center h-16 px-margin-desktop w-full">
+<div class="flex items-center w-full max-w-[1440px]">
 <div class="text-title-lg font-title-lg font-bold text-on-surface dark:text-surface-bright flex items-center gap-xs">
 <img src="assets/logo.svg" alt="iSuite" class="w-6 h-6 filter brightness-0"/>
                 iSuite Office
             </div>
-<div class="hidden md:flex gap-lg items-center">
+<div class="hidden md:flex gap-lg items-center justify-center flex-1">
 <a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#features">Features</a>
 <a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#apps">The Apps</a>
 <a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#pricing">Pricing</a>
@@ -161,9 +177,22 @@
 <button onclick="startCheckout('bundle')" class="bg-primary text-on-primary px-lg py-sm rounded-full font-label-md text-label-md hover:shadow-lg active:scale-95 transition-all">Try iSuite Free</button>
 <button class="bg-secondary-fixed text-on-secondary-fixed px-lg py-sm rounded-full font-label-md text-label-md hover:bg-secondary-container transition-all">Watch Preview</button>
 </div>
-<!-- iVoz App UI Preview -->
-<div class="max-w-2xl mx-auto mt-lg">
-<img class="rounded-xl app-preview-shadow border border-outline-variant/30 w-full" src="assets/ivoz-ui.png" alt="iVoz App Interface"/>
+<!-- iVoz App UI Preview with Floating Icons -->
+<div class="relative max-w-2xl mx-auto mt-lg h-96">
+<!-- Floating App Icons (3D) -->
+<div class="absolute -left-32 top-8 floating-icon">
+<img src="assets/ivoz-icon.png" alt="iVoz" class="w-20 h-20 rounded-3xl shadow-xl"/>
+</div>
+<div class="absolute top-0 left-1/2 transform -translate-x-1/2 floating-icon">
+<img src="assets/iorganize-icon.png" alt="iOrganize" class="w-24 h-24 rounded-3xl shadow-xl"/>
+</div>
+<div class="absolute -right-32 top-8 floating-icon">
+<img src="assets/imonitor-icon.png" alt="iMonitor" class="w-20 h-20 rounded-3xl shadow-xl"/>
+</div>
+<!-- Center UI Screenshot -->
+<div class="absolute inset-0 flex items-center justify-center">
+<img class="rounded-xl app-preview-shadow border border-outline-variant/30 w-full h-full object-cover" src="assets/ivoz-ui.png" alt="iVoz App Interface"/>
+</div>
 </div>
 </div>
 </section>
@@ -457,47 +486,59 @@
 </section>
 </main>
 <!-- Footer -->
-<footer class="w-full py-xl bg-surface-container-low dark:bg-surface-dim border-t border-outline-variant">
-<div class="max-w-[1440px] mx-auto px-margin-desktop">
-<!-- Footer Content -->
-<div class="grid grid-cols-1 md:grid-cols-3 gap-xl mb-xl">
-<!-- Left: Company Info -->
-<div class="flex flex-col gap-xs">
-<span class="font-headline-md text-headline-md text-on-surface">iSuite Office</span>
-<p class="font-label-md text-label-md text-on-surface-variant">Productive Office Tools for macOS</p>
-<p class="font-label-md text-label-md text-secondary mt-md">📍 Córdoba, Argentina</p>
-<p class="font-label-md text-label-md text-secondary">📞 (351) 212-2600</p>
+<footer class="w-full bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-[1440px] mx-auto px-margin-desktop py-xl">
+<!-- Footer Grid - 4 Columns -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg mb-xl">
+<!-- Column 1: Product -->
+<div>
+<h4 class="font-label-md text-label-md font-bold text-on-surface mb-md uppercase tracking-wider opacity-70">Product</h4>
+<ul class="space-y-sm">
+<li><a href="#features" class="font-body-md text-on-surface-variant hover:text-primary transition-colors">Features</a></li>
+<li><a href="#apps" class="font-body-md text-on-surface-variant hover:text-primary transition-colors">The Apps</a></li>
+<li><a href="#pricing" class="font-body-md text-on-surface-variant hover:text-primary transition-colors">Pricing</a></li>
+</ul>
 </div>
-<!-- Center: Payment Methods -->
-<div class="flex flex-col gap-xs">
-<span class="font-label-md text-label-md font-bold text-on-surface mb-sm">We Accept</span>
-<div class="flex gap-md">
-<div class="flex items-center gap-xs p-sm bg-white/10 rounded-lg">
+<!-- Column 2: Support -->
+<div>
+<h4 class="font-label-md text-label-md font-bold text-on-surface mb-md uppercase tracking-wider opacity-70">Support</h4>
+<ul class="space-y-sm">
+<li><a href="#" class="font-body-md text-on-surface-variant hover:text-primary transition-colors">Help</a></li>
+<li><a href="#" class="font-body-md text-on-surface-variant hover:text-primary transition-colors">Privacy</a></li>
+<li><a href="#" class="font-body-md text-on-surface-variant hover:text-primary transition-colors">Terms</a></li>
+</ul>
+</div>
+<!-- Column 3: Company -->
+<div>
+<h4 class="font-label-md text-label-md font-bold text-on-surface mb-md uppercase tracking-wider opacity-70">Company</h4>
+<ul class="space-y-sm">
+<li><p class="font-body-md text-on-surface-variant">Córdoba, Argentina</p></li>
+<li><a href="tel:+351212260" class="font-body-md text-primary hover:text-primary/80 transition-colors font-semibold">(351) 212-2600</a></li>
+</ul>
+</div>
+<!-- Column 4: Payments -->
+<div>
+<h4 class="font-label-md text-label-md font-bold text-on-surface mb-md uppercase tracking-wider opacity-70">Payment</h4>
+<div class="space-y-xs">
+<div class="flex items-center gap-sm p-sm rounded-lg hover:bg-white/5 transition-colors">
 <span class="material-symbols-outlined text-primary text-lg">payment</span>
-<span class="font-label-md text-label-md text-on-surface">PayPal</span>
+<span class="font-body-md text-on-surface">PayPal</span>
 </div>
-<div class="flex items-center gap-xs p-sm bg-white/10 rounded-lg">
+<div class="flex items-center gap-sm p-sm rounded-lg hover:bg-white/5 transition-colors">
 <span class="material-symbols-outlined text-primary text-lg">payments</span>
-<span class="font-label-md text-label-md text-on-surface">Mercado Pago</span>
+<span class="font-body-md text-on-surface">Mercado Pago</span>
 </div>
 </div>
 </div>
-<!-- Right: Links -->
-<div class="flex flex-col gap-xs">
-<div class="flex gap-lg">
-<a class="font-label-md text-label-md text-on-secondary-fixed-variant hover:text-primary hover:underline transition-all" href="#">Privacy Policy</a>
-<a class="font-label-md text-label-md text-on-secondary-fixed-variant hover:text-primary hover:underline transition-all" href="#">Terms</a>
 </div>
-<div class="flex gap-lg">
-<a class="font-label-md text-label-md text-on-secondary-fixed-variant hover:text-primary hover:underline transition-all" href="#">Support</a>
-<a class="font-label-md text-label-md text-on-secondary-fixed-variant hover:text-primary hover:underline transition-all" href="#">Status</a>
+
+<!-- Divider -->
+<div class="border-t border-outline-variant/10 py-lg">
+<!-- Bottom Bar -->
+<div class="flex flex-col md:flex-row items-center justify-between gap-md text-center md:text-left">
+<p class="font-label-sm text-label-sm text-on-surface-variant opacity-60">Secured • 100% Local • One-Time Purchase</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant opacity-60">© 2026 iSuite Office. All rights reserved.</p>
 </div>
-</div>
-</div>
-<!-- Bottom: Security & Copyright -->
-<div class="border-t border-outline-variant pt-lg text-center">
-<p class="font-label-md text-label-md text-on-surface-variant mb-md">Secured • 100% Local • One-Time Purchase</p>
-<p class="font-label-md text-label-md text-secondary">© 2026 iSuite Office. All rights reserved.</p>
 </div>
 </div>
 </footer>
