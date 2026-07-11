@@ -32,7 +32,7 @@ const PRODUCTS = {
   },
   ibrain: {
     name: 'iBrain Pro - Lifetime License',
-    price: 29.99,
+    price: 14.99,
     currency: 'USD',
     downloads: [
       { name: 'iBrain', url: 'https://github.com/hikaribrandan3-code/ibrian/releases/download/v1.0/iBrain.app.zip', desc: 'Private, offline AI chat' }
@@ -48,7 +48,7 @@ const PRODUCTS = {
   },
   bundle: {
     name: 'iSuite Bundle (iVoz + iOrganize + Screen Bridge + iBrain + iStats free)',
-    price: 69.99,
+    price: 49.99,
     currency: 'USD',
     downloads: [
       { name: 'iVoz', url: 'https://github.com/hikaribrandan3-code/hikari-yaps-website/releases/download/v1.0/iVoz.app.zip', desc: 'Talk to your Mac' },
