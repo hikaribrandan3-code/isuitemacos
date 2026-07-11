@@ -267,8 +267,6 @@ html, body { font-family: 'Inter', -apple-system, sans-serif; background: var(--
 
 <!-- HERO -->
 <section class="hero" id="hero">
-  <div class="blob blob-1"></div>
-  <div class="blob blob-2"></div>
   <div style="position:relative;z-index:1;">
     <div class="hero-badge">Ahora Disponible para macOS</div>
     <h1 class="hero-title">La <span class="gradient-text">Suite de Oficina</span> Que Faltaba en Tu Mac.</h1>
@@ -284,9 +282,6 @@ html, body { font-family: 'Inter', -apple-system, sans-serif; background: var(--
   </div>
 
 
-  <div class="scroll-indicator">
-    <div class="mouse"></div>
-  </div>
 </section>
 
 <!-- MARQUEE -->
@@ -363,70 +358,96 @@ html, body { font-family: 'Inter', -apple-system, sans-serif; background: var(--
 </section>
 
 <!-- FEATURES -->
-<section class="section" id="features" style="background:linear-gradient(180deg, transparent, rgba(0,88,188,0.02), transparent);">
+<section class="section" id="features">
   <div class="reveal">
     <p class="section-label">Características</p>
     <h2 class="section-title">Hecho para pros. Diseñado para ti.</h2>
   </div>
 
+  <!-- iVoz -->
   <div class="reveal reveal-delay-1">
-    <div class="feature-card ivoz">
-      <div class="feature-icon"></div>
-      <h4>Inteligencia en el Dispositivo</h4>
-      <p>Tu voz nunca abandona tu Mac. Todo el procesamiento de IA es local, sin dependencia de la nube. Rápido, privado y seguro.</p>
+    <div class="feature-card ivoz" style="border-left:4px solid #3b82f6;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+        <img src="assets/ivoz-icon.png" alt="iVoz" style="width:48px;height:48px;border-radius:12px;">
+        <div>
+          <span style="font-size:11px;font-weight:700;color:#3b82f6;text-transform:uppercase;letter-spacing:0.1em;">Audio Impulsado por IA</span>
+          <h4 style="font-size:18px;font-weight:700;margin-top:2px;">iVoz: Habla con tu Mac como nunca.</h4>
+        </div>
+      </div>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px;">
+        <li style="display:flex;align-items:flex-start;gap:12px;">
+          <span style="color:#3b82f6;font-size:20px;line-height:1;">&#10003;</span>
+          <div>
+            <strong style="font-size:15px;">Inteligencia en el Dispositivo</strong>
+            <p style="font-size:13px;color:#6b7280;margin:2px 0 0;line-height:1.5;">Tu voz permanece en tu máquina. Transcripción rápida, privada y segura.</p>
+          </div>
+        </li>
+        <li style="display:flex;align-items:flex-start;gap:12px;">
+          <span style="color:#3b82f6;font-size:20px;line-height:1;">&#10003;</span>
+          <div>
+            <strong style="font-size:15px;">Escribe Más Rápido Sin Tipear</strong>
+            <p style="font-size:13px;color:#6b7280;margin:2px 0 0;line-height:1.5;">Dicta directamente en cualquier app. Funciona sin conexión con 10+ idiomas.</p>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
-  <div class="reveal reveal-delay-2">
-    <div class="feature-card iorg">
-      <div class="feature-icon"></div>
-      <h4>Reglas Automáticas Smart Flow</h4>
-      <p>Crea potentes reglas de organización que se ejecutan automáticamente. Cada hora, cada día o al instante — tu Mac siempre impecable.</p>
-    </div>
-  </div>
-  <div class="reveal reveal-delay-3">
-    <div class="feature-card imon">
-      <div class="feature-icon"></div>
-      <h4>Puente Universal de Pantalla</h4>
-      <p>Conéctate a cualquier dispositivo con navegador. iPad, Android, Smart TV — todos se convierten en monitores extendidos con latencia casi nula.</p>
-    </div>
-  </div>
-</section>
 
-<!-- DEMO -->
-<section class="section">
-  <div class="reveal">
-    <p class="section-label">Demo en Vivo</p>
-    <h2 class="section-title">Véalo en acción.</h2>
-    <p class="section-desc" style="margin-bottom:24px;">Mira cómo iOrganize limpia automáticamente tu carpeta de Descargas.</p>
+  <!-- iOrganize -->
+  <div class="reveal reveal-delay-2">
+    <div class="feature-card iorg" style="border-left:4px solid #8b5cf6;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+        <img src="assets/iorganize-icon.png" alt="iOrganize" style="width:48px;height:48px;border-radius:12px;">
+        <div>
+          <span style="font-size:11px;font-weight:700;color:#8b5cf6;text-transform:uppercase;letter-spacing:0.1em;">Gestión de Archivos</span>
+          <h4 style="font-size:18px;font-weight:700;margin-top:2px;">iOrganize: El espacio de trabajo sin desorden.</h4>
+        </div>
+      </div>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px;">
+        <li style="display:flex;align-items:flex-start;gap:12px;">
+          <span style="color:#8b5cf6;font-size:20px;line-height:1;">&#10003;</span>
+          <div>
+            <strong style="font-size:15px;">Sanitización Inteligente</strong>
+            <p style="font-size:13px;color:#6b7280;margin:2px 0 0;line-height:1.5;">Escaneo con un clic elimina archivos basura, duplicados e instaladores olvidados.</p>
+          </div>
+        </li>
+        <li style="display:flex;align-items:flex-start;gap:12px;">
+          <span style="color:#8b5cf6;font-size:20px;line-height:1;">&#10003;</span>
+          <div>
+            <strong style="font-size:15px;">Reglas Automáticas</strong>
+            <p style="font-size:13px;color:#6b7280;margin:2px 0 0;line-height:1.5;">Crea reglas que se ejecutan cada hora, diariamente o al instante. Todo local.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
-  <div class="reveal reveal-delay-1">
-    <div class="demo-mockup">
-      <div class="mockup-header">
-        <div class="dot"></div><div class="dot"></div><div class="dot"></div>
-        <span class="mockup-title">iOrganize — Demo Auto-Flow</span>
-      </div>
-      <div class="demo-animation" style="min-height:140px;position:relative;">
-        <div class="demo-state active" id="demo1">
-          <div class="demo-pulse"></div>
-          <span style="font-size:13px;color:#6b7280;font-weight:500;">Escaneando Descargas...</span>
-        </div>
-        <div class="demo-state" id="demo2">
-          <div class="demo-file">
-            <span style="font-size:20px;"></span>
-            <div class="demo-file-info">
-              <span class="demo-file-name">instalador_2024.dmg</span>
-              <span class="demo-file-tag">.dmg · 14 días</span>
-            </div>
-          </div>
-          <span style="font-size:13px;color:#6b7280;font-weight:500;">Regla activada</span>
-        </div>
-        <div class="demo-state" id="demo3">
-          <div class="demo-done">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Liberados 138.5 MB</span>
-          </div>
+
+  <!-- Screen Bridge -->
+  <div class="reveal reveal-delay-3">
+    <div class="feature-card imon" style="border-left:4px solid #10b981;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+        <img src="assets/imonitor-icon.png" alt="Screen Bridge" style="width:48px;height:48px;border-radius:12px;">
+        <div>
+          <span style="font-size:11px;font-weight:700;color:#10b981;text-transform:uppercase;letter-spacing:0.1em;">Conectividad Universal</span>
+          <h4 style="font-size:18px;font-weight:700;margin-top:2px;">Screen Bridge: Cerrando la brecha.</h4>
         </div>
       </div>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px;">
+        <li style="display:flex;align-items:flex-start;gap:12px;">
+          <span style="color:#10b981;font-size:20px;line-height:1;">&#10003;</span>
+          <div>
+            <strong style="font-size:15px;">Funciona en Todas Partes</strong>
+            <p style="font-size:13px;color:#6b7280;margin:2px 0 0;line-height:1.5;">Conéctate a iPads, tablets Android, Smart TVs y cualquier navegador.</p>
+          </div>
+        </li>
+        <li style="display:flex;align-items:flex-start;gap:12px;">
+          <span style="color:#10b981;font-size:20px;line-height:1;">&#10003;</span>
+          <div>
+            <strong style="font-size:15px;">Configuración de Un Clic</strong>
+            <p style="font-size:13px;color:#6b7280;margin:2px 0 0;line-height:1.5;">Sin necesidad de instalar aplicaciones. Conecta, comparte, listo. Latencia casi nula.</p>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </section>
