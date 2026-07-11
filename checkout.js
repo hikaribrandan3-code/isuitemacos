@@ -30,14 +30,32 @@ const PRODUCTS = {
       { name: 'Screen Bridge', url: 'https://github.com/hikaribrandan3-code/imonitor/releases/download/v1.0/Screen%20Bridge.app.zip', desc: 'Display streaming' }
     ]
   },
+  ibrain: {
+    name: 'iBrain Pro - Lifetime License',
+    price: 29.99,
+    currency: 'USD',
+    downloads: [
+      { name: 'iBrain', url: 'https://github.com/hikaribrandan3-code/ibrian/releases/download/v1.0/iBrain.app.zip', desc: 'Private, offline AI chat' }
+    ]
+  },
+  istats: {
+    name: 'iStats Pro - Lifetime License',
+    price: 4.99,
+    currency: 'USD',
+    downloads: [
+      { name: 'iStats', url: 'https://github.com/hikaribrandan3-code/istats/releases/download/v1.0/iStats.app.zip', desc: 'Real-time system monitor' }
+    ]
+  },
   bundle: {
-    name: 'iSuite Bundle (iVoz + iOrganize + Screen Bridge)',
-    price: 44.99,
+    name: 'iSuite Bundle (iVoz + iOrganize + Screen Bridge + iBrain + iStats free)',
+    price: 69.99,
     currency: 'USD',
     downloads: [
       { name: 'iVoz', url: 'https://github.com/hikaribrandan3-code/hikari-yaps-website/releases/download/v1.0/iVoz.app.zip', desc: 'Talk to your Mac' },
       { name: 'iOrganize', url: 'https://github.com/hikaribrandan3-code/iorganize/releases/download/v1.0/iOrganize.app.zip', desc: 'Smart file cleanup' },
-      { name: 'Screen Bridge', url: 'https://github.com/hikaribrandan3-code/imonitor/releases/download/v1.0/Screen%20Bridge.app.zip', desc: 'Display streaming' }
+      { name: 'Screen Bridge', url: 'https://github.com/hikaribrandan3-code/imonitor/releases/download/v1.0/Screen%20Bridge.app.zip', desc: 'Display streaming' },
+      { name: 'iBrain', url: 'https://github.com/hikaribrandan3-code/ibrian/releases/download/v1.0/iBrain.app.zip', desc: 'Private, offline AI chat' },
+      { name: 'iStats', url: 'https://github.com/hikaribrandan3-code/istats/releases/download/v1.0/iStats.app.zip', desc: 'Real-time system monitor (free bonus)' }
     ]
   }
 };
