@@ -6,28 +6,12 @@ const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 
 // Products
 const PRODUCTS = {
-  ivoz: {
-    name: 'iVoz Pro - Lifetime License',
-    price: 24.99,
-    currency: 'USD',
-    downloads: [
-      { name: 'iVoz', url: 'https://github.com/hikaribrandan3-code/hikari-yaps-website/releases/download/v1.0/iVoz.app.zip', desc: 'Talk to your Mac' }
-    ]
-  },
   iorganize: {
     name: 'iOrganize Pro - Lifetime License',
     price: 12.99,
     currency: 'USD',
     downloads: [
       { name: 'iOrganize', url: 'https://github.com/hikaribrandan3-code/iorganize/releases/download/v1.0/iOrganize.app.zip', desc: 'Smart file cleanup' }
-    ]
-  },
-  imonitor: {
-    name: 'Screen Bridge Pro - Lifetime License',
-    price: 9.99,
-    currency: 'USD',
-    downloads: [
-      { name: 'Screen Bridge', url: 'https://github.com/hikaribrandan3-code/imonitor/releases/download/v1.0/Screen%20Bridge.app.zip', desc: 'Display streaming' }
     ]
   },
   ibrain: {
@@ -46,37 +30,13 @@ const PRODUCTS = {
       { name: 'iStats', url: 'https://github.com/hikaribrandan3-code/istats/releases/download/v1.0/iStats.app.zip', desc: 'Real-time system monitor' }
     ]
   },
-  bundle: {
-    name: 'iSuite Bundle (iVoz + iOrganize + Screen Bridge + iBrain + iStats free)',
-    price: 49.99,
-    currency: 'USD',
-    downloads: [
-      { name: 'iVoz', url: 'https://github.com/hikaribrandan3-code/hikari-yaps-website/releases/download/v1.0/iVoz.app.zip', desc: 'Talk to your Mac' },
-      { name: 'iOrganize', url: 'https://github.com/hikaribrandan3-code/iorganize/releases/download/v1.0/iOrganize.app.zip', desc: 'Smart file cleanup' },
-      { name: 'Screen Bridge', url: 'https://github.com/hikaribrandan3-code/imonitor/releases/download/v1.0/Screen%20Bridge.app.zip', desc: 'Display streaming' },
-      { name: 'iBrain', url: 'https://github.com/hikaribrandan3-code/ibrian/releases/download/v1.0/iBrain.app.zip', desc: 'Private, offline AI chat' },
-      { name: 'iStats', url: 'https://github.com/hikaribrandan3-code/istats/releases/download/v1.0/iStats.app.zip', desc: 'Real-time system monitor (free bonus)' }
-    ]
-  }
 };
-
-/**
- * Generate demo license code
- */
-function generateLicenseCode() {
-  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-  let code = '';
-  for (let i = 0; i < 7; i++) {
-    code += chars.charAt(Math.floor(Math.random() * chars.length));
-  }
-  return code;
-}
 
 /**
  * Initiate PayPal checkout
  * Calls Supabase edge function: create-preference (PayPal)
  */
-async function payWithPayPal(productKey = 'bundle') {
+async function payWithPayPal(productKey = 'iorganize') {
   const product = PRODUCTS[productKey];
 
   try {
@@ -103,8 +63,7 @@ async function payWithPayPal(productKey = 'bundle') {
     }
   } catch (error) {
     console.error('PayPal error:', error);
-    // Demo: show success screen for testing
-    showPaymentSuccess(generateLicenseCode(), productKey);
+    alert('Could not start PayPal checkout. Please try again or choose another payment method.');
   }
 }
 
@@ -112,7 +71,7 @@ async function payWithPayPal(productKey = 'bundle') {
  * Initiate Mercado Pago checkout
  * Calls Supabase edge function: create-preference-mercado (Mercado Pago)
  */
-async function payWithMercadoPago(productKey = 'bundle') {
+async function payWithMercadoPago(productKey = 'iorganize') {
   const product = PRODUCTS[productKey];
 
   try {
@@ -142,18 +101,17 @@ async function payWithMercadoPago(productKey = 'bundle') {
     }
   } catch (error) {
     console.error('Mercado Pago error:', error);
-    // Demo: show success screen for testing
-    showPaymentSuccess(generateLicenseCode(), productKey);
+    alert('Could not start Mercado Pago checkout. Please try again or choose another payment method.');
   }
 }
 
 /**
  * Show success screen after payment
  */
-function showPaymentSuccess(code, productKey = 'bundle') {
+function showPaymentSuccess(code, productKey = 'iorganize') {
   const modal = document.getElementById('checkoutModal');
   const content = document.getElementById('checkoutContent');
-  const product = PRODUCTS[productKey] || PRODUCTS.bundle;
+  const product = PRODUCTS[productKey] || PRODUCTS.iorganize;
   const downloads = product.downloads || [];
 
   let downloadsHtml = downloads.map(app => `

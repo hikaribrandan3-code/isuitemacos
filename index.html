@@ -307,12 +307,12 @@ if (window.innerWidth < 768) window.location.replace('mobile.html');
     <!-- Open Graph / Social Sharing -->
     <meta property="og:type" content="website"/>
     <meta property="og:title" content="iSuite Office - The Missing Suite for macOS"/>
-    <meta property="og:description" content="Get iVoz, iOrganize, Screen Bridge, and iBrain in one bundle — plus iStats free. $49.99 lifetime access. Productivity and control, together."/>
+    <meta property="og:description" content="iVoz and Screen Bridge are free macOS apps. Explore the iSuite app collection and current availability."/>
     <meta property="og:image" content="https://isuitemacos.vercel.app/assets/linkimage.png"/>
     <meta property="og:url" content="https://isuitemacos.vercel.app"/>
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:title" content="iSuite Office - The Missing Suite for macOS"/>
-    <meta name="twitter:description" content="Get iVoz, iOrganize, Screen Bridge, and iBrain in one bundle — plus iStats free. $49.99 lifetime access."/>
+    <meta name="twitter:description" content="iVoz and Screen Bridge are free macOS apps. Explore the iSuite app collection and current availability."/>
     <meta name="twitter:image" content="https://isuitemacos.vercel.app/assets/linkimage.png"/>
 </head>
 <body class="bg-background text-on-surface font-body-md">
@@ -327,9 +327,9 @@ if (window.innerWidth < 768) window.location.replace('mobile.html');
 <div class="hidden md:flex gap-lg items-center justify-center flex-1">
 <a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#features">Features</a>
 <a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#apps">The Apps</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#pricing">Pricing</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#apps">Apps</a>
 <a href="index-es.html" class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md">ES</a>
-<button onclick="startCheckout('bundle')" class="bg-primary text-on-primary px-lg py-sm rounded-full font-label-md text-label-md hover:opacity-90 active:scale-95 transition-all">Get the Suite</button>
+<button onclick="document.getElementById('apps').scrollIntoView({behavior:'smooth'})" class="bg-primary text-on-primary px-lg py-sm rounded-full font-label-md text-label-md hover:opacity-90 active:scale-95 transition-all">Explore Apps</button>
 </div>
 <button onclick="document.getElementById('mobileNav').classList.add('active')" class="md:hidden material-symbols-outlined text-on-surface ml-auto">menu</button>
 </div>
@@ -342,9 +342,9 @@ if (window.innerWidth < 768) window.location.replace('mobile.html');
 <div class="mobile-nav-links">
 <a href="#features" onclick="document.getElementById('mobileNav').classList.remove('active')">Features</a>
 <a href="#apps" onclick="document.getElementById('mobileNav').classList.remove('active')">The Apps</a>
-<a href="#pricing" onclick="document.getElementById('mobileNav').classList.remove('active')">Pricing</a>
+<a href="#apps" onclick="document.getElementById('mobileNav').classList.remove('active')">Apps</a>
 <a href="index-es.html">Español</a>
-<button onclick="startCheckout('bundle'); document.getElementById('mobileNav').classList.remove('active')">Get iSuite</button>
+<button onclick="document.getElementById('apps').scrollIntoView({behavior:'smooth'}); document.getElementById('mobileNav').classList.remove('active')">Explore Apps</button>
 </div>
 </div>
 </div>
@@ -353,7 +353,7 @@ if (window.innerWidth < 768) window.location.replace('mobile.html');
 <section class="bg-white pt-xl pb-md overflow-hidden relative">
 <div class="max-w-[1440px] mx-auto px-margin-desktop relative">
 <img src="assets/hero-5apps-desktop.png" alt="iSuite Office - 5 Apps Bundle: AI Voice Transcription, File Automation, System Connectivity, Private AI Chat, System Monitoring" class="hidden md:block w-full h-auto"/>
-<button onclick="startCheckout('bundle')" class="hidden md:block absolute top-[28%] left-1/2 -translate-x-1/2 w-32 h-12 bg-transparent cursor-pointer" title="Get iSuite Office"></button>
+<button onclick="document.getElementById('apps').scrollIntoView({behavior:'smooth'})" class="hidden md:block absolute top-[28%] left-1/2 -translate-x-1/2 w-32 h-12 bg-transparent cursor-pointer" title="Get iSuite Office"></button>
 </div>
 </section>
 
@@ -630,79 +630,20 @@ if (window.innerWidth < 768) window.location.replace('mobile.html');
 </div>
 </div>
 </section>
-<!-- Testimonials Section -->
-<section class="py-lg bg-white">
-<div class="max-w-[1440px] mx-auto px-margin-desktop">
-<div class="text-center mb-lg">
-<h2 class="font-headline-lg text-headline-lg mb-md">What Our Users Say.</h2>
-<p class="font-body-md text-body-md text-on-surface-variant">Professionals who trust iSuite to get work done.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
-<!-- Testimonial 1 -->
-<div class="glass-card p-lg rounded-xl">
-<div class="flex items-center gap-md mb-lg">
-<div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold text-2xl">SM</div>
-<div>
-<h4 class="font-title-lg text-title-lg">Sarah Martinez</h4>
-<p class="font-label-md text-label-md text-on-surface-variant">Content Producer</p>
-</div>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant italic">"iVoz transformed my workflow. I can capture ideas while driving without worrying who's listening. Everything stays on my Mac."</p>
-<div class="flex gap-xs mt-md">⭐⭐⭐⭐⭐</div>
-</div>
-<!-- Testimonial 2 -->
-<div class="glass-card p-lg rounded-xl">
-<div class="flex items-center gap-md mb-lg">
-<div class="w-16 h-16 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center text-white font-bold text-2xl">JW</div>
-<div>
-<h4 class="font-title-lg text-title-lg">James Wilson</h4>
-<p class="font-label-md text-label-md text-on-surface-variant">Data Engineer</p>
-</div>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant italic">"iOrganize recovered 287GB of my SSD. Now my Mac runs like new, without me doing anything manually. Impressive."</p>
-<div class="flex gap-xs mt-md">⭐⭐⭐⭐⭐</div>
-</div>
-<!-- Testimonial 3 -->
-<div class="glass-card p-lg rounded-xl">
-<div class="flex items-center gap-md mb-lg">
-<div class="w-16 h-16 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-white font-bold text-2xl">AK</div>
-<div>
-<h4 class="font-title-lg text-title-lg">Alexandra Kim</h4>
-<p class="font-label-md text-label-md text-on-surface-variant">Design Director</p>
-</div>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant italic">"The combo of apps let me optimize my setup across 3 Macs. No friction, always works. Money well spent."</p>
-<div class="flex gap-xs mt-md">⭐⭐⭐⭐⭐</div>
-</div>
-<!-- Testimonial 4 -->
-<div class="glass-card p-lg rounded-xl">
-<div class="flex items-center gap-md mb-lg">
-<div class="w-16 h-16 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center text-white font-bold text-2xl">DR</div>
-<div>
-<h4 class="font-title-lg text-title-lg">David Rodriguez</h4>
-<p class="font-label-md text-label-md text-on-surface-variant">Business Consultant</p>
-</div>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant italic">"iScreen Share turns my iPad into a real second monitor. Zero lag, zero setup complexity. Perfect for meetings."</p>
-<div class="flex gap-xs mt-md">⭐⭐⭐⭐⭐</div>
-</div>
-</div>
-</div>
-</section>
 <!-- Designed for Mac Professionals - Mobile Header -->
 <section class="py-lg bg-surface-container-low md:hidden">
 <div class="max-w-[1440px] mx-auto px-margin-desktop text-center">
 <h2 class="font-headline-lg text-headline-lg mb-md">Designed for Mac Professionals</h2>
-<p class="font-body-md text-body-md text-on-surface-variant">Zero internet. No API rate limits. 4x productivity.</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Zero internet. No API rate limits. Purpose-built Mac tools for voice, files, connectivity, and AI.</p>
 </div>
 </section>
 
 <!-- Designed for Mac Professionals - Unified Grid -->
-<section class="py-xl bg-surface-container-low">
+<section class="py-xl bg-surface-container-low" id="apps">
 <div class="max-w-[1440px] mx-auto px-margin-desktop">
 <div class="text-center mb-xl">
 <h2 class="text-display text-center mb-md font-headline-lg">Designed for Mac Professionals</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-md">Zero internet. No API rate limits. 4x productivity.</p>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-md">Zero internet. No API rate limits. Purpose-built Mac tools for voice, files, connectivity, and AI.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
 <!-- iVoz Card -->
@@ -713,13 +654,10 @@ if (window.innerWidth < 768) window.location.replace('mobile.html');
 </div>
 <p class="font-body-md text-on-surface-variant mb-lg">Discover all the smart transcription features and how iVoz transforms the way you capture ideas.</p>
 <div class="flex items-center justify-between mb-lg mt-auto">
-<a href="https://ivoz.vercel.app/" target="_blank" class="flex items-center gap-sm text-primary font-title-lg hover:gap-md transition-all">Learn More <span class="material-symbols-outlined">arrow_outward</span></a>
-<div class="flex items-baseline gap-xs">
-<span class="text-headline-md font-bold text-primary">$</span>
-<span class="text-2xl font-display text-primary">24.99</span>
+<a href="https://ivoz-macos-site.vercel.app/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-sm text-primary font-title-lg hover:gap-md transition-all">Learn More <span class="material-symbols-outlined">arrow_outward</span></a>
+<span class="font-title-lg text-primary">Free download</span>
 </div>
-</div>
-<button onclick="startCheckout('ivoz')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all">Get iVoz</button>
+<a href="https://ivoz-macos-site.vercel.app/" target="_blank" rel="noopener noreferrer" class="block text-center w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:shadow-xl transition-all">Get iVoz free</a>
 </div>
 
 <!-- iOrganize Card -->
@@ -730,7 +668,7 @@ if (window.innerWidth < 768) window.location.replace('mobile.html');
 </div>
 <p class="font-body-md text-on-surface-variant mb-lg">Learn how iOrganize automates system cleanup and keeps your workspace pristine.</p>
 <div class="flex items-center justify-between mb-lg mt-auto">
-<a href="https://iorganize.vercel.app/" target="_blank" class="flex items-center gap-sm text-primary font-title-lg hover:gap-md transition-all">Learn More <span class="material-symbols-outlined">arrow_outward</span></a>
+<a href="https://iorganize-eight.vercel.app/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-sm text-primary font-title-lg hover:gap-md transition-all">Learn More <span class="material-symbols-outlined">arrow_outward</span></a>
 <div class="flex items-baseline gap-xs">
 <span class="text-headline-md font-bold text-primary">$</span>
 <span class="text-2xl font-display text-primary">12.99</span>
@@ -747,13 +685,10 @@ if (window.innerWidth < 768) window.location.replace('mobile.html');
 </div>
 <p class="font-body-md text-on-surface-variant mb-lg">Explore how Screen Bridge turns any device into a low-latency second monitor.</p>
 <div class="flex items-center justify-between mb-lg mt-auto">
-<a href="https://imonitor-xi.vercel.app/" target="_blank" class="flex items-center gap-sm text-primary font-title-lg hover:gap-md transition-all">Learn More <span class="material-symbols-outlined">arrow_outward</span></a>
-<div class="flex items-baseline gap-xs">
-<span class="text-headline-md font-bold text-primary">$</span>
-<span class="text-2xl font-display text-primary">9.99</span>
+<a href="https://github.com/hikaribrandan3-code/screen-bridge-macos" target="_blank" rel="noopener noreferrer" class="flex items-center gap-sm text-primary font-title-lg hover:gap-md transition-all">Learn More <span class="material-symbols-outlined">arrow_outward</span></a>
+<span class="font-title-lg text-primary">Free download</span>
 </div>
-</div>
-<button onclick="startCheckout('imonitor')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all">Get Screen Bridge</button>
+<a href="https://screen-bridge-macos.vercel.app/" target="_blank" rel="noopener noreferrer" class="block text-center w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:shadow-xl transition-all">Get Screen Bridge free</a>
 </div>
 
 <!-- iBrain Card -->
@@ -764,7 +699,7 @@ if (window.innerWidth < 768) window.location.replace('mobile.html');
 </div>
 <p class="font-body-md text-on-surface-variant mb-lg">Run AI entirely on your Mac. Private, offline, no subscriptions. Download models and chat with custom AI instructions.</p>
 <div class="flex items-center justify-between mb-lg mt-auto">
-<a href="https://ibrian.vercel.app/" target="_blank" class="flex items-center gap-sm text-primary font-title-lg hover:gap-md transition-all">Learn More <span class="material-symbols-outlined">arrow_outward</span></a>
+<a href="https://ibrian-self.vercel.app/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-sm text-primary font-title-lg hover:gap-md transition-all">Learn More <span class="material-symbols-outlined">arrow_outward</span></a>
 <div class="flex items-baseline gap-xs">
 <span class="text-headline-md font-bold text-primary">$</span>
 <span class="text-2xl font-display text-primary">14.99</span>
@@ -781,7 +716,7 @@ if (window.innerWidth < 768) window.location.replace('mobile.html');
 </div>
 <p class="font-body-md text-on-surface-variant mb-lg">Live system stats in your menu bar. Catch runaway processes before they slow you down. Fully offline, zero telemetry.</p>
 <div class="flex items-center justify-between mb-lg mt-auto">
-<a href="https://istats.vercel.app/" target="_blank" class="flex items-center gap-sm text-primary font-title-lg hover:gap-md transition-all">Learn More <span class="material-symbols-outlined">arrow_outward</span></a>
+<a href="https://istats-flame.vercel.app/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-sm text-primary font-title-lg hover:gap-md transition-all">Learn More <span class="material-symbols-outlined">arrow_outward</span></a>
 <div class="flex items-baseline gap-xs">
 <span class="text-headline-md font-bold text-primary">$</span>
 <span class="text-2xl font-display text-primary">4.99</span>
@@ -810,35 +745,6 @@ if (window.innerWidth < 768) window.location.replace('mobile.html');
 </div>
 </section>
 
-<!-- Pricing Section -->
-<section class="py-lg bg-white relative overflow-hidden" id="pricing">
-<div class="max-w-[1440px] mx-auto px-margin-desktop text-center relative z-10">
-<h2 class="font-headline-lg text-headline-lg mb-lg">Simple, Transparent Pricing.</h2>
-<div class="max-w-md mx-auto">
-<div class="glass-card p-xl rounded-full border-2 border-primary relative">
-<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-on-primary px-md py-xs rounded-full font-label-md text-label-md shadow-lg">BEST VALUE</div>
-<h3 class="font-display text-headline-lg mb-xs">iSuite Bundle</h3>
-<p class="text-on-surface-variant mb-lg">Four professional apps for one price — plus a free bonus.</p>
-<div class="flex items-center justify-center gap-xs mb-xl">
-<span class="text-headline-md font-bold text-on-surface">$</span>
-<span class="text-display font-display text-primary leading-none">49.99</span>
-<span class="text-on-surface-variant font-label-md">· Save $13</span>
-</div>
-<ul class="text-left space-y-sm mb-xl">
-<li class="flex items-center gap-sm font-body-md"><span class="material-symbols-outlined text-primary">done</span> Lifetime Access to iVoz</li>
-<li class="flex items-center gap-sm font-body-md"><span class="material-symbols-outlined text-primary">done</span> Lifetime Access to iOrganize</li>
-<li class="flex items-center gap-sm font-body-md"><span class="material-symbols-outlined text-primary">done</span> Lifetime Access to iScreen Share</li>
-<li class="flex items-center gap-sm font-body-md"><span class="material-symbols-outlined text-primary">done</span> Lifetime Access to iBrain</li>
-<li class="flex items-center gap-sm font-body-md"><span class="material-symbols-outlined text-primary">done</span> iStats — Free Bonus Add-On</li>
-</ul>
-<button onclick="startCheckout('bundle')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg text-title-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all">Get Started Now</button>
-</div>
-</div>
-<p class="mt-lg text-on-surface-variant font-label-md">No subscriptions. No hidden fees. Just great software.</p>
-</div>
-<!-- Decorative Background Element -->
-<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[100px] -z-0"></div>
-</section>
 </main>
 <!-- Footer -->
 <footer class="w-full bg-surface-container-lowest border-t border-outline-variant/10">
@@ -856,7 +762,7 @@ if (window.innerWidth < 768) window.location.replace('mobile.html');
 <div>
 <h4 class="font-label-md text-label-md font-bold text-on-surface mb-md uppercase tracking-wider opacity-70">Pricing</h4>
 <ul class="space-y-sm">
-<li><a href="#pricing" class="font-body-md text-on-surface-variant hover:text-primary transition-colors">View Plans</a></li>
+<li><a href="#apps" class="font-body-md text-on-surface-variant hover:text-primary transition-colors">View Apps</a></li>
 </ul>
 </div>
 <!-- Column 3: Support -->
@@ -909,212 +815,35 @@ if (window.innerWidth < 768) window.location.replace('mobile.html');
 
         // Checkout flow
         function startCheckout(type) {
+            const freeDownloads = {
+                ivoz: 'https://ivoz-macos-site.vercel.app/',
+                imonitor: 'https://screen-bridge-macos.vercel.app/'
+            };
+            if (freeDownloads[type]) { window.location.href = freeDownloads[type]; return; }
+            if (type === 'bundle') { document.getElementById('apps').scrollIntoView({behavior: 'smooth'}); return; }
+            const product = typeof PRODUCTS !== 'undefined' ? PRODUCTS[type] : null;
+            if (!product) return;
             const modal = document.getElementById('checkoutModal');
             const content = document.getElementById('checkoutContent');
-
-            let html = '';
-
-            if (type === 'bundle') {
-                html = `
-                    <div class="space-y-lg">
-                        <div class="flex items-center gap-md pb-lg border-b border-outline-variant">
-                            <span class="material-symbols-outlined text-primary text-2xl">shopping_cart</span>
-                            <div>
-                                <p class="font-body-sm text-on-surface-variant">Complete Your Purchase</p>
-                                <h3 class="font-title-lg text-title-lg">iSuite Bundle</h3>
-                            </div>
-                        </div>
-
-                        <div class="bg-primary/5 p-md rounded-xl">
-                            <div class="flex justify-between items-baseline">
-                                <span class="font-body-md text-on-surface-variant">4 Professional Apps + iStats Free</span>
-                                <span class="text-3xl font-headline-lg text-primary">$49.99</span>
-                            </div>
-                            <p class="text-on-surface-variant font-body-sm mt-sm">One-time purchase, lifetime access</p>
-                        </div>
-
-                        <div class="space-y-sm pt-lg">
-                            <button onclick="payWithPayPal('bundle')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:bg-primary/90 active:scale-95 transition-all shadow-md hover:shadow-lg">
-                                <span class="material-symbols-outlined align-text-bottom mr-xs">payment</span> Pay with PayPal
-                            </button>
-                            <button onclick="payWithMercadoPago('bundle')" class="w-full bg-yellow-400 text-black py-md rounded-full font-title-lg hover:bg-yellow-500 active:scale-95 transition-all shadow-md hover:shadow-lg">
-                                <span class="material-symbols-outlined align-text-bottom mr-xs">shopping_bag</span> Mercado Pago
-                            </button>
-                            <button onclick="closeCheckout()" class="w-full border border-outline-variant text-on-surface py-md rounded-full font-title-lg hover:bg-surface-container transition-all">
-                                Cancel
-                            </button>
-                        </div>
+            const title = product.name.replace(/ Pro - Lifetime License$/, '');
+            const copy = 'Complete your purchase|One-time purchase. Price in USD.'.split('|');
+            content.innerHTML = `
+                <div class="space-y-lg">
+                    <div class="pb-lg border-b border-outline-variant">
+                        <p class="font-body-sm text-on-surface-variant">${copy[0]}</p>
+                        <h3 class="font-title-lg text-title-lg">${title}</h3>
                     </div>
-                `;
-            } else if (type === 'ivoz') {
-                html = `
-                    <div class="space-y-lg">
-                        <div class="flex items-center gap-md pb-lg border-b border-outline-variant">
-                            <img src="assets/ivoz-icon.png" alt="iVoz" class="w-12 h-12 rounded-lg" />
-                            <div>
-                                <p class="font-body-sm text-on-surface-variant">Complete Your Purchase</p>
-                                <h3 class="font-title-lg text-title-lg">iVoz</h3>
-                            </div>
-                        </div>
-
-                        <div class="bg-primary/5 p-md rounded-xl">
-                            <div class="flex justify-between items-baseline">
-                                <span class="font-body-md text-on-surface-variant">Professional Transcription</span>
-                                <span class="text-3xl font-headline-lg text-primary">$24.99</span>
-                            </div>
-                            <p class="text-on-surface-variant font-body-sm mt-sm">One-time purchase, lifetime access</p>
-                        </div>
-
-                        <div class="space-y-sm pt-lg">
-                            <button onclick="payWithPayPal('ivoz')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:bg-primary/90 active:scale-95 transition-all shadow-md hover:shadow-lg">
-                                <span class="material-symbols-outlined align-text-bottom mr-xs">payment</span> Pay with PayPal
-                            </button>
-                            <button onclick="payWithMercadoPago('ivoz')" class="w-full bg-yellow-400 text-black py-md rounded-full font-title-lg hover:bg-yellow-500 active:scale-95 transition-all shadow-md hover:shadow-lg">
-                                <span class="material-symbols-outlined align-text-bottom mr-xs">shopping_bag</span> Mercado Pago
-                            </button>
-                            <button onclick="closeCheckout()" class="w-full border border-outline-variant text-on-surface py-md rounded-full font-title-lg hover:bg-surface-container transition-all">
-                                Cancel
-                            </button>
-                        </div>
+                    <div class="bg-primary/5 p-md rounded-xl flex justify-between items-baseline">
+                        <span class="font-body-md text-on-surface-variant">${copy[1]}</span>
+                        <span class="text-3xl font-headline-lg text-primary">$${product.price.toFixed(2)}</span>
                     </div>
-                `;
-            } else if (type === 'iorganize') {
-                html = `
-                    <div class="space-y-lg">
-                        <div class="flex items-center gap-md pb-lg border-b border-outline-variant">
-                            <img src="assets/iorganize-icon.png" alt="iOrganize" class="w-12 h-12 rounded-lg" />
-                            <div>
-                                <p class="font-body-sm text-on-surface-variant">Complete Your Purchase</p>
-                                <h3 class="font-title-lg text-title-lg">iOrganize</h3>
-                            </div>
-                        </div>
-
-                        <div class="bg-primary/5 p-md rounded-xl">
-                            <div class="flex justify-between items-baseline">
-                                <span class="font-body-md text-on-surface-variant">Smart File Management</span>
-                                <span class="text-3xl font-headline-lg text-primary">$12.99</span>
-                            </div>
-                            <p class="text-on-surface-variant font-body-sm mt-sm">One-time purchase, lifetime access</p>
-                        </div>
-
-                        <div class="space-y-sm pt-lg">
-                            <button onclick="payWithPayPal('iorganize')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:bg-primary/90 active:scale-95 transition-all shadow-md hover:shadow-lg">
-                                <span class="material-symbols-outlined align-text-bottom mr-xs">payment</span> Pay with PayPal
-                            </button>
-                            <button onclick="payWithMercadoPago('iorganize')" class="w-full bg-yellow-400 text-black py-md rounded-full font-title-lg hover:bg-yellow-500 active:scale-95 transition-all shadow-md hover:shadow-lg">
-                                <span class="material-symbols-outlined align-text-bottom mr-xs">shopping_bag</span> Mercado Pago
-                            </button>
-                            <button onclick="closeCheckout()" class="w-full border border-outline-variant text-on-surface py-md rounded-full font-title-lg hover:bg-surface-container transition-all">
-                                Cancel
-                            </button>
-                        </div>
+                    <div class="space-y-sm pt-lg">
+                        <button onclick="payWithPayPal('${type}')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg">PayPal</button>
+                        <button onclick="payWithMercadoPago('${type}')" class="w-full bg-yellow-400 text-black py-md rounded-full font-title-lg">Mercado Pago</button>
+                        <button onclick="closeCheckout()" class="w-full border border-outline-variant py-md rounded-full">Cancel</button>
                     </div>
-                `;
-            } else if (type === 'imonitor') {
-                html = `
-                    <div class="space-y-lg">
-                        <div class="flex items-center gap-md pb-lg border-b border-outline-variant">
-                            <img src="assets/imonitor-icon.png" alt="Screen Bridge" class="w-12 h-12 rounded-lg" />
-                            <div>
-                                <p class="font-body-sm text-on-surface-variant">Complete Your Purchase</p>
-                                <h3 class="font-title-lg text-title-lg">Screen Bridge</h3>
-                            </div>
-                        </div>
-
-                        <div class="bg-primary/5 p-md rounded-xl">
-                            <div class="flex justify-between items-baseline">
-                                <span class="font-body-md text-on-surface-variant">Universal Display Streaming</span>
-                                <span class="text-3xl font-headline-lg text-primary">$9.99</span>
-                            </div>
-                            <p class="text-on-surface-variant font-body-sm mt-sm">One-time purchase, lifetime access</p>
-                        </div>
-
-                        <div class="space-y-sm pt-lg">
-                            <button onclick="payWithPayPal('imonitor')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:bg-primary/90 active:scale-95 transition-all shadow-md hover:shadow-lg">
-                                <span class="material-symbols-outlined align-text-bottom mr-xs">payment</span> Pay with PayPal
-                            </button>
-                            <button onclick="payWithMercadoPago('imonitor')" class="w-full bg-yellow-400 text-black py-md rounded-full font-title-lg hover:bg-yellow-500 active:scale-95 transition-all shadow-md hover:shadow-lg">
-                                <span class="material-symbols-outlined align-text-bottom mr-xs">shopping_bag</span> Mercado Pago
-                            </button>
-                            <button onclick="closeCheckout()" class="w-full border border-outline-variant text-on-surface py-md rounded-full font-title-lg hover:bg-surface-container transition-all">
-                                Cancel
-                            </button>
-                        </div>
-                    </div>
-                `;
-            } else if (type === 'ibrain') {
-                html = `
-                    <div class="space-y-lg">
-                        <div class="flex items-center gap-md pb-lg border-b border-outline-variant">
-                            <img src="assets/ibrain-icon.png" alt="iBrain" class="w-12 h-12 rounded-lg" />
-                            <div>
-                                <p class="font-body-sm text-on-surface-variant">Complete Your Purchase</p>
-                                <h3 class="font-title-lg text-title-lg">iBrain</h3>
-                            </div>
-                        </div>
-
-                        <div class="bg-primary/5 p-md rounded-xl">
-                            <div class="flex justify-between items-baseline">
-                                <span class="font-body-md text-on-surface-variant">Private, Offline AI Chat</span>
-                                <span class="text-3xl font-headline-lg text-primary">$29.99</span>
-                            </div>
-                            <p class="text-on-surface-variant font-body-sm mt-sm">One-time purchase, lifetime access</p>
-                        </div>
-
-                        <div class="space-y-sm pt-lg">
-                            <button onclick="payWithPayPal('ibrain')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:bg-primary/90 active:scale-95 transition-all shadow-md hover:shadow-lg">
-                                <span class="material-symbols-outlined align-text-bottom mr-xs">payment</span> Pay with PayPal
-                            </button>
-                            <button onclick="payWithMercadoPago('ibrain')" class="w-full bg-yellow-400 text-black py-md rounded-full font-title-lg hover:bg-yellow-500 active:scale-95 transition-all shadow-md hover:shadow-lg">
-                                <span class="material-symbols-outlined align-text-bottom mr-xs">shopping_bag</span> Mercado Pago
-                            </button>
-                            <button onclick="closeCheckout()" class="w-full border border-outline-variant text-on-surface py-md rounded-full font-title-lg hover:bg-surface-container transition-all">
-                                Cancel
-                            </button>
-                        </div>
-                    </div>
-                `;
-            } else if (type === 'istats') {
-                html = `
-                    <div class="space-y-lg">
-                        <div class="flex items-center gap-md pb-lg border-b border-outline-variant">
-                            <img src="assets/istats-icon.png" alt="iStats" class="w-12 h-12 rounded-lg" />
-                            <div>
-                                <p class="font-body-sm text-on-surface-variant">Complete Your Purchase</p>
-                                <h3 class="font-title-lg text-title-lg">iStats</h3>
-                            </div>
-                        </div>
-
-                        <div class="bg-primary/5 p-md rounded-xl">
-                            <div class="flex justify-between items-baseline">
-                                <span class="font-body-md text-on-surface-variant">Real-Time System Monitor</span>
-                                <span class="text-3xl font-headline-lg text-primary">$4.99</span>
-                            </div>
-                            <p class="text-on-surface-variant font-body-sm mt-sm">One-time purchase, lifetime access</p>
-                        </div>
-
-                        <div class="space-y-sm pt-lg">
-                            <button onclick="payWithPayPal('istats')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:bg-primary/90 active:scale-95 transition-all shadow-md hover:shadow-lg">
-                                <span class="material-symbols-outlined align-text-bottom mr-xs">payment</span> Pay with PayPal
-                            </button>
-                            <button onclick="payWithMercadoPago('istats')" class="w-full bg-yellow-400 text-black py-md rounded-full font-title-lg hover:bg-yellow-500 active:scale-95 transition-all shadow-md hover:shadow-lg">
-                                <span class="material-symbols-outlined align-text-bottom mr-xs">shopping_bag</span> Mercado Pago
-                            </button>
-                            <button onclick="closeCheckout()" class="w-full border border-outline-variant text-on-surface py-md rounded-full font-title-lg hover:bg-surface-container transition-all">
-                                Cancel
-                            </button>
-                        </div>
-                    </div>
-                `;
-            }
-
-            content.innerHTML = html;
+                </div>`;
             modal.classList.remove('hidden');
-        }
-
-        function processPayment(method, amount) {
-            alert(`Processing ${method.toUpperCase()} payment for $${amount}\n\nThis will redirect to ${method === 'paypal' ? 'PayPal' : 'Mercado Pago'} checkout.`);
-            closeCheckout();
         }
 
         function closeCheckout() {
@@ -1125,7 +854,7 @@ if (window.innerWidth < 768) window.location.replace('mobile.html');
 <!-- Sticky Floating CTA Button - v2 -->
 
 <div id="floatingCTA" class="hidden md:block fixed bottom-24 right-8 z-40 opacity-0 translate-y-8 transition-all duration-500 pointer-events-none">
-    <button onclick="startCheckout('bundle')" class="bg-primary text-on-primary px-md py-sm rounded-full font-body-lg text-body-lg hover:shadow-lg hover:scale-105 active:scale-95 transition-all shadow-md flex items-center gap-xs pointer-events-auto">
+    <button onclick="document.getElementById('apps').scrollIntoView({behavior:'smooth'})" class="bg-primary text-on-primary px-md py-sm rounded-full font-body-lg text-body-lg hover:shadow-lg hover:scale-105 active:scale-95 transition-all shadow-md flex items-center gap-xs pointer-events-auto">
         <span class="material-symbols-outlined text-lg">shopping_cart</span>
         Get Suite
     </button>

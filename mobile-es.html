@@ -258,9 +258,9 @@ html, body { font-family: 'Inter', -apple-system, sans-serif; background: var(--
     <div class="menu-links">
       <a href="#apps" onclick="closeMenu()">Las Apps</a>
       <a href="#features" onclick="closeMenu()">Características</a>
-      <a href="#pricing" onclick="closeMenu()">Precios</a>
-      <a href="#testimonials" onclick="closeMenu()">Opiniones</a>
-      <button class="btn-menu" onclick="startCheckout('bundle'); closeMenu();">Obtener iSuite — $44.99</button>
+      <a href="#apps" onclick="closeMenu()">Las Apps</a>
+      <a href="#apps" onclick="closeMenu()">Las Apps</a>
+      <button class="btn-menu" onclick="document.getElementById('apps').scrollIntoView({behavior:'smooth'}); closeMenu();">Ver las Apps</button>
     </div>
   </div>
 </div>
@@ -268,12 +268,12 @@ html, body { font-family: 'Inter', -apple-system, sans-serif; background: var(--
 <!-- HERO -->
 <section class="hero" id="hero">
   <div style="position:relative;z-index:1;">
-    <div class="hero-badge">Ahora Disponible para macOS</div>
+    <div class="hero-badge">Suite de productos para macOS</div>
     <h1 class="hero-title">La <span class="gradient-text">Suite de Oficina</span> Que Faltaba en Tu Mac.</h1>
-    <p class="hero-subtitle">iVoz, iOrganize y Screen Bridge. Tres apps potentes. Un bundle increíble. Cero suscripciones.</p>
+    <p class="hero-subtitle">Una colección de apps útiles para Mac. iVoz y Screen Bridge se descargan gratis.</p>
     <div class="hero-cta">
-      <button class="btn-primary" onclick="startCheckout('bundle')">
-         Obtener el Bundle — $44.99
+      <button class="btn-primary" onclick="document.getElementById('apps').scrollIntoView({behavior:'smooth'})">
+         Ver las Apps
       </button>
       <button class="btn-secondary" onclick="document.getElementById('apps').scrollIntoView({behavior:'smooth'})">
         Explorar las Apps ↓
@@ -307,11 +307,11 @@ html, body { font-family: 'Inter', -apple-system, sans-serif; background: var(--
   <div class="reveal">
     <p class="section-label">Las Apps</p>
     <h2 class="section-title">Conoce la Suite.</h2>
-    <p class="section-desc">Tres apps diseñadas para funcionar perfectamente juntas en tu Mac.</p>
+    <p class="section-desc">Descubre tres apps destacadas de la colección iSuite de cinco apps.</p>
   </div>
 
   <div class="app-carousel" id="appCarousel">
-    <div class="app-card reveal reveal-delay-1" onclick="startCheckout('ivoz')">
+    <div class="app-card reveal reveal-delay-1" onclick="window.location.href='https://ivoz-macos-site.vercel.app/'">
       <div class="app-card-header">
         <img src="assets/ivoz-icon.png" alt="iVoz">
         <div>
@@ -320,8 +320,8 @@ html, body { font-family: 'Inter', -apple-system, sans-serif; background: var(--
         </div>
       </div>
       <p>Dictado con IA local. Transcribe tu voz en tiempo real en cualquier app. Funciona completamente sin conexión con 10+ idiomas.</p>
-      <div class="price-tag">$24.99 <span>$29.99</span></div>
-      <button class="card-cta">Obtener iVoz</button>
+      <div class="price-tag">Descarga gratis</div>
+      <button class="card-cta">Descargar iVoz gratis</button>
     </div>
 
     <div class="app-card reveal reveal-delay-2" onclick="startCheckout('iorganize')">
@@ -337,7 +337,7 @@ html, body { font-family: 'Inter', -apple-system, sans-serif; background: var(--
       <button class="card-cta">Obtener iOrganize</button>
     </div>
 
-    <div class="app-card reveal reveal-delay-3" onclick="startCheckout('imonitor')">
+    <div class="app-card reveal reveal-delay-3" onclick="window.location.href='https://screen-bridge-macos.vercel.app/'">
       <div class="app-card-header">
         <img src="assets/imonitor-icon.png" alt="Screen Bridge">
         <div>
@@ -346,8 +346,8 @@ html, body { font-family: 'Inter', -apple-system, sans-serif; background: var(--
         </div>
       </div>
       <p>Convierte cualquier iPad, tablet Android o TV en un segundo monitor de baja latencia. Cero configuración, solo abre un navegador.</p>
-      <div class="price-tag">$9.99 <span>$12.99</span></div>
-      <button class="card-cta">Obtener Screen Bridge</button>
+      <div class="price-tag">Descarga gratis</div>
+      <button class="card-cta">Descargar Screen Bridge gratis</button>
     </div>
   </div>
   <div class="swipe-dots" id="appDots">
@@ -452,81 +452,6 @@ html, body { font-family: 'Inter', -apple-system, sans-serif; background: var(--
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="section" id="testimonials">
-  <div class="reveal">
-    <p class="section-label">Opiniones</p>
-    <h2 class="section-title">Amado por usuarios Mac.</h2>
-  </div>
-  <div class="testimonials" id="testimonialCarousel">
-    <div class="testimonial-card reveal reveal-delay-1">
-      <div class="stars"></div>
-      <p>"iVoz cambió mi flujo de trabajo. Ahora capturo ideas mientras conduzco, sin preocuparme por quién escucha. Todo permanece en mi Mac."</p>
-      <div class="testimonial-author">
-        <div class="avatar" style="background:linear-gradient(135deg,#3b82f6,#1d4ed8);">MD</div>
-        <div><div class="name">Mariana Díaz</div><div class="role">Productora de Contenido</div></div>
-      </div>
-    </div>
-    <div class="testimonial-card reveal reveal-delay-2">
-      <div class="stars"></div>
-      <p>"iOrganize recuperó 287GB de mi SSD. Ahora mi Mac corre como nuevo, sin hacer nada manualmente. Impresionante."</p>
-      <div class="testimonial-author">
-        <div class="avatar" style="background:linear-gradient(135deg,#8b5cf6,#6d28d9);">JC</div>
-        <div><div class="name">Juan Castillo</div><div class="role">Ingeniero de Datos</div></div>
-      </div>
-    </div>
-    <div class="testimonial-card reveal reveal-delay-3">
-      <div class="stars"></div>
-      <p>"Screen Bridge convierte mi iPad en un segundo monitor real. Sin lag, sin configuración complicada. Perfecto para reuniones y diseño."</p>
-      <div class="testimonial-author">
-        <div class="avatar" style="background:linear-gradient(135deg,#10b981,#059669);">AB</div>
-        <div><div class="name">Ana Barrera</div><div class="role">Directora de Diseño</div></div>
-      </div>
-    </div>
-    <div class="testimonial-card reveal reveal-delay-4">
-      <div class="stars"></div>
-      <p>"El combo de las tres apps me permitió optimizar mi setup en 3 Macs. Sin fricción, siempre funcionan. Dinero bien gastado."</p>
-      <div class="testimonial-author">
-        <div class="avatar" style="background:linear-gradient(135deg,#f59e0b,#d97706);">CR</div>
-        <div><div class="name">Carlos Ramírez</div><div class="role">Consultor Empresarial</div></div>
-      </div>
-    </div>
-  </div>
-  <div class="swipe-dots" id="testimonialDots">
-    <div class="swipe-dot active"></div>
-    <div class="swipe-dot"></div>
-    <div class="swipe-dot"></div>
-    <div class="swipe-dot"></div>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section class="section" id="pricing">
-  <div class="reveal">
-    <p class="section-label">Precios</p>
-    <h2 class="section-title">Un precio. Para siempre.</h2>
-    <p class="section-desc" style="margin-bottom:32px;">Sin suscripciones. Sin tarifas ocultas. Solo excelente software.</p>
-  </div>
-  <div class="reveal reveal-delay-1">
-    <div class="pricing-card">
-      <div class="pricing-badge">MEJOR VALOR</div>
-      <h3>iSuite Bundle</h3>
-      <p class="subtitle">Las tres apps profesionales por un precio.</p>
-      <div class="pricing-price"><span class="currency">$</span>44.99</div>
-      <ul class="pricing-features">
-        <li><span class="check">✓</span> Acceso de Por Vida a iVoz</li>
-        <li><span class="check">✓</span> Acceso de Por Vida a iOrganize</li>
-        <li><span class="check">✓</span> Acceso de Por Vida a Screen Bridge</li>
-        <li><span class="check">✓</span> Licencia Universal para 3 Macs</li>
-        <li><span class="check">✓</span> Garantía de 30 Días</li>
-      </ul>
-      <button class="btn-primary" style="width:100%;" onclick="triggerConfetti(); startCheckout('bundle');">
-        Comenzar Ahora
-      </button>
-    </div>
-  </div>
-</section>
-
 <!-- FOOTER -->
 <footer class="footer">
   <div class="footer-logo">
@@ -539,8 +464,8 @@ html, body { font-family: 'Inter', -apple-system, sans-serif; background: var(--
 <!-- STICKY CTA -->
 <div class="sticky-cta" id="stickyCTA">
   <div class="sticky-cta-inner">
-    <button class="btn-bundle" onclick="triggerConfetti(); startCheckout('bundle');">
-      Obtener iSuite — $44.99
+    <button class="btn-bundle" onclick="triggerConfetti(); document.getElementById('apps').scrollIntoView({behavior:'smooth'});">
+      Ver las Apps
     </button>
     <button class="btn-icon" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
   </div>
@@ -660,6 +585,7 @@ function closeMenu() { document.getElementById('menuOverlay').classList.remove('
 function updateDots(carouselId, dotsId) {
   const carousel = document.getElementById(carouselId);
   const dots = document.querySelectorAll(`#${dotsId} .swipe-dot`);
+  if (!carousel || !dots.length) return;
   carousel.addEventListener('scroll', () => {
     const idx = Math.round(carousel.scrollLeft / (carousel.offsetWidth * 0.7));
     dots.forEach((d, i) => d.classList.toggle('active', i === idx));
@@ -719,28 +645,20 @@ window.addEventListener('scroll', () => {
 // ===== CHECKOUT (fallback if checkout.js not loaded) =====
 if (typeof startCheckout !== 'function') {
   window.startCheckout = function(type) {
+    if (type === 'ivoz') { window.location.href = 'https://ivoz-macos-site.vercel.app/'; return; }
+    if (type === 'imonitor') { window.location.href = 'https://screen-bridge-macos.vercel.app/'; return; }
+    if (type === 'bundle') { document.getElementById('apps').scrollIntoView({behavior:'smooth'}); return; }
     const modal = document.getElementById('checkoutModal');
     const content = document.getElementById('checkoutContent');
-    const prices = { bundle: 44.99, ivoz: 24.99, iorganize: 12.99, imonitor: 9.99 };
-    const names = { bundle: 'iSuite Bundle', ivoz: 'iVoz', iorganize: 'iOrganize', imonitor: 'Screen Bridge' };
-    const descs = { bundle: 'Las 3 apps profesionales', ivoz: 'Transcripción Profesional', iorganize: 'Gestión Inteligente de Archivos', imonitor: 'Transmisión Universal de Pantalla' };
     content.innerHTML = `
       <div style="margin-bottom:20px;">
-        <p style="font-size:13px;color:#6b7280;">Completa Tu Compra</p>
-        <h3 style="font-size:22px;font-weight:700;">${names[type]}</h3>
+        <p style="font-size:13px;color:#6b7280;">Vista previa de iSuite</p>
+        <h3 style="font-size:22px;font-weight:700;">Compra no disponible</h3>
       </div>
       <div style="background:rgba(0,88,188,0.05);padding:16px;border-radius:16px;margin-bottom:20px;">
-        <div style="display:flex;justify-content:space-between;align-items:baseline;">
-          <span style="font-size:14px;color:#6b7280;">${descs[type]}</span>
-          <span style="font-size:32px;font-weight:800;color:#0058bc;">$${prices[type]}</span>
-        </div>
-        <p style="font-size:12px;color:#6b7280;margin-top:4px;">Compra única, acceso de por vida</p>
+        <p style="font-size:14px;color:#4b5563;line-height:1.5;">El pago no está conectado en esta vista previa. Visita la página del proyecto para consultar las aplicaciones y su disponibilidad actual.</p>
       </div>
-      <div style="display:flex;flex-direction:column;gap:10px;">
-        <button onclick="alert('Redirigiendo a PayPal...')" style="background:#0058bc;color:white;padding:16px;border-radius:100px;font-size:16px;font-weight:700;border:none;"> Pagar con PayPal</button>
-        <button onclick="alert('Redirigiendo a Mercado Pago...')" style="background:#fbbf24;color:#1a1b1f;padding:16px;border-radius:100px;font-size:16px;font-weight:700;border:none;"> Mercado Pago</button>
-        <button onclick="closeCheckout()" style="background:transparent;color:#6b7280;padding:16px;border-radius:100px;font-size:16px;font-weight:600;border:1px solid rgba(0,0,0,0.08);">Cancelar</button>
-      </div>
+      <button onclick="closeCheckout()" style="background:transparent;color:#6b7280;padding:16px;border-radius:100px;font-size:16px;font-weight:600;border:1px solid rgba(0,0,0,0.08);">Cancelar</button>
     `;
     modal.style.display = 'flex';
   };
