@@ -1,0 +1,242 @@
+/* MacBook Mockup Animation */
+@keyframes mockupFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.macbook-mockup {
+    width: 100%;
+    max-width: 720px;
+    animation: mockupFloat 6s ease-in-out infinite;
+    margin: 0 auto;
+}
+
+.macbook-frame { position: relative; }
+.macbook-screen {
+    background: #fff;
+    border: 2px solid #d1d1d6;
+    border-radius: 16px 16px 0 0;
+    padding: 8px;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.1);
+}
+
+.screen-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    background: #f5f5f7;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.screen-dots {
+    display: flex;
+    gap: 6px;
+}
+
+.screen-dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.screen-dots span:nth-child(1) { background: #FF5F57; }
+.screen-dots span:nth-child(2) { background: #FFBD2E; }
+.screen-dots span:nth-child(3) { background: #28C840; }
+
+.screen-title {
+    font-size: 0.75rem;
+    color: #6b7280;
+    font-weight: 600;
+    flex: 1;
+    text-align: center;
+    margin-right: 32px;
+}
+
+.screen-content {
+    padding: 24px 20px;
+    background: #fff;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 12px 12px;
+}
+
+.macbook-hinge {
+    height: 8px;
+    background: linear-gradient(180deg, #c1c1c6 0%, #d1d1d6 100%);
+    border-radius: 0 0 4px 4px;
+    margin: 0 12px;
+}
+
+.macbook-base {
+    height: 14px;
+    background: linear-gradient(180deg, #d1d1d6 0%, #e1e1e6 40%, #c1c1c6 100%);
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    margin: 0 -8px;
+}
+
+.screen-meta {
+    display: flex;
+    gap: 12px;
+    font-size: 0.7rem;
+    margin-top: 16px;
+}
+
+.screen-tag {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+    padding: 4px 10px;
+    border-radius: 100px;
+    font-weight: 600;
+}
+
+/* Demo Animation States */
+@keyframes demoFadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.demo-animation {
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.demo-state {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    animation: demoFadeIn 0.4s ease forwards;
+}
+
+.demo-state.active {
+    display: flex;
+}
+
+/* Pulsing Dot Animation */
+@keyframes demoPulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.3); }
+    50% { transform: scale(1.15); box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+}
+
+.demo-dot {
+    width: 14px;
+    height: 14px;
+    background: #ef4444;
+    border-radius: 50%;
+    animation: demoPulse 1.2s ease-in-out infinite;
+}
+
+/* File Match Display */
+.demo-file-match {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f9f9fb;
+    border: 1px solid rgba(0,0,0,0.04);
+    border-radius: 12px;
+    padding: 10px 16px;
+    min-width: 240px;
+}
+
+.demo-file-icon {
+    flex-shrink: 0;
+    color: #9ca3af;
+}
+
+.demo-file-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.demo-file-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.demo-file-tags {
+    font-size: 0.72rem;
+    color: #b45309;
+    background: rgba(245, 158, 11, 0.1);
+    padding: 1px 8px;
+    border-radius: 100px;
+    font-weight: 500;
+}
+
+/* File Move Animation */
+@keyframes fileSlide {
+    0% { left: 0; }
+    100% { left: calc(100% - 10px); }
+}
+
+.demo-file-move {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 260px;
+}
+
+.demo-move-icon {
+    flex-shrink: 0;
+    color: #9ca3af;
+}
+
+.demo-move-track {
+    position: relative;
+    flex: 1;
+    height: 2px;
+    background: repeating-linear-gradient(90deg, rgba(0,0,0,0.08) 0 6px, transparent 6px 12px);
+}
+
+.demo-move-file {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 10px;
+    height: 12px;
+    background: #f59e0b;
+    border-radius: 2px;
+    transform: translate(0, -50%);
+    animation: fileSlide 1.4s ease-in-out infinite;
+}
+
+/* Checkmark Animation */
+@keyframes checkPop {
+    0% { transform: scale(0); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.demo-done {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    color: #10b981;
+}
+
+.demo-done svg {
+    animation: checkPop 0.6s ease-out;
+}
+
+/* Label Styling */
+.demo-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #6b7280;
+}
+
+.demo-label.done {
+    color: #10b981;
+}

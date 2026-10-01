@@ -307,13 +307,13 @@ if (window.innerWidth < 768) window.location.replace('mobile.html');
     <!-- Open Graph / Social Sharing -->
     <meta property="og:type" content="website"/>
     <meta property="og:title" content="iSuite Office - The Missing Suite for macOS"/>
-    <meta property="og:description" content="Five macOS projects with public source. Explore voice, file cleanup, displays, local AI, and system monitoring."/>
-    <meta property="og:image" content="https://isuitemacos-cyan.vercel.app/assets/hero-5apps-desktop.png"/>
-    <meta property="og:url" content="https://isuitemacos-cyan.vercel.app"/>
+    <meta property="og:description" content="iVoz and Screen Bridge are free macOS apps. Explore the iSuite app collection and current availability."/>
+    <meta property="og:image" content="https://isuitemacos-cyan.vercel.app/assets/linkimage.png"/>
+    <meta property="og:url" content="https://isuitemacos.vercel.app"/>
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:title" content="iSuite Office - The Missing Suite for macOS"/>
-    <meta name="twitter:description" content="Five macOS projects with public source. Explore voice, file cleanup, displays, local AI, and system monitoring."/>
-    <meta name="twitter:image" content="https://isuitemacos-cyan.vercel.app/assets/hero-5apps-desktop.png"/>
+    <meta name="twitter:description" content="iVoz and Screen Bridge are free macOS apps. Explore the iSuite app collection and current availability."/>
+    <meta name="twitter:image" content="https://isuitemacos-cyan.vercel.app/assets/linkimage.png"/>
 </head>
 <body class="bg-background text-on-surface font-body-md">
 <!-- Top Navigation Bar -->
@@ -327,6 +327,7 @@ if (window.innerWidth < 768) window.location.replace('mobile.html');
 <div class="hidden md:flex gap-lg items-center justify-center flex-1">
 <a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#features">Features</a>
 <a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#apps">The Apps</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#apps">Apps</a>
 <a href="index-es.html" class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md">ES</a>
 <button onclick="document.getElementById('apps').scrollIntoView({behavior:'smooth'})" class="bg-primary text-on-primary px-lg py-sm rounded-full font-label-md text-label-md hover:opacity-90 active:scale-95 transition-all">Explore Apps</button>
 </div>
@@ -341,6 +342,7 @@ if (window.innerWidth < 768) window.location.replace('mobile.html');
 <div class="mobile-nav-links">
 <a href="#features" onclick="document.getElementById('mobileNav').classList.remove('active')">Features</a>
 <a href="#apps" onclick="document.getElementById('mobileNav').classList.remove('active')">The Apps</a>
+<a href="#apps" onclick="document.getElementById('mobileNav').classList.remove('active')">Apps</a>
 <a href="index-es.html">Español</a>
 <button onclick="document.getElementById('apps').scrollIntoView({behavior:'smooth'}); document.getElementById('mobileNav').classList.remove('active')">Explore Apps</button>
 </div>
@@ -374,14 +376,14 @@ if (window.innerWidth < 768) window.location.replace('mobile.html');
 <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
 <div>
 <h4 class="font-title-lg text-body-lg font-bold">On-Device Intelligence</h4>
-<p class="text-on-surface-variant">Your voice stays on your machine. Fast, private, and secure transcription processing.</p>
+<p class="text-on-surface-variant">Speech processing runs on-device; review the app privacy notes for model and workflow details.</p>
 </div>
 </li>
 <li class="flex items-start gap-md">
 <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
 <div>
 <h4 class="font-title-lg text-body-lg font-bold">Write Faster Without Typing</h4>
-<p class="text-on-surface-variant">Dictate into supported Mac apps with on-device transcription and multilingual model support.</p>
+<p class="text-on-surface-variant">Dictate in supported Mac apps with on-device multilingual transcription.</p>
 </div>
 </li>
 </ul>
@@ -400,14 +402,14 @@ if (window.innerWidth < 768) window.location.replace('mobile.html');
 <span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
 <div>
 <h4 class="font-title-lg text-body-lg font-bold">Smart Sanitize</h4>
-<p class="text-on-surface-variant">Scan for cleanup candidates, preview the results, and choose what to remove.</p>
+<p class="text-on-surface-variant">Scan cleanup candidates, review the results, and choose what to move or remove.</p>
 </div>
 </li>
 <li class="flex items-start gap-md">
 <span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
 <div>
 <h4 class="font-title-lg text-body-lg font-bold">Auto-flow Rules</h4>
-<p class="text-on-surface-variant">Set up local organization rules. Review file actions before relying on automation.</p>
+<p class="text-on-surface-variant">Create local organization rules; review them before relying on automated actions.</p>
 </div>
 </li>
 </ul>
@@ -461,13 +463,13 @@ if (window.innerWidth < 768) window.location.replace('mobile.html');
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5">
 <polyline points="20 6 9 17 4 12"/>
 </svg>
-<span>Cleanup review complete</span>
+<span>Review scan results before cleanup</span>
 </div>
 </div>
 </div>
 <div class="screen-meta">
 <span class="screen-tag">Auto-Flow rule</span>
-<span class="screen-accuracy">Illustrative animation</span>
+<span class="screen-accuracy">Running in background</span>
 </div>
 </div>
 </div>
@@ -483,20 +485,20 @@ if (window.innerWidth < 768) window.location.replace('mobile.html');
 <div class="max-w-[1440px] mx-auto px-margin-desktop flex flex-col md:flex-row items-center gap-xl">
 <div class="flex-1">
 <span class="text-tertiary font-label-md text-label-md mb-xs block">UNIVERSAL CONNECTIVITY</span>
-<h2 class="font-headline-lg text-headline-lg mb-md">Screen Bridge: Bridging the gap.</h2>
+<h2 class="font-headline-lg text-headline-lg mb-md">iScreen Share: Bridging the gap.</h2>
 <ul class="space-y-md">
 <li class="flex items-start gap-md">
 <span class="material-symbols-outlined text-tertiary mt-1">check_circle</span>
 <div>
-<h4 class="font-title-lg text-body-lg font-bold">Browser-Based Viewing</h4>
-<p class="text-on-surface-variant">View the Mac display from another device with a compatible browser on the local network.</p>
+<h4 class="font-title-lg text-body-lg font-bold">Visualización en red local</h4>
+<p class="text-on-surface-variant">View from another device using a compatible browser on the same local network.</p>
 </div>
 </li>
 <li class="flex items-start gap-md">
 <span class="material-symbols-outlined text-tertiary mt-1">check_circle</span>
 <div>
-<h4 class="font-title-lg text-body-lg font-bold">Local Network Setup</h4>
-<p class="text-on-surface-variant">Connect through a browser on the same network. This experimental build can have noticeable lag.</p>
+<h4 class="font-title-lg text-body-lg font-bold">Rendimiento experimental</h4>
+<p class="text-on-surface-variant">Performance varies by setup; noticeable latency may occur.</p>
 </div>
 </li>
 </ul>
@@ -510,19 +512,19 @@ if (window.innerWidth < 768) window.location.replace('mobile.html');
 <div class="screen-dots">
 <span></span><span></span><span></span>
 </div>
-<span class="screen-title">Screen Bridge concept</span>
+<span class="screen-title">iMonitor</span>
 </div>
 <div class="screen-content">
 <div class="demo-animation">
 <div class="demo-state active" id="imon-state-1">
-<div class="demo-label">🔗 Local Connection Ready</div>
+<div class="demo-label">📊 System Status Active</div>
 <div class="demo-file-match" style="background: #ecfdf5; border-color: #10b981;">
 <svg class="demo-file-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2">
 <circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/>
 </svg>
 <div class="demo-file-info">
-<span class="demo-file-name" style="color: #065f46;">Local network ready</span>
-<span class="demo-file-tags" style="color: #10b981; background: rgba(16, 185, 129, 0.1);">Local network</span>
+<span class="demo-file-name" style="color: #065f46;">All Systems Nominal</span>
+<span class="demo-file-tags" style="color: #10b981; background: rgba(16, 185, 129, 0.1);">Running 24/7</span>
 </div>
 </div>
 </div>
@@ -533,13 +535,13 @@ if (window.innerWidth < 768) window.location.replace('mobile.html');
 <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/>
 </svg>
 <div class="demo-file-info">
-<span class="demo-file-name" style="color: #312e81;">Browser display connected</span>
-<span class="demo-file-tags" style="color: #6366f1; background: rgba(99, 102, 241, 0.1);">Experimental</span>
+<span class="demo-file-name" style="color: #312e81;">iPad Air (192.168.1.42)</span>
+<span class="demo-file-tags" style="color: #6366f1; background: rgba(99, 102, 241, 0.1);">Experimental preview</span>
 </div>
 </div>
 </div>
 <div class="demo-state" id="imon-state-3">
-<div class="demo-label">⚡ Display Streaming</div>
+<div class="demo-label">⚡ Performance Peak</div>
 <div class="demo-file-move">
 <svg class="demo-move-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2">
 <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8Z"/>
@@ -547,7 +549,7 @@ if (window.innerWidth < 768) window.location.replace('mobile.html');
 <div class="demo-move-track">
 <span class="demo-move-file" style="animation-duration: 1.6s;"></span>
 </div>
-<span style="color: #f59e0b; font-weight: 600;">Active stream</span>
+<span style="color: #f59e0b; font-weight: 600;">CPU 78%</span>
 </div>
 </div>
 <div class="demo-state" id="imon-state-4">
@@ -555,13 +557,13 @@ if (window.innerWidth < 768) window.location.replace('mobile.html');
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5">
 <polyline points="20 6 9 17 4 12"/>
 </svg>
-<span style="color: #10b981;">Display connected</span>
+<span style="color: #10b981;">Zero Lag Connection</span>
 </div>
 </div>
 </div>
 <div class="screen-meta">
-<span class="screen-tag">Experimental display</span>
-<span class="screen-accuracy">Illustrative animation</span>
+<span class="screen-tag">Real-time Monitoring</span>
+<span class="screen-accuracy">Always in sync</span>
 </div>
 </div>
 </div>
@@ -583,15 +585,15 @@ if (window.innerWidth < 768) window.location.replace('mobile.html');
 <li class="flex items-start gap-md">
 <span class="material-symbols-outlined text-purple-600 mt-1">check_circle</span>
 <div>
-<h4 class="font-title-lg text-body-lg font-bold">Local Model Option</h4>
-<p class="text-on-surface-variant">Use Ollama for local chat. If you choose a cloud provider, prompts are sent to that provider.</p>
+<h4 class="font-title-lg text-body-lg font-bold">Local Model Options</h4>
+<p class="text-on-surface-variant">Run AI entirely on your Mac. No cloud, no subscriptions, no data leaving your computer.</p>
 </div>
 </li>
 <li class="flex items-start gap-md">
 <span class="material-symbols-outlined text-purple-600 mt-1">check_circle</span>
 <div>
-<h4 class="font-title-lg text-body-lg font-bold">Local Models and Optional APIs</h4>
-<p class="text-on-surface-variant">Download a compatible local model before first use, or configure an optional cloud API key.</p>
+<h4 class="font-title-lg text-body-lg font-bold">One-Click Model Download</h4>
+<p class="text-on-surface-variant">Choose a supported local model. Availability and setup depend on the selected model.</p>
 </div>
 </li>
 </ul>
@@ -611,14 +613,14 @@ if (window.innerWidth < 768) window.location.replace('mobile.html');
 <span class="material-symbols-outlined text-green-600 mt-1">check_circle</span>
 <div>
 <h4 class="font-title-lg text-body-lg font-bold">Always-On Menu Bar</h4>
-<p class="text-on-surface-variant">View current CPU, memory, disk, and network readings with short rolling graphs.</p>
+<p class="text-on-surface-variant">Live CPU, memory, disk, and network stats. Click for detailed graphs and full history.</p>
 </div>
 </li>
 <li class="flex items-start gap-md">
 <span class="material-symbols-outlined text-green-600 mt-1">check_circle</span>
 <div>
-<h4 class="font-title-lg text-body-lg font-bold">Lightweight Utility</h4>
-<p class="text-on-surface-variant">Runs locally as a small menu-bar utility. It is focused on quick system readings.</p>
+<h4 class="font-title-lg text-body-lg font-bold">Zero Overhead</h4>
+<p class="text-on-surface-variant">A small menu-bar utility for viewing system metrics. See the repository for metric definitions and current limitations.</p>
 </div>
 </li>
 </ul>
@@ -632,7 +634,7 @@ if (window.innerWidth < 768) window.location.replace('mobile.html');
 <section class="py-lg bg-surface-container-low md:hidden">
 <div class="max-w-[1440px] mx-auto px-margin-desktop text-center">
 <h2 class="font-headline-lg text-headline-lg mb-md">Designed for Mac Professionals</h2>
-<p class="font-body-md text-body-md text-on-surface-variant">Five personal Mac projects with public source. Updated builds are being checked before release.</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Personal macOS projects for voice, file organization, display sharing, local AI, and system monitoring.</p>
 </div>
 </section>
 
@@ -641,7 +643,7 @@ if (window.innerWidth < 768) window.location.replace('mobile.html');
 <div class="max-w-[1440px] mx-auto px-margin-desktop">
 <div class="text-center mb-xl">
 <h2 class="text-display text-center mb-md font-headline-lg">Designed for Mac Professionals</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-md">Five personal Mac projects with public source. Updated builds are being checked before release.</p>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-md">Personal macOS projects for voice, file organization, display sharing, local AI, and system monitoring.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
 <!-- iVoz Card -->
@@ -650,11 +652,12 @@ if (window.innerWidth < 768) window.location.replace('mobile.html');
 <img src="assets/ivoz-icon.png" alt="iVoz icon" class="w-16 h-16 rounded-lg" loading="lazy"/>
 <h3 class="font-title-lg text-title-lg">iVoz</h3>
 </div>
-<p class="font-body-md text-on-surface-variant mb-lg">On-device speech transcription and dictation, built with SwiftUI, WhisperKit, and Core ML.</p>
-<div class="flex items-center justify-between mb-lg mt-auto gap-sm">
-<span class="font-body-md text-on-surface-variant">New build under review</span>
+<p class="font-body-md text-on-surface-variant mb-lg">Discover all the smart transcription features and how iVoz transforms the way you capture ideas.</p>
+<div class="flex items-center justify-between mb-lg mt-auto">
+<a href="https://ivoz-macos-site.vercel.app/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-sm text-primary font-title-lg hover:gap-md transition-all">Learn More <span class="material-symbols-outlined">arrow_outward</span></a>
+<span class="font-title-lg text-primary">Free download</span>
 </div>
-<a href="https://github.com/hikaribrandan3-code/ivoz-macos" target="_blank" rel="noopener noreferrer" class="block text-center w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:shadow-xl transition-all">View source</a>
+<a href="https://ivoz-macos-site.vercel.app/" target="_blank" rel="noopener noreferrer" class="block text-center w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:shadow-xl transition-all">Get iVoz free</a>
 </div>
 
 <!-- iOrganize Card -->
@@ -663,11 +666,12 @@ if (window.innerWidth < 768) window.location.replace('mobile.html');
 <img src="assets/iorganize-icon.png" alt="iOrganize icon" class="w-16 h-16 rounded-lg" loading="lazy"/>
 <h3 class="font-title-lg text-title-lg">iOrganize</h3>
 </div>
-<p class="font-body-md text-on-surface-variant mb-lg">A Mac file cleanup utility with previews and user-controlled actions. Built with SwiftUI and AppKit.</p>
-<div class="flex items-center justify-between mb-lg mt-auto gap-sm">
-<span class="font-body-md text-on-surface-variant">New build under review</span>
+<p class="font-body-md text-on-surface-variant mb-lg">See how iOrganize helps review and organize files on your Mac.</p>
+<div class="flex items-center justify-between mb-lg mt-auto">
+<a href="https://iorganize-eight.vercel.app/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-sm text-primary font-title-lg hover:gap-md transition-all">Learn More <span class="material-symbols-outlined">arrow_outward</span></a>
+<span class="font-title-lg text-primary">Project source</span>
 </div>
-<a href="https://github.com/hikaribrandan3-code/iorganize" target="_blank" rel="noopener noreferrer" class="block text-center w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:shadow-xl transition-all">View source</a>
+<a href="https://github.com/hikaribrandan3-code/iorganize" target="_blank" rel="noopener noreferrer" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all">View source</a>
 </div>
 
 <!-- Screen Bridge Card -->
@@ -676,24 +680,12 @@ if (window.innerWidth < 768) window.location.replace('mobile.html');
 <img src="assets/imonitor-icon.png" alt="Screen Bridge icon" class="w-16 h-16 rounded-lg" loading="lazy"/>
 <h3 class="font-title-lg text-title-lg">Screen Bridge</h3>
 </div>
-<p class="font-body-md text-on-surface-variant mb-lg">An experimental local-network display project built with Tauri, React, Rust, WebSockets, and a macOS bridge. Performance varies by setup.</p>
-<div class="flex items-center justify-between mb-lg mt-auto gap-sm">
-<span class="font-body-md text-on-surface-variant">New build under review · Experimental</span>
+<p class="font-body-md text-on-surface-variant mb-lg">An experimental local-network display project; compatibility and performance vary by device and network.</p>
+<div class="flex items-center justify-between mb-lg mt-auto">
+<a href="https://github.com/hikaribrandan3-code/isuitemacos/tree/main/releases/screen-bridge" target="_blank" rel="noopener noreferrer" class="flex items-center gap-sm text-primary font-title-lg hover:gap-md transition-all">Learn More <span class="material-symbols-outlined">arrow_outward</span></a>
+<span class="font-title-lg text-primary">Free download</span>
 </div>
-<a href="https://github.com/hikaribrandan3-code/screen-bridge-macos" target="_blank" rel="noopener noreferrer" class="block text-center w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:shadow-xl transition-all">View source</a>
-</div>
-
-<!-- iStats Card -->
-<div class="glass-card p-lg rounded-xl flex flex-col">
-<div class="flex items-center gap-md mb-md">
-<img src="assets/istats-icon.png" alt="iStats icon" class="w-16 h-16 rounded-lg" loading="lazy"/>
-<h3 class="font-title-lg text-title-lg">iStats</h3>
-</div>
-<p class="font-body-md text-on-surface-variant mb-lg">A small menu-bar monitor for CPU, memory, disk, and network activity. Built with SwiftUI and macOS system APIs.</p>
-<div class="flex items-center justify-between mb-lg mt-auto gap-sm">
-<span class="font-body-md text-on-surface-variant">New build under review</span>
-</div>
-<a href="https://github.com/hikaribrandan3-code/istats" target="_blank" rel="noopener noreferrer" class="block text-center w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:shadow-xl transition-all">View source</a>
+<a href="https://screen-bridge-macos.vercel.app/" target="_blank" rel="noopener noreferrer" class="block text-center w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:shadow-xl transition-all">Get Screen Bridge free</a>
 </div>
 
 <!-- iBrain Card -->
@@ -702,11 +694,26 @@ if (window.innerWidth < 768) window.location.replace('mobile.html');
 <img src="assets/ibrain-icon.png" alt="iBrain icon" class="w-16 h-16 rounded-lg" loading="lazy"/>
 <h3 class="font-title-lg text-title-lg">iBrain</h3>
 </div>
-<p class="font-body-md text-on-surface-variant mb-lg">A compact AI chat utility. Local models run through Ollama; optional cloud providers require an API key.</p>
-<div class="flex items-center justify-between mb-lg mt-auto gap-sm">
-<span class="font-body-md text-on-surface-variant">New build under review</span>
+<p class="font-body-md text-on-surface-variant mb-lg">Run AI entirely on your Mac. Private, offline, no subscriptions. Download models and chat with custom AI instructions.</p>
+<div class="flex items-center justify-between mb-lg mt-auto">
+<a href="https://github.com/hikaribrandan3-code/isuitemacos" target="_blank" rel="noopener noreferrer" class="flex items-center gap-sm text-primary font-title-lg hover:gap-md transition-all">Learn More <span class="material-symbols-outlined">arrow_outward</span></a>
+<span class="font-title-lg text-primary">Project source</span>
 </div>
-<a href="https://github.com/hikaribrandan3-code/ibrian" target="_blank" rel="noopener noreferrer" class="block text-center w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:shadow-xl transition-all">View source</a>
+<a href="https://github.com/hikaribrandan3-code/isuitemacos" target="_blank" rel="noopener noreferrer" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all">View source</a>
+</div>
+
+<!-- iStats Card -->
+<div class="glass-card p-lg rounded-xl flex flex-col">
+<div class="flex items-center gap-md mb-md">
+<img src="assets/istats-icon.png" alt="iStats icon" class="w-16 h-16 rounded-lg" loading="lazy"/>
+<h3 class="font-title-lg text-title-lg">iStats</h3>
+</div>
+<p class="font-body-md text-on-surface-variant mb-lg">A small menu-bar utility for viewing system metrics, built for a focused personal workflow.</p>
+<div class="flex items-center justify-between mb-lg mt-auto">
+<a href="https://istats-flame.vercel.app/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-sm text-primary font-title-lg hover:gap-md transition-all">Learn More <span class="material-symbols-outlined">arrow_outward</span></a>
+<span class="font-title-lg text-primary">Project source</span>
+</div>
+<a href="https://github.com/hikaribrandan3-code/isuitemacos" target="_blank" rel="noopener noreferrer" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all">View source</a>
 </div>
 </div>
 </div>
@@ -715,16 +722,16 @@ if (window.innerWidth < 768) window.location.replace('mobile.html');
 <!-- Works With Section -->
 <section class="py-lg bg-surface-container-low border-y border-outline-variant/30">
 <div class="max-w-[1440px] mx-auto px-margin-desktop">
-<p class="text-center font-label-md text-label-md text-on-surface-variant mb-lg uppercase tracking-widest">Technologies Used Across the Apps</p>
+<p class="text-center font-label-md text-label-md text-on-surface-variant mb-lg uppercase tracking-widest">Works Seamlessly With Tools You Already Use</p>
 <div class="flex flex-wrap justify-center items-center gap-lg opacity-70 hover:opacity-100 transition-all">
-<span class="font-semibold text-body-lg">SwiftUI</span>
-<span class="font-semibold text-body-lg">Core ML</span>
-<span class="font-semibold text-body-lg">WhisperKit</span>
-<span class="font-semibold text-body-lg">Rust</span>
-<span class="font-semibold text-body-lg">Tauri</span>
-<span class="font-semibold text-body-lg">React</span>
-<span class="font-semibold text-body-lg">Ollama</span>
-<span class="font-semibold text-body-lg">WebSockets</span>
+<span class="font-semibold text-body-lg">Gmail</span>
+<span class="font-semibold text-body-lg">Notion</span>
+<span class="font-semibold text-body-lg">Microsoft Word</span>
+<span class="font-semibold text-body-lg">Slack</span>
+<span class="font-semibold text-body-lg">Zoom</span>
+<span class="font-semibold text-body-lg">Figma</span>
+<span class="font-semibold text-body-lg">VS Code</span>
+<span class="font-semibold text-body-lg">Final Cut Pro</span>
 </div>
 </div>
 </section>
@@ -742,7 +749,7 @@ if (window.innerWidth < 768) window.location.replace('mobile.html');
 <li><a href="#features" class="font-body-md text-on-surface-variant hover:text-primary transition-colors">Features</a></li>
 </ul>
 </div>
-<!-- Column 2: Pricing -->
+<!-- Column 2: Projects -->
 <div>
 <h4 class="font-label-md text-label-md font-bold text-on-surface mb-md uppercase tracking-wider opacity-70">Projects</h4>
 <ul class="space-y-sm">
@@ -753,7 +760,7 @@ if (window.innerWidth < 768) window.location.replace('mobile.html');
 <div>
 <h4 class="font-label-md text-label-md font-bold text-on-surface mb-md uppercase tracking-wider opacity-70">Support</h4>
 <ul class="space-y-sm">
-<li><a href="https://github.com/hikaribrandan3-code" target="_blank" rel="noopener noreferrer" class="font-body-md text-primary hover:text-primary/80 transition-colors font-semibold">GitHub</a></li>
+<li><a href="https://github.com/hikaribrandan3-code/isuitemacos/issues" class="font-body-md text-primary">Project questions</a></li>
 </ul>
 </div>
 </div>
@@ -762,12 +769,15 @@ if (window.innerWidth < 768) window.location.replace('mobile.html');
 <div class="border-t border-outline-variant/10 py-lg">
 <!-- Bottom Bar -->
 <div class="flex flex-col md:flex-row items-center justify-between gap-md text-center md:text-left">
-<p class="font-label-sm text-label-sm text-on-surface-variant opacity-60">Public source • New Mac builds under review</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant opacity-60">Personal macOS projects • Public source</p>
 <p class="font-label-sm text-label-sm text-on-surface-variant opacity-60">© 2026 iSuite Office. All rights reserved.</p>
 </div>
 </div>
 </div>
 </footer>
+
+
+</div>
 
 <script>
         // Simple scroll reveal interaction
@@ -793,7 +803,7 @@ if (window.innerWidth < 768) window.location.replace('mobile.html');
 
 <div id="floatingCTA" class="hidden md:block fixed bottom-24 right-8 z-40 opacity-0 translate-y-8 transition-all duration-500 pointer-events-none">
     <button onclick="document.getElementById('apps').scrollIntoView({behavior:'smooth'})" class="bg-primary text-on-primary px-md py-sm rounded-full font-body-lg text-body-lg hover:shadow-lg hover:scale-105 active:scale-95 transition-all shadow-md flex items-center gap-xs pointer-events-auto">
-        <span class="material-symbols-outlined text-lg">apps</span>
+        <span class="material-symbols-outlined text-lg">shopping_cart</span>
         Explore Apps
     </button>
 </div>

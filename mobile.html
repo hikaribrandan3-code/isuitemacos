@@ -145,17 +145,7 @@ html, body { font-family: 'Inter', -apple-system, sans-serif; background: var(--
 .stat-number { font-size: 36px; font-weight: 800; background: linear-gradient(135deg, var(--primary), #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .stat-label { font-size: 13px; color: var(--on-surface-variant); margin-top: 4px; }
 
-/* ===== PRICING ===== */
-.pricing-card { background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85)); border: 2px solid var(--primary); border-radius: 28px; padding: 32px 24px; text-align: center; position: relative; box-shadow: 0 20px 60px rgba(0,88,188,0.12); }
-.pricing-badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--primary), var(--primary-light)); color: white; padding: 6px 20px; border-radius: 100px; font-size: 12px; font-weight: 700; box-shadow: 0 4px 16px rgba(0,88,188,0.3); }
-.pricing-card h3 { font-size: 28px; font-weight: 800; margin-bottom: 4px; }
-.pricing-card .subtitle { font-size: 14px; color: var(--on-surface-variant); margin-bottom: 20px; }
-.pricing-price { font-size: 56px; font-weight: 900; background: linear-gradient(135deg, var(--primary), #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; margin-bottom: 24px; }
-.pricing-price .currency { font-size: 24px; font-weight: 700; vertical-align: super; }
-.pricing-features { text-align: left; margin-bottom: 24px; }
-.pricing-features li { display: flex; align-items: center; gap: 12px; padding: 10px 0; font-size: 14px; border-bottom: 1px solid rgba(0,0,0,0.04); }
-.pricing-features li:last-child { border-bottom: none; }
-.pricing-features li .check { width: 22px; height: 22px; border-radius: 50%; background: rgba(16,185,129,0.1); color: #10b981; display: flex; align-items: center; justify-content: center; font-size: 12px; flex-shrink: 0; }
+/* ===== PROJECT CARD STYLES ===== */
 
 /* ===== STICKY CTA ===== */
 .sticky-cta { position: fixed; bottom: 0; left: 0; right: 0; z-index: 99; padding: 12px 20px 24px; background: linear-gradient(to top, rgba(255,255,255,0.98), rgba(255,255,255,0.85)); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-top: 1px solid rgba(0,0,0,0.06); transform: translateY(100%); transition: transform 0.4s cubic-bezier(0.16,1,0.3,1); }
@@ -275,7 +265,7 @@ html, body { font-family: 'Inter', -apple-system, sans-serif; background: var(--
   <div style="position:relative;z-index:1;">
     <div class="hero-badge">macOS Product Suite</div>
     <h1 class="hero-title">The Missing <span class="gradient-text">Office Suite</span> for Your Mac.</h1>
-    <p class="hero-subtitle">Five focused Mac projects with public source. Updated builds are being checked before release.</p>
+    <p class="hero-subtitle">A collection of focused Mac apps. Five personal macOS projects, built and used to explore voice, files, displays, and local AI.</p>
     <div class="hero-cta">
       <button class="btn-primary" onclick="document.getElementById('apps').scrollIntoView({behavior:'smooth'})">
          Explore the Apps
@@ -292,18 +282,18 @@ html, body { font-family: 'Inter', -apple-system, sans-serif; background: var(--
 <!-- MARQUEE -->
 <div class="marquee-container">
   <div class="marquee-track">
+    <span class="marquee-item">Local-First Features</span>
+    <span class="marquee-item">No Subscriptions</span>
+    <span class="marquee-item">Personal Projects</span>
     <span class="marquee-item">Public Source</span>
-    <span class="marquee-item">Five Mac Projects</span>
-    <span class="marquee-item">SwiftUI and Core ML</span>
-    <span class="marquee-item">Tauri and Rust</span>
-    <span class="marquee-item">Optional Local AI</span>
-    <span class="marquee-item">Builds Under Review</span>
+    <span class="marquee-item">Apple Silicon Native</span>
+    <span class="marquee-item">Project Builds Under Review</span>
+    <span class="marquee-item">Local-First Features</span>
+    <span class="marquee-item">No Subscriptions</span>
+    <span class="marquee-item">Personal Projects</span>
     <span class="marquee-item">Public Source</span>
-    <span class="marquee-item">Five Mac Projects</span>
-    <span class="marquee-item">SwiftUI and Core ML</span>
-    <span class="marquee-item">Tauri and Rust</span>
-    <span class="marquee-item">Optional Local AI</span>
-    <span class="marquee-item">Builds Under Review</span>
+    <span class="marquee-item">Apple Silicon Native</span>
+    <span class="marquee-item">Project Builds Under Review</span>
   </div>
 </div>
 
@@ -312,36 +302,47 @@ html, body { font-family: 'Inter', -apple-system, sans-serif; background: var(--
   <div class="reveal">
     <p class="section-label">The Apps</p>
     <h2 class="section-title">Meet the Suite.</h2>
-    <p class="section-desc">Explore three featured projects from the five-app iSuite collection.</p>
+    <p class="section-desc">Explore three featured projects from the iSuite collection.</p>
   </div>
 
   <div class="app-carousel" id="appCarousel">
-    <div class="app-card reveal reveal-delay-1" onclick="window.open('https://github.com/hikaribrandan3-code/ivoz-macos','_blank','noopener')">
+    <div class="app-card reveal reveal-delay-1" onclick="window.open('https://github.com/hikaribrandan3-code/ivozdownload','_blank','noopener')">
       <div class="app-card-header">
         <img src="assets/ivoz-icon.png" alt="iVoz">
-        <div><h3>iVoz</h3></div>
+        <div>
+          <h3>iVoz</h3>
+
+        </div>
       </div>
-      <p>On-device speech transcription and dictation, built with SwiftUI, WhisperKit, and Core ML.</p>
-      <div class="price-tag">In review</div>
-      <button class="card-cta">View source</button>
+      <p>On-device speech transcription and dictation for supported Mac apps, with multilingual workflows.</p>
+      <div class="price-tag">Free download</div>
+      <button class="card-cta">View project</button>
     </div>
+
     <div class="app-card reveal reveal-delay-2" onclick="window.open('https://github.com/hikaribrandan3-code/iorganize','_blank','noopener')">
       <div class="app-card-header">
         <img src="assets/iorganize-icon.png" alt="iOrganize">
-        <div><h3>iOrganize</h3></div>
+        <div>
+          <h3>iOrganize</h3>
+
+        </div>
       </div>
-      <p>A Mac file cleanup utility. Review results and choose what to remove.</p>
-      <div class="price-tag">In review</div>
+      <p>A Mac file cleanup utility. Review scan results and choose what to move or remove; some automation remains experimental.</p>
+      <div class="price-tag">Free project</div>
       <button class="card-cta">View source</button>
     </div>
-    <div class="app-card reveal reveal-delay-3" onclick="window.open('https://github.com/hikaribrandan3-code/screen-bridge-macos','_blank','noopener')">
+
+    <div class="app-card reveal reveal-delay-3" onclick="window.open('https://github.com/hikaribrandan3-code/isuitemacos/tree/main/releases/screen-bridge','_blank','noopener')">
       <div class="app-card-header">
         <img src="assets/imonitor-icon.png" alt="Screen Bridge">
-        <div><h3>Screen Bridge</h3></div>
+        <div>
+          <h3>Screen Bridge</h3>
+
+        </div>
       </div>
-      <p>An experimental local-network display project. Performance varies by device and network.</p>
-      <div class="price-tag">Experimental · In review</div>
-      <button class="card-cta">View source</button>
+      <p>An experimental local-network display project. Performance and compatibility vary by device and network.</p>
+      <div class="price-tag">Free download</div>
+      <button class="card-cta">View project</button>
     </div>
   </div>
   <div class="swipe-dots" id="appDots">
@@ -373,14 +374,14 @@ html, body { font-family: 'Inter', -apple-system, sans-serif; background: var(--
           <span style="color:#3b82f6;font-size:20px;line-height:1;">&#10003;</span>
           <div>
             <strong style="font-size:15px;">On-Device Intelligence</strong>
-            <p style="font-size:13px;color:#6b7280;margin:2px 0 0;line-height:1.5;">Your voice stays on your machine. Fast, private, and secure transcription.</p>
+            <p style="font-size:13px;color:#6b7280;margin:2px 0 0;line-height:1.5;">On-device speech transcription; see the project notes for privacy and model details.</p>
           </div>
         </li>
         <li style="display:flex;align-items:flex-start;gap:12px;">
           <span style="color:#3b82f6;font-size:20px;line-height:1;">&#10003;</span>
           <div>
             <strong style="font-size:15px;">Write Faster Without Typing</strong>
-            <p style="font-size:13px;color:#6b7280;margin:2px 0 0;line-height:1.5;">Dictate into supported Mac apps with on-device, multilingual transcription.</p>
+            <p style="font-size:13px;color:#6b7280;margin:2px 0 0;line-height:1.5;">Dictate in supported Mac apps with on-device multilingual transcription.</p>
           </div>
         </li>
       </ul>
@@ -402,14 +403,14 @@ html, body { font-family: 'Inter', -apple-system, sans-serif; background: var(--
           <span style="color:#8b5cf6;font-size:20px;line-height:1;">&#10003;</span>
           <div>
             <strong style="font-size:15px;">Smart Sanitize</strong>
-            <p style="font-size:13px;color:#6b7280;margin:2px 0 0;line-height:1.5;">Scan for cleanup candidates, review the results, and choose what to remove.</p>
+            <p style="font-size:13px;color:#6b7280;margin:2px 0 0;line-height:1.5;">Scan cleanup candidates, review the results, and choose what to move or remove.</p>
           </div>
         </li>
         <li style="display:flex;align-items:flex-start;gap:12px;">
           <span style="color:#8b5cf6;font-size:20px;line-height:1;">&#10003;</span>
           <div>
             <strong style="font-size:15px;">Auto-flow Rules</strong>
-            <p style="font-size:13px;color:#6b7280;margin:2px 0 0;line-height:1.5;">Create local rules and review file actions before relying on automation.</p>
+            <p style="font-size:13px;color:#6b7280;margin:2px 0 0;line-height:1.5;">Create local organization rules; review them before relying on automated actions.</p>
           </div>
         </li>
       </ul>
@@ -430,15 +431,15 @@ html, body { font-family: 'Inter', -apple-system, sans-serif; background: var(--
         <li style="display:flex;align-items:flex-start;gap:12px;">
           <span style="color:#10b981;font-size:20px;line-height:1;">&#10003;</span>
           <div>
-            <strong style="font-size:15px;">Browser-Based Viewing</strong>
-            <p style="font-size:13px;color:#6b7280;margin:2px 0 0;line-height:1.5;">View from another device with a compatible browser on the local network.</p>
+            <strong style="font-size:15px;">Visualización en red local</strong>
+            <p style="font-size:13px;color:#6b7280;margin:2px 0 0;line-height:1.5;">View from another device using a compatible browser on the same local network.</p>
           </div>
         </li>
         <li style="display:flex;align-items:flex-start;gap:12px;">
           <span style="color:#10b981;font-size:20px;line-height:1;">&#10003;</span>
           <div>
-            <strong style="font-size:15px;">Local Network Setup</strong>
-            <p style="font-size:13px;color:#6b7280;margin:2px 0 0;line-height:1.5;">View through a browser on your local network. Performance varies by setup.</p>
+            <strong style="font-size:15px;">Rendimiento experimental</strong>
+            <p style="font-size:13px;color:#6b7280;margin:2px 0 0;line-height:1.5;">Performance varies by setup; noticeable latency may occur.</p>
           </div>
         </li>
       </ul>
@@ -465,6 +466,8 @@ html, body { font-family: 'Inter', -apple-system, sans-serif; background: var(--
   </div>
 </div>
 
+
+</div>
 <script>
 // ===== PARTICLE SYSTEM =====
 (function() {
@@ -626,9 +629,7 @@ window.addEventListener('scroll', () => {
     const transX = i === 1 ? 30 : i === 2 ? -30 : 0;
     c.style.transform = `translate(-50%, -50%) translateZ(${base}px) rotateY(${rotateY + (i === 0 ? -5 : i === 1 ? 3 : -2)}deg) translateX(${transX}px)`;
   });
-});
-
-// ===== PARALLAX ON HERO BLOBS =====
+});// ===== PARALLAX ON HERO BLOBS =====
 window.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
   document.querySelectorAll('.blob').forEach((blob, i) => {
