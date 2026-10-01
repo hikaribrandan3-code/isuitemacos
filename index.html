@@ -691,37 +691,6 @@
         }
     });
 
-    // Demo Animation Cycle - Real animations extracted from iOrganize & iMonitor repos
-    function initDemoAnimation(prefix, stateCount = 4) {
-        let currentState = 1;
-
-        function showState(index) {
-            for (let i = 1; i <= stateCount; i++) {
-                const el = document.getElementById(`${prefix}-state-${i}`);
-                if (el) {
-                    if (i === index) {
-                        el.classList.add('active');
-                    } else {
-                        el.classList.remove('active');
-                    }
-                }
-            }
-        }
-
-        function cycle() {
-            showState(currentState);
-            const durations = [2500, 2500, 2500, 2500];
-            currentState = currentState < stateCount ? currentState + 1 : 1;
-            setTimeout(cycle, durations[currentState - 1] || 2500);
-        }
-
-        cycle();
-    }
-
-    // Start demo animations (iOrganize & iMonitor MacBook mockups)
-    initDemoAnimation('iorg', 4);
-    initDemoAnimation('imon', 4);
-
     // Mobile Hero — Animated App Showcase cycle
     (function() {
         const cards = document.querySelectorAll('.hero-app-card');
