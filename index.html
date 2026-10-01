@@ -12,6 +12,7 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="portfolio-desktop.css"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
       tailwind.config = {
@@ -362,7 +363,7 @@
 <!-- Deep Dives -->
 <section class="py-xl space-y-16" id="features">
 <!-- iVoz Deep Dive -->
-<div class="max-w-[1440px] mx-auto px-margin-desktop flex flex-col md:flex-row items-center gap-xl">
+<div class="app-detail max-w-[1440px] mx-auto px-margin-desktop flex flex-col md:flex-row items-center gap-xl">
 <div class="flex-1">
 <span class="text-primary font-label-md text-label-md mb-xs block">AI-POWERED AUDIO</span>
 <h2 class="font-headline-lg text-headline-lg mb-md">iVoz: Talk to your Mac like never before.</h2>
@@ -371,7 +372,7 @@
 <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
 <div>
 <h4 class="font-title-lg text-body-lg font-bold">On-Device Intelligence</h4>
-<p class="text-on-surface-variant">Speech processing runs on-device; review the app privacy notes for model and workflow details.</p>
+<p class="text-on-surface-variant">Transcription runs on-device after model setup. Longer recordings can take time to process; optional text refinement can use a local model.</p>
 </div>
 </li>
 <li class="flex items-start gap-md">
@@ -384,11 +385,11 @@
 </ul>
 </div>
 <div class="flex-1 w-full">
-<img class="rounded-xl app-preview-shadow border border-outline-variant/30" alt="iVoz transcription interface showing real-time voice-to-text processing with professional UI design" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwHd_8Xi4cC_c_DOl35xzJDlF3CCuNVGuwNz8UUdEtYJuQeZ1uiFmS6rgG8al7Kk7G1RRm3eoqCpKOK0jBIseIIfKNs4Jm_jP5zptGtJftZo43pe7pjjMnO6VfyVWOgPoCWCSSHOArxU-Hpll7QThyzA9H63vzz1c-rkgN0u9WDICuKBG2H54FI4FkU5cc5XhbPJYV7sqsMxdHk_73CVgzOqc8UDeI8kyWXwXuZstbRuSA0jdSCJKd"/>
+<img class="rounded-xl app-preview-shadow border border-outline-variant/30" alt="iVoz app window on macOS during a live transcription test" loading="lazy" src="assets/real/ivoz-capture-temp.jpg"/>
 </div>
 </div>
 <!-- iOrganize Deep Dive -->
-<div class="max-w-[1440px] mx-auto px-margin-desktop flex flex-col md:flex-row-reverse items-center gap-xl">
+<div class="app-detail app-detail-reverse max-w-[1440px] mx-auto px-margin-desktop flex flex-col md:flex-row-reverse items-center gap-xl">
 <div class="flex-1">
 <span class="text-secondary font-label-md text-label-md mb-xs block">FILE MANAGEMENT</span>
 <h2 class="font-headline-lg text-headline-lg mb-md">iOrganize: The clutter-free workspace.</h2>
@@ -404,80 +405,17 @@
 <span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
 <div>
 <h4 class="font-title-lg text-body-lg font-bold">Auto-flow Rules</h4>
-<p class="text-on-surface-variant">Create local organization rules; review them before relying on automated actions.</p>
+<p class="text-on-surface-variant">Manual scan and review are the most dependable workflow. Filing rules and automatic deletion can miss cases; inspect each rule and result before acting.</p>
 </div>
 </li>
 </ul>
 </div>
 <div class="flex-1 w-full">
-<!-- iOrganize MacBook Mockup with Demo Animation -->
-<div class="macbook-mockup">
-<div class="macbook-frame">
-<div class="macbook-screen">
-<div class="screen-header">
-<div class="screen-dots">
-<span></span><span></span><span></span>
-</div>
-<span class="screen-title">iOrganize</span>
-</div>
-<div class="screen-content">
-<div class="demo-animation">
-<div class="demo-state active" id="iorg-state-1">
-<div class="demo-dot"></div>
-<div class="demo-label">Scanning Downloads...</div>
-</div>
-<div class="demo-state" id="iorg-state-2">
-<div class="demo-file-match">
-<svg class="demo-file-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/>
-<path d="M14 2v6h6"/>
-</svg>
-<div class="demo-file-info">
-<span class="demo-file-name">invoice_2024.dmg</span>
-<span class="demo-file-tags">.dmg · 9 days old</span>
-</div>
-</div>
-<div class="demo-label">Rule matched</div>
-</div>
-<div class="demo-state" id="iorg-state-3">
-<div class="demo-file-move">
-<svg class="demo-move-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-<path d="M3 7a2 2 0 0 1 2-2h4l2 2.5h8a2 2 0 0 1 2 2V17a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/>
-</svg>
-<div class="demo-move-track">
-<span class="demo-move-file"></span>
-</div>
-<svg class="demo-move-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-<path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m2 0-1 14a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L6 6"/>
-</svg>
-</div>
-<div class="demo-label done">Moving to Trash</div>
-</div>
-<div class="demo-state" id="iorg-state-4">
-<div class="demo-done">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5">
-<polyline points="20 6 9 17 4 12"/>
-</svg>
-<span>Review scan results before cleanup</span>
-</div>
-</div>
-</div>
-<div class="screen-meta">
-<span class="screen-tag">Auto-Flow rule</span>
-<span class="screen-accuracy">Illustrative interface preview</span>
-</div>
-</div>
-</div>
-<div class="macbook-hinge"></div>
-<div class="macbook-base">
-<div class="macbook-notch"></div>
-</div>
-</div>
-</div>
+<img class="rounded-xl app-preview-shadow border border-outline-variant/30 w-full" src="assets/real/iorganize-sanitize.jpg" alt="iOrganize Smart Sanitize scan results with categories and review controls" loading="lazy"/>
 </div>
 </div>
 <!-- Screen Bridge Deep Dive -->
-<div class="max-w-[1440px] mx-auto px-margin-desktop flex flex-col md:flex-row items-center gap-xl">
+<div class="app-detail max-w-[1440px] mx-auto px-margin-desktop flex flex-col md:flex-row items-center gap-xl">
 <div class="flex-1">
 <span class="text-tertiary font-label-md text-label-md mb-xs block">UNIVERSAL CONNECTIVITY</span>
 <h2 class="font-headline-lg text-headline-lg mb-md">Screen Bridge: Bridging the gap.</h2>
@@ -486,7 +424,7 @@
 <span class="material-symbols-outlined text-tertiary mt-1">check_circle</span>
 <div>
 <h4 class="font-title-lg text-body-lg font-bold">Local-Network Viewing</h4>
-<p class="text-on-surface-variant">View from another device using a compatible browser on the same local network.</p>
+<p class="text-on-surface-variant">View from a compatible browser on the same local network. The local connection is experimental and should be used only on a trusted network.</p>
 </div>
 </li>
 <li class="flex items-start gap-md">
@@ -499,89 +437,21 @@
 </ul>
 </div>
 <div class="flex-1 w-full">
-<!-- iMonitor MacBook Mockup with Demo Animation -->
-<div class="macbook-mockup">
-<div class="macbook-frame">
-<div class="macbook-screen">
-<div class="screen-header">
-<div class="screen-dots">
-<span></span><span></span><span></span>
-</div>
-<span class="screen-title">iMonitor</span>
-</div>
-<div class="screen-content">
-<div class="demo-animation">
-<div class="demo-state active" id="imon-state-1">
-<div class="demo-label">📊 System Status Active</div>
-<div class="demo-file-match" style="background: #ecfdf5; border-color: #10b981;">
-<svg class="demo-file-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2">
-<circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/>
-</svg>
-<div class="demo-file-info">
-<span class="demo-file-name" style="color: #065f46;">All Systems Nominal</span>
-<span class="demo-file-tags" style="color: #10b981; background: rgba(16, 185, 129, 0.1);">Illustrative preview</span>
-</div>
-</div>
-</div>
-<div class="demo-state" id="imon-state-2">
-<div class="demo-label">🔗 Display Connected</div>
-<div class="demo-file-match" style="background: #e0e7ff; border-color: #6366f1;">
-<svg class="demo-file-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2">
-<rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/>
-</svg>
-<div class="demo-file-info">
-<span class="demo-file-name" style="color: #312e81;">iPad Air (192.168.1.42)</span>
-<span class="demo-file-tags" style="color: #6366f1; background: rgba(99, 102, 241, 0.1);">Experimental preview</span>
-</div>
-</div>
-</div>
-<div class="demo-state" id="imon-state-3">
-<div class="demo-label">⚡ Performance Peak</div>
-<div class="demo-file-move">
-<svg class="demo-move-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2">
-<path d="M13 2L3 14h9l-1 8 10-12h-9l1-8Z"/>
-</svg>
-<div class="demo-move-track">
-<span class="demo-move-file" style="animation-duration: 1.6s;"></span>
-</div>
-<span style="color: #f59e0b; font-weight: 600;">CPU 78%</span>
-</div>
-</div>
-<div class="demo-state" id="imon-state-4">
-<div class="demo-done">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5">
-<polyline points="20 6 9 17 4 12"/>
-</svg>
-<span style="color: #10b981;">Zero Lag Connection</span>
-</div>
-</div>
-</div>
-<div class="screen-meta">
-<span class="screen-tag">Real-time Monitoring</span>
-<span class="screen-accuracy">Always in sync</span>
-</div>
-</div>
-</div>
-<div class="macbook-hinge"></div>
-<div class="macbook-base">
-<div class="macbook-notch"></div>
-</div>
-</div>
-</div>
+<img class="rounded-xl app-preview-shadow border border-outline-variant/30 w-full" src="assets/real/screen-bridge-ready.jpg" alt="Screen Bridge app on macOS, showing its experimental local display connection setup" loading="lazy"/>
 </div>
 </div>
 
 <!-- iBrain Deep Dive -->
-<div class="max-w-[1440px] mx-auto px-margin-desktop flex flex-col md:flex-row-reverse items-center gap-xl">
+<div class="app-detail app-detail-reverse max-w-[1440px] mx-auto px-margin-desktop flex flex-col md:flex-row-reverse items-center gap-xl">
 <div class="flex-1">
 <span class="text-purple-600 font-label-md text-label-md mb-xs block">ARTIFICIAL INTELLIGENCE</span>
-<h2 class="font-headline-lg text-headline-lg mb-md">iBrain: AI that stays private.</h2>
+<h2 class="font-headline-lg text-headline-lg mb-md">iBrain: Local AI, with optional cloud providers.</h2>
 <ul class="space-y-md">
 <li class="flex items-start gap-md">
 <span class="material-symbols-outlined text-purple-600 mt-1">check_circle</span>
 <div>
 <h4 class="font-title-lg text-body-lg font-bold">Local Model Options</h4>
-<p class="text-on-surface-variant">Run supported local models on your Mac; privacy depends on the selected model and feature.</p>
+<p class="text-on-surface-variant">Connect to Ollama for local models or choose an optional hosted provider. Cloud chats send prompts and conversation history to that provider.</p>
 </div>
 </li>
 <li class="flex items-start gap-md">
@@ -594,12 +464,17 @@
 </ul>
 </div>
 <div class="flex-1 w-full">
-<img src="assets/ibrain-mockup.png" alt="iBrain chat interface" class="rounded-xl app-preview-shadow border border-outline-variant/30 w-full" loading="lazy"/>
+<div class="app-preview-panel rounded-xl app-preview-shadow border border-outline-variant/30 w-full" aria-label="iBrain verified implementation summary">
+<span class="text-purple-600 font-label-md text-label-md">LOCAL BY DEFAULT</span>
+<h3 class="font-headline-lg text-headline-lg mt-md mb-md">iBrain</h3>
+<p class="text-on-surface-variant">SwiftUI desktop app · Ollama on localhost · optional OpenAI and Anthropic APIs</p>
+<p class="text-on-surface-variant mt-md">API keys are stored in macOS Keychain. Choose local or cloud mode for each provider.</p>
+</div>
 </div>
 </div>
 
 <!-- iStats Deep Dive -->
-<div class="max-w-[1440px] mx-auto px-margin-desktop flex flex-col md:flex-row items-center gap-xl">
+<div class="app-detail max-w-[1440px] mx-auto px-margin-desktop flex flex-col md:flex-row items-center gap-xl">
 <div class="flex-1">
 <span class="text-green-600 font-label-md text-label-md mb-xs block">SYSTEM MONITORING</span>
 <h2 class="font-headline-lg text-headline-lg mb-md">iStats: Know your Mac in real time.</h2>
@@ -608,7 +483,7 @@
 <span class="material-symbols-outlined text-green-600 mt-1">check_circle</span>
 <div>
 <h4 class="font-title-lg text-body-lg font-bold">Always-On Menu Bar</h4>
-<p class="text-on-surface-variant">View CPU, memory, disk, and network readouts in a compact menu-bar panel.</p>
+<p class="text-on-surface-variant">View compact CPU, memory, disk, and network estimates. Definitions and sampled interfaces differ from Activity Monitor.</p>
 </div>
 </li>
 <li class="flex items-start gap-md">
@@ -621,7 +496,7 @@
 </ul>
 </div>
 <div class="flex-1 w-full">
-<img src="assets/istats-mockup.png" alt="iStats monitoring interface" class="rounded-xl app-preview-shadow border border-outline-variant/30 w-full" loading="lazy"/>
+<img src="assets/real/istats-dashboard.jpg" alt="iStats menu-bar utility showing live CPU and memory readings" class="rounded-xl app-preview-shadow border border-outline-variant/30 w-full" loading="lazy"/>
 </div>
 </div>
 </section>
@@ -640,7 +515,7 @@
 <h2 class="text-display text-center mb-md font-headline-lg">Designed for Mac Professionals</h2>
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-md">Personal macOS projects for voice, file organization, display sharing, local AI, and system monitoring.</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+<div class="app-card-grid grid grid-cols-1 md:grid-cols-3 gap-lg">
 <!-- iVoz Card -->
 <div class="glass-card p-lg rounded-xl flex flex-col">
 <div class="flex items-center gap-md mb-md">
@@ -650,9 +525,10 @@
 <p class="font-body-md text-on-surface-variant mb-lg">Discover all the smart transcription features and how iVoz transforms the way you capture ideas.</p>
 <div class="flex items-center justify-between mb-lg mt-auto">
 <a href="https://ivoz-macos-site.vercel.app/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-sm text-primary font-title-lg hover:gap-md transition-all">Learn More <span class="material-symbols-outlined">arrow_outward</span></a>
-<span class="font-title-lg text-primary">Free download</span>
+<span class="font-title-lg text-primary">Swift · WhisperKit · Core ML</span>
 </div>
 <a href="https://ivoz-macos-site.vercel.app/" target="_blank" rel="noopener noreferrer" class="block text-center w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:shadow-xl transition-all">Get iVoz free</a>
+<a class="mt-md text-center text-primary" href="https://github.com/hikaribrandan3-code/ivoz-macos" target="_blank" rel="noopener noreferrer">Source &amp; development notes</a>
 </div>
 
 <!-- iOrganize Card -->
@@ -664,9 +540,9 @@
 <p class="font-body-md text-on-surface-variant mb-lg">See how iOrganize helps review and organize files on your Mac.</p>
 <div class="flex items-center justify-between mb-lg mt-auto">
 <a href="https://iorganize-eight.vercel.app/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-sm text-primary font-title-lg hover:gap-md transition-all">Learn More <span class="material-symbols-outlined">arrow_outward</span></a>
-<span class="font-title-lg text-primary">Project source</span>
+<span class="font-title-lg text-primary">Swift · SwiftUI · AppKit</span>
 </div>
-<a href="https://github.com/hikaribrandan3-code/iorganize" target="_blank" rel="noopener noreferrer" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all">View source</a>
+<a href="https://github.com/hikaribrandan3-code/iorganize" target="_blank" rel="noopener noreferrer" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all">View source &amp; safety notes</a>
 </div>
 
 <!-- Screen Bridge Card -->
@@ -677,10 +553,11 @@
 </div>
 <p class="font-body-md text-on-surface-variant mb-lg">An experimental local-network display project; compatibility and performance vary by device and network.</p>
 <div class="flex items-center justify-between mb-lg mt-auto">
-<a href="https://github.com/hikaribrandan3-code/isuitemacos/tree/main/releases/screen-bridge" target="_blank" rel="noopener noreferrer" class="flex items-center gap-sm text-primary font-title-lg hover:gap-md transition-all">Learn More <span class="material-symbols-outlined">arrow_outward</span></a>
-<span class="font-title-lg text-primary">Free download</span>
+<a href="https://github.com/hikaribrandan3-code/screen-bridge-macos" target="_blank" rel="noopener noreferrer" class="flex items-center gap-sm text-primary font-title-lg hover:gap-md transition-all">Learn More <span class="material-symbols-outlined">arrow_outward</span></a>
+<span class="font-title-lg text-primary">Experimental · Rust · Tauri · Axum</span>
 </div>
-<a href="https://screen-bridge-macos.vercel.app/" target="_blank" rel="noopener noreferrer" class="block text-center w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:shadow-xl transition-all">Get Screen Bridge free</a>
+<a href="https://screen-bridge-macos.vercel.app/" target="_blank" rel="noopener noreferrer" class="block text-center w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:shadow-xl transition-all">View experimental project</a>
+<a class="mt-md text-center text-primary" href="https://github.com/hikaribrandan3-code/screen-bridge-macos" target="_blank" rel="noopener noreferrer">Source &amp; development notes</a>
 </div>
 
 <!-- iBrain Card -->
@@ -689,12 +566,12 @@
 <img src="assets/ibrain-icon.png" alt="iBrain icon" class="w-16 h-16 rounded-lg" loading="lazy"/>
 <h3 class="font-title-lg text-title-lg">iBrain</h3>
 </div>
-<p class="font-body-md text-on-surface-variant mb-lg">Run AI entirely on your Mac. Private, offline, no subscriptions. Download models and chat with custom AI instructions.</p>
+<p class="font-body-md text-on-surface-variant mb-lg">Use local Ollama models or optional OpenAI and Anthropic providers. Cloud conversations are sent to the selected provider.</p>
 <div class="flex items-center justify-between mb-lg mt-auto">
-<a href="https://github.com/hikaribrandan3-code/isuitemacos" target="_blank" rel="noopener noreferrer" class="flex items-center gap-sm text-primary font-title-lg hover:gap-md transition-all">Learn More <span class="material-symbols-outlined">arrow_outward</span></a>
-<span class="font-title-lg text-primary">Project source</span>
+<a href="https://github.com/hikaribrandan3-code/ibrian" target="_blank" rel="noopener noreferrer" class="flex items-center gap-sm text-primary font-title-lg hover:gap-md transition-all">Project source <span class="material-symbols-outlined">arrow_outward</span></a>
+<span class="font-title-lg text-primary">Swift · SwiftUI · Ollama</span>
 </div>
-<a href="https://github.com/hikaribrandan3-code/isuitemacos" target="_blank" rel="noopener noreferrer" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all">View source</a>
+<a href="https://github.com/hikaribrandan3-code/ibrian" target="_blank" rel="noopener noreferrer" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all">View source &amp; notes</a>
 </div>
 
 <!-- iStats Card -->
@@ -706,27 +583,24 @@
 <p class="font-body-md text-on-surface-variant mb-lg">A small menu-bar utility for viewing system metrics, built for a focused personal workflow.</p>
 <div class="flex items-center justify-between mb-lg mt-auto">
 <a href="https://istats-flame.vercel.app/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-sm text-primary font-title-lg hover:gap-md transition-all">Learn More <span class="material-symbols-outlined">arrow_outward</span></a>
-<span class="font-title-lg text-primary">Project source</span>
+<span class="font-title-lg text-primary">Swift · SwiftUI · Swift Charts</span>
 </div>
-<a href="https://github.com/hikaribrandan3-code/isuitemacos" target="_blank" rel="noopener noreferrer" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all">View source</a>
+<a href="https://github.com/hikaribrandan3-code/istats" target="_blank" rel="noopener noreferrer" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all">View source &amp; notes</a>
 </div>
 </div>
 </div>
 </section>
 
 <!-- Works With Section -->
-<section class="py-lg bg-surface-container-low border-y border-outline-variant/30">
+<section class="hidden md:block py-lg bg-surface-container-low border-y border-outline-variant/30">
 <div class="max-w-[1440px] mx-auto px-margin-desktop">
-<p class="text-center font-label-md text-label-md text-on-surface-variant mb-lg uppercase tracking-widest">Works Seamlessly With Tools You Already Use</p>
+<p class="text-center font-label-md text-label-md text-on-surface-variant mb-lg uppercase tracking-widest">Verified technology across these projects</p>
 <div class="flex flex-wrap justify-center items-center gap-lg opacity-70 hover:opacity-100 transition-all">
-<span class="font-semibold text-body-lg">Gmail</span>
-<span class="font-semibold text-body-lg">Notion</span>
-<span class="font-semibold text-body-lg">Microsoft Word</span>
-<span class="font-semibold text-body-lg">Slack</span>
-<span class="font-semibold text-body-lg">Zoom</span>
-<span class="font-semibold text-body-lg">Figma</span>
-<span class="font-semibold text-body-lg">VS Code</span>
-<span class="font-semibold text-body-lg">Final Cut Pro</span>
+<span class="font-semibold text-body-lg">Swift / SwiftUI</span>
+<span class="font-semibold text-body-lg">Rust / Tauri</span>
+<span class="font-semibold text-body-lg">WhisperKit / Core ML</span>
+<span class="font-semibold text-body-lg">Ollama</span>
+<span class="font-semibold text-body-lg">Swift Charts</span>
 </div>
 </div>
 </section>
@@ -796,7 +670,7 @@
     </script>
 <!-- Sticky Floating CTA Button - v2 -->
 
-<div id="floatingCTA" class="hidden md:block fixed bottom-24 right-8 z-40 opacity-0 translate-y-8 transition-all duration-500 pointer-events-none">
+<div id="floatingCTA" class="md:hidden fixed bottom-24 right-8 z-40 opacity-0 translate-y-8 transition-all duration-500 pointer-events-none">
     <button onclick="document.getElementById('apps').scrollIntoView({behavior:'smooth'})" class="bg-primary text-on-primary px-md py-sm rounded-full font-body-lg text-body-lg hover:shadow-lg hover:scale-105 active:scale-95 transition-all shadow-md flex items-center gap-xs pointer-events-auto">
         <span class="material-symbols-outlined text-lg">shopping_cart</span>
         Explore Apps
