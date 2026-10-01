@@ -3,11 +3,9 @@
 <html class="scroll-smooth" lang="es"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<!-- Mobile redirect: if screen is small, go to mobile version -->
-<script>
-if (window.innerWidth < 768) window.location.replace('mobile-es.html');
-</script>
-<title>iSuite Office | La Suite Que Faltaba para macOS</title>
+
+<meta name="description" content="Cinco proyectos para Mac con código público: iVoz, iOrganize, Screen Bridge, iStats e iBrain. Las nuevas descargas están en revisión.">
+<title>iSuite Office | Cinco Proyectos para macOS</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -110,79 +108,9 @@ if (window.innerWidth < 768) window.location.replace('mobile-es.html');
       }
     </script>
 <style>
-        .glass-card {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(229, 229, 231, 0.5);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-        .app-preview-shadow {
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
-        }
-        .hero-gradient {
-            background: #ffffff;
-        }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
-            25% { transform: translateY(-20px) rotateX(10deg) rotateY(10deg) rotateZ(5deg); }
-            50% { transform: translateY(-40px) rotateX(-10deg) rotateY(-10deg) rotateZ(-5deg); }
-            75% { transform: translateY(-20px) rotateX(10deg) rotateY(-10deg) rotateZ(5deg); }
-        }
-        .floating-icon {
-            animation: float 6s ease-in-out infinite;
-            perspective: 1000px;
-        }
-        .floating-icon:nth-child(2) {
-            animation-delay: -2s;
-        }
-        .floating-icon:nth-child(3) {
-            animation-delay: -4s;
-        }
-        @keyframes mockupFloat {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-        .macbook-mockup { width: 100%; max-width: 720px; animation: mockupFloat 6s ease-in-out infinite; margin: 0 auto; }
-        .macbook-frame { position: relative; }
-        .macbook-screen { background: #fff; border: 2px solid #d1d1d6; border-radius: 16px 16px 0 0; padding: 8px; box-shadow: 0 24px 80px rgba(0,0,0,0.1); }
-        .screen-header { display: flex; align-items: center; gap: 10px; padding: 8px 12px; background: #f5f5f7; border-radius: 10px 10px 0 0; border-bottom: 1px solid rgba(0,0,0,0.08); }
-        .screen-dots { display: flex; gap: 6px; }
-        .screen-dots span { width: 10px; height: 10px; border-radius: 50%; }
-        .screen-dots span:nth-child(1) { background: #FF5F57; }
-        .screen-dots span:nth-child(2) { background: #FFBD2E; }
-        .screen-dots span:nth-child(3) { background: #28C840; }
-        .screen-title { font-size: 0.75rem; color: #6b7280; font-weight: 600; flex: 1; text-align: center; margin-right: 32px; }
-        .screen-content { padding: 24px 20px; background: #fff; min-height: 180px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 0 0 12px 12px; }
-        .macbook-hinge { height: 8px; background: linear-gradient(180deg, #c1c1c6 0%, #d1d1d6 100%); border-radius: 0 0 4px 4px; margin: 0 12px; }
-        .macbook-base { height: 14px; background: linear-gradient(180deg, #d1d1d6 0%, #e1e1e6 40%, #c1c1c6 100%); border-radius: 0 0 12px 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); margin: 0 -8px; }
-        .macbook-notch { width: 60px; height: 4px; background: #a1a1a6; border-radius: 0 0 3px 3px; position: absolute; top: 0; left: 50%; transform: translateX(-50%); }
-        .screen-meta { display: flex; gap: 12px; font-size: 0.7rem; margin-top: 16px; }
-        .screen-tag { background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 4px 10px; border-radius: 100px; font-weight: 600; }
-        @keyframes demoFadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
-        .demo-animation { min-height: 100px; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; }
-        .demo-state { display: none; flex-direction: column; align-items: center; gap: 10px; animation: demoFadeIn 0.4s ease forwards; }
-        .demo-state.active { display: flex; }
-        @keyframes demoPulse { 0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.3); } 50% { transform: scale(1.15); box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); } }
-        .demo-dot { width: 14px; height: 14px; background: #ef4444; border-radius: 50%; animation: demoPulse 1.2s ease-in-out infinite; }
-        .demo-file-match { display: flex; align-items: center; gap: 12px; background: #f9f9fb; border: 1px solid rgba(0,0,0,0.04); border-radius: 12px; padding: 10px 16px; min-width: 240px; }
-        .demo-file-icon { flex-shrink: 0; color: #9ca3af; }
-        .demo-file-info { display: flex; flex-direction: column; gap: 2px; }
-        .demo-file-name { font-size: 0.85rem; font-weight: 600; color: #1f2937; }
-        .demo-file-tags { font-size: 0.72rem; color: #b45309; background: rgba(245, 158, 11, 0.1); padding: 1px 8px; border-radius: 100px; font-weight: 500; }
-        @keyframes fileSlide { 0% { left: 0; } 100% { left: calc(100% - 10px); } }
-        .demo-file-move { display: flex; align-items: center; gap: 10px; min-width: 260px; }
-        .demo-move-icon { flex-shrink: 0; color: #9ca3af; }
-        .demo-move-track { position: relative; flex: 1; height: 2px; background: repeating-linear-gradient(90deg, rgba(0,0,0,0.08) 0 6px, transparent 6px 12px); }
-        .demo-move-file { position: absolute; top: 50%; left: 0; width: 10px; height: 12px; background: #f59e0b; border-radius: 2px; transform: translate(0, -50%); animation: fileSlide 1.4s ease-in-out infinite; }
-        @keyframes checkPop { 0% { transform: scale(0); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
-        .demo-done { display: flex; align-items: center; gap: 12px; font-weight: 600; color: #10b981; }
-        .demo-done svg { animation: checkPop 0.6s ease-out; }
-        .demo-label { font-size: 0.9rem; font-weight: 500; color: #6b7280; }
-        .demo-label.done { color: #10b981; }
-    </style>
+  .glass-card { background: rgba(255,255,255,.82); backdrop-filter: blur(16px); border: 1px solid rgba(193,198,215,.45); box-shadow: 0 8px 28px rgba(0,0,0,.04); }
+  @media (max-width: 767px) { .text-display { font-size: 2.25rem; line-height: 1.12; } }
+</style>
 </head>
 <body class="bg-background text-on-surface font-body-md">
 <!-- Top Navigation Bar -->
@@ -193,298 +121,89 @@ if (window.innerWidth < 768) window.location.replace('mobile-es.html');
                 iSuite Office
             </div>
 <div class="hidden md:flex gap-lg items-center">
-<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#features">Características</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#apps">Las Apps</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#apps">Apps</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#about">Acerca de</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#apps">Proyectos</a>
 <a href="index.html" class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md">EN</a>
 <button onclick="document.getElementById('apps').scrollIntoView({behavior:'smooth'})" class="bg-primary text-on-primary px-lg py-sm rounded-full font-label-md text-label-md hover:opacity-90 active:scale-95 transition-all">Explorar Apps</button>
 </div>
-<button onclick="document.getElementById('mobileNav').classList.add('active')" class="md:hidden material-symbols-outlined text-on-surface">menu</button>
+<div class="md:hidden flex gap-md items-center"><a href="index.html" class="text-primary font-semibold">EN</a><a href="#apps" class="text-primary font-semibold">Proyectos</a></div>
 </div>
 </nav>
 <main class="pt-16">
-<!-- Hero Section (Desktop) -->
-<section class="bg-white pt-xl pb-md overflow-hidden relative">
-<div class="max-w-[1440px] mx-auto px-margin-desktop relative">
-<img src="assets/hero-es.png" alt="La suite de oficina que le falta a macOS" class="hidden md:block w-full h-auto"/>
-<button onclick="document.getElementById('apps').scrollIntoView({behavior:'smooth'})" class="hidden md:block absolute top-[28%] left-1/2 -translate-x-1/2 w-32 h-12 bg-transparent cursor-pointer" title="Obtener iSuite Office"></button>
-</div>
+<section class="bg-white py-xl" id="about">
+  <div class="max-w-[1440px] mx-auto px-margin-desktop py-xl">
+    <p class="font-label-md text-primary uppercase tracking-wider mb-md">Colección de proyectos · macOS</p>
+    <h1 class="text-display font-headline-lg max-w-4xl mb-lg">Cinco proyectos para macOS, con código público.</h1>
+    <p class="font-body-lg text-on-surface-variant max-w-2xl mb-lg">iSuite reúne apps personales que construí y uso para explorar voz, archivos, pantallas y IA local. Las nuevas compilaciones están en revisión antes de publicar descargas.</p>
+    <a href="#apps" class="inline-block bg-primary text-on-primary px-lg py-md rounded-full font-label-md">Las aplicaciones</a>
+  </div>
 </section>
-
-<!-- Hero Section (Mobile) -->
-<section class="bg-white pt-0 pb-0 overflow-hidden md:hidden">
-<div class="max-w-[1440px] mx-auto px-0">
-<img src="assets/hero.png" alt="La suite de oficina que le falta a macOS" class="w-full h-auto"/>
-</div>
-</section>
-
-<!-- Deep Dives -->
-<section class="py-xl space-y-16" id="features">
-<!-- iVoz Deep Dive -->
-<div class="max-w-[1440px] mx-auto px-margin-desktop flex flex-col md:flex-row items-center gap-xl">
-<div class="flex-1">
-<span class="text-primary font-label-md text-label-md mb-xs block">AUDIO IMPULSADO POR IA</span>
-<h2 class="font-headline-lg text-headline-lg mb-md">iVoz: Habla con tu Mac como nunca.</h2>
-<ul class="space-y-md">
-<li class="flex items-start gap-md">
-<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
-<div>
-<h4 class="font-title-lg text-body-lg font-bold">Inteligencia en el Dispositivo</h4>
-<p class="text-on-surface-variant">Tu voz permanece en tu máquina. Procesamiento de transcripción rápido, privado y seguro.</p>
-</div>
-</li>
-<li class="flex items-start gap-md">
-<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
-<div>
-<h4 class="font-title-lg text-body-lg font-bold">Escribe Más Rápido Sin Tipear</h4>
-<p class="text-on-surface-variant">Dicta directamente en cualquier aplicación. Funciona completamente sin conexión con soporte para 10+ idiomas.</p>
-</div>
-</li>
-</ul>
-</div>
-<div class="flex-1 w-full">
-<img class="rounded-xl app-preview-shadow border border-outline-variant/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwHd_8Xi4cC_c_DOl35xzJDlF3CCuNVGuwNz8UUdEtYJuQeZ1uiFmS6rgG8al7Kk7G1RRm3eoqCpKOK0jBIseIIfKNs4Jm_jP5zptGtJftZo43pe7pjjMnO6VfyVWOgPoCWCSSHOArxU-Hpll7QThyzA9H63vzz1c-rkgN0u9WDICuKBG2H54FI4FkU5cc5XhbPJYV7sqsMxdHk_73CVgzOqc8UDeI8kyWXwXuZstbRuSA0jdSCJKd"/>
-</div>
-</div>
-<!-- iOrganize Deep Dive -->
-<div class="max-w-[1440px] mx-auto px-margin-desktop flex flex-col md:flex-row-reverse items-center gap-xl">
-<div class="flex-1">
-<span class="text-secondary font-label-md text-label-md mb-xs block">GESTIÓN DE ARCHIVOS</span>
-<h2 class="font-headline-lg text-headline-lg mb-md">iOrganize: El espacio de trabajo sin desorden.</h2>
-<ul class="space-y-md">
-<li class="flex items-start gap-md">
-<span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
-<div>
-<h4 class="font-title-lg text-body-lg font-bold">Sanitización Inteligente</h4>
-<p class="text-on-surface-variant">Escaneo con un clic identifica y elimina archivos basura, duplicados e instaladores olvidados al instante.</p>
-</div>
-</li>
-<li class="flex items-start gap-md">
-<span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
-<div>
-<h4 class="font-title-lg text-body-lg font-bold">Reglas Automáticas</h4>
-<p class="text-on-surface-variant">Crea reglas con condiciones que se ejecutan cada hora, diariamente o al instante. Todo procesamiento es local.</p>
-</div>
-</li>
-</ul>
-</div>
-<div class="flex-1 w-full">
-<img class="rounded-xl app-preview-shadow border border-outline-variant/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaIEp7t1xGTtxobo-LGuTgmkLnp5S_Mr-TdqJGv00hBGt5Lex9RR1AD1LvHWkCbwGo1-T0kHr_cg1ZOtKmEpRwBoYXr1FvL7YfyUPb_WFVVre-N68oTgTkZaIcn1FwRcxK5IV-iouZq8cKSSQxJ15EgLN27Q9Fmg89UQkYQem9FIZmz2WVYW5V_H3-VLii1uqWj_1Xd9hJpxKzzAhdSVZ9oiWIt2BtRUoA7-gGj5C-ZLFhQe_ICKay"/>
-</div>
-</div>
-<!-- iScreen Share Deep Dive -->
-<div class="max-w-[1440px] mx-auto px-margin-desktop flex flex-col md:flex-row items-center gap-xl">
-<div class="flex-1">
-<span class="text-tertiary font-label-md text-label-md mb-xs block">CONECTIVIDAD UNIVERSAL</span>
-<h2 class="font-headline-lg text-headline-lg mb-md">iScreen Share: Cerrando la brecha.</h2>
-<ul class="space-y-md">
-<li class="flex items-start gap-md">
-<span class="material-symbols-outlined text-tertiary mt-1">check_circle</span>
-<div>
-<h4 class="font-title-lg text-body-lg font-bold">Funciona en Todas Partes</h4>
-<p class="text-on-surface-variant">Conéctate a iPads, tablets Android, Smart TVs y cualquier computadora con navegador web.</p>
-</div>
-</li>
-<li class="flex items-start gap-md">
-<span class="material-symbols-outlined text-tertiary mt-1">check_circle</span>
-<div>
-<h4 class="font-title-lg text-body-lg font-bold">Configuración de Un Clic</h4>
-<p class="text-on-surface-variant">Sin necesidad de instalar aplicaciones. Conecta, comparte, listo. Latencia casi nula para colaboración fluida.</p>
-</div>
-</li>
-</ul>
-</div>
-<div class="flex-1 w-full">
-<img class="rounded-xl app-preview-shadow border border-outline-variant/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo-k3RNnFtMkvzPhBECH615bglsPdPi0_sq2QCPqD8SSMDyXz4mQVc4e_KavRucU9PUEUWzBv3BiZdMkuicgPupWv4mwNHIRPUaF09HmuHeIxVsFtfGXT6AC01b8UBc4B471qx1bNidoDNauBDEkc9eHMJDhfxsZJNXrwziVGOmGu25oO-8LHPuaIo0bmCYmtbXP7lSX57KaPMqlZtaPJ_MxvHu3mBupqZ4gdzrYR1bYRKGQqfiW7q"/>
-</div>
-</div>
-</section>
-<!-- Diseñado para Profesionales Mac - Mobile Header -->
-<section class="py-lg bg-surface-container-low md:hidden">
-<div class="max-w-[1440px] mx-auto px-margin-desktop text-center">
-<h2 class="font-headline-lg text-headline-lg mb-md">Diseñado para Profesionales Mac</h2>
-<p class="font-body-md text-body-md text-on-surface-variant">Sin internet. Sin límites de API. Herramientas para Mac de voz, archivos, conectividad e IA.</p>
-</div>
-</section>
-
-<!-- Diseñado para Profesionales Mac - Unified Grid -->
 <section class="py-xl bg-surface-container-low" id="apps">
-<div class="max-w-[1440px] mx-auto px-margin-desktop">
-<div class="text-center mb-xl">
-<h2 class="font-headline-lg text-headline-lg mb-md">Diseñado para Profesionales Mac</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-md">Sin internet. Sin límites de API. Herramientas para Mac de voz, archivos, conectividad e IA.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
-<!-- iVoz Card -->
-<div class="glass-card p-lg rounded-xl flex flex-col">
-<div class="flex items-center gap-md mb-md">
-<img src="assets/ivoz-icon.png" alt="iVoz icon" class="w-16 h-16 rounded-lg" loading="lazy"/>
-<h3 class="font-title-lg text-title-lg">iVoz</h3>
-</div>
-<p class="font-body-md text-on-surface-variant mb-lg">Descubre todas las características de transcripción inteligente y cómo iVoz transforma tu forma de capturar ideas.</p>
-<div class="flex items-center justify-between mb-lg mt-auto">
-<a href="https://ivoz-macos-site.vercel.app/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-sm text-primary font-title-lg hover:gap-md transition-all">Descubre Más <span class="material-symbols-outlined">arrow_outward</span></a>
-<span class="font-title-lg text-primary">Descarga gratis</span>
-</div>
-<a href="https://ivoz-macos-site.vercel.app/" target="_blank" rel="noopener noreferrer" class="block text-center w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:shadow-xl transition-all">Descargar iVoz gratis</a>
-</div>
-
-<!-- iOrganize Card -->
-<div class="glass-card p-lg rounded-xl flex flex-col">
-<div class="flex items-center gap-md mb-md">
-<img src="assets/iorganize-icon.png" alt="iOrganize icon" class="w-16 h-16 rounded-lg" loading="lazy"/>
-<h3 class="font-title-lg text-title-lg">iOrganize</h3>
-</div>
-<p class="font-body-md text-on-surface-variant mb-lg">Aprende cómo iOrganize automatiza la limpieza de tu sistema y mantiene tu espacio de trabajo impecable.</p>
-<div class="flex items-center justify-between mb-lg mt-auto">
-<a href="https://iorganize-eight.vercel.app/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-sm text-primary font-title-lg hover:gap-md transition-all">Descubre Más <span class="material-symbols-outlined">arrow_outward</span></a>
-<div class="flex items-baseline gap-xs">
-<span class="text-headline-md font-bold text-primary">$</span>
-<span class="text-2xl font-display text-primary">12.99</span>
-</div>
-</div>
-<button onclick="startCheckout('iorganize')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all">Obtener iOrganize</button>
-</div>
-
-<!-- Screen Bridge Card -->
-<div class="glass-card p-lg rounded-xl flex flex-col">
-<div class="flex items-center gap-md mb-md">
-<img src="assets/imonitor-icon.png" alt="Screen Bridge icon" class="w-16 h-16 rounded-lg" loading="lazy"/>
-<h3 class="font-title-lg text-title-lg">Screen Bridge</h3>
-</div>
-<p class="font-body-md text-on-surface-variant mb-lg">Explora cómo Screen Bridge convierte cualquier dispositivo en un segundo monitor de baja latencia.</p>
-<div class="mb-lg mt-auto text-primary font-title-lg">Descarga gratis</div>
-<a href="https://screen-bridge-macos.vercel.app/" target="_blank" rel="noopener noreferrer" class="block text-center w-full bg-primary text-on-primary py-md rounded-full font-title-lg">Descargar Screen Bridge gratis</a>
-</div>
-</div>
-</div>
+  <div class="max-w-[1440px] mx-auto px-margin-desktop">
+    <h2 class="font-headline-lg text-headline-lg mb-md">Las aplicaciones</h2>
+    <p class="font-body-lg text-on-surface-variant max-w-2xl mb-lg">Ordenadas por relevancia para mi portafolio. Screen Bridge se presenta como prototipo experimental.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-lg"><article class="glass-card p-lg rounded-xl flex flex-col gap-md">
+  <div class="flex items-center gap-md">
+    <img src="assets/ivoz-icon.png" alt="iVoz icon" class="w-14 h-14 rounded-lg" loading="lazy" width="56" height="56">
+    <div><h3 class="font-title-lg text-title-lg font-bold">iVoz</h3><p class="text-xs text-primary">Código público · prueba pendiente</p></div>
+  </div>
+  <p class="font-body-md text-on-surface-variant">Dictado local con historial, fragmentos de texto e inserción en apps de Mac.</p>
+  <p class="text-xs font-semibold text-on-surface">SwiftUI · WhisperKit · Core ML</p>
+  <p class="text-xs text-on-surface-variant"><strong>Límite actual:</strong> Funcionó bien al principio; aún falta diagnosticar una demora posterior.</p>
+  <a href="https://github.com/hikaribrandan3-code/ivoz-macos" target="_blank" rel="noopener noreferrer" class="block text-center w-full bg-primary text-on-primary py-md rounded-full font-title-lg mt-auto">Ver código en GitHub</a>
+</article>
+<article class="glass-card p-lg rounded-xl flex flex-col gap-md">
+  <div class="flex items-center gap-md">
+    <img src="assets/iorganize-icon.png" alt="iOrganize icon" class="w-14 h-14 rounded-lg" loading="lazy" width="56" height="56">
+    <div><h3 class="font-title-lg text-title-lg font-bold">iOrganize</h3><p class="text-xs text-primary">Código público · prueba pendiente</p></div>
+  </div>
+  <p class="font-body-md text-on-surface-variant">Limpieza de archivos y reglas por carpeta, con acciones opcionales, control de duplicados y revisión antes de enviar a Papelera.</p>
+  <p class="text-xs font-semibold text-on-surface">SwiftUI · AppKit · Foundation · CryptoKit</p>
+  <p class="text-xs text-on-surface-variant"><strong>Límite actual:</strong> Revisá los archivos y scripts seleccionados antes de ejecutar la limpieza.</p>
+  <a href="https://github.com/hikaribrandan3-code/iorganize" target="_blank" rel="noopener noreferrer" class="block text-center w-full bg-primary text-on-primary py-md rounded-full font-title-lg mt-auto">Ver código en GitHub</a>
+</article>
+<article class="glass-card p-lg rounded-xl flex flex-col gap-md">
+  <div class="flex items-center gap-md">
+    <img src="assets/imonitor-icon.png" alt="Screen Bridge icon" class="w-14 h-14 rounded-lg" loading="lazy" width="56" height="56">
+    <div><h3 class="font-title-lg text-title-lg font-bold">Screen Bridge</h3><p class="text-xs text-primary">Experimental · código público</p></div>
+  </div>
+  <p class="font-body-md text-on-surface-variant">Pantalla extendida experimental de Mac a tablet a través de una red local de confianza.</p>
+  <p class="text-xs font-semibold text-on-surface">Tauri · React · Rust · WebSockets · puente Objective-C</p>
+  <p class="text-xs text-on-surface-variant"><strong>Límite actual:</strong> Experimental: API privada de macOS, demora perceptible y compatibilidad poco probada.</p>
+  <a href="https://github.com/hikaribrandan3-code/screen-bridge-macos" target="_blank" rel="noopener noreferrer" class="block text-center w-full bg-primary text-on-primary py-md rounded-full font-title-lg mt-auto">Ver código en GitHub</a>
+</article>
+<article class="glass-card p-lg rounded-xl flex flex-col gap-md">
+  <div class="flex items-center gap-md">
+    <img src="assets/istats-icon.png" alt="iStats icon" class="w-14 h-14 rounded-lg" loading="lazy" width="56" height="56">
+    <div><h3 class="font-title-lg text-title-lg font-bold">iStats</h3><p class="text-xs text-primary">Código público · prueba pendiente</p></div>
+  </div>
+  <p class="font-body-md text-on-surface-variant">Panel compacto de CPU, memoria, red, disco y procesos principales.</p>
+  <p class="text-xs font-semibold text-on-surface">SwiftUI · Swift Charts · API Mach/BSD</p>
+  <p class="text-xs text-on-surface-variant"><strong>Límite actual:</strong> Utilidad pequeña con categorías de memoria estimadas; no reemplaza a Monitor de Actividad.</p>
+  <a href="https://github.com/hikaribrandan3-code/istats" target="_blank" rel="noopener noreferrer" class="block text-center w-full bg-primary text-on-primary py-md rounded-full font-title-lg mt-auto">Ver código en GitHub</a>
+</article>
+<article class="glass-card p-lg rounded-xl flex flex-col gap-md">
+  <div class="flex items-center gap-md">
+    <img src="assets/ibrain-icon.png" alt="iBrain icon" class="w-14 h-14 rounded-lg" loading="lazy" width="56" height="56">
+    <div><h3 class="font-title-lg text-title-lg font-bold">iBrain</h3><p class="text-xs text-primary">Código público · prueba pendiente</p></div>
+  </div>
+  <p class="font-body-md text-on-surface-variant">Chat local con Ollama, conversaciones guardadas y modo nube opcional con tu propia clave.</p>
+  <p class="text-xs font-semibold text-on-surface">SwiftUI · Ollama · Keychain · API de OpenAI/Anthropic</p>
+  <p class="text-xs text-on-surface-variant"><strong>Límite actual:</strong> Necesita un modelo local; el modo nube envía el contexto al proveedor elegido.</p>
+  <a href="https://github.com/hikaribrandan3-code/ibrian" target="_blank" rel="noopener noreferrer" class="block text-center w-full bg-primary text-on-primary py-md rounded-full font-title-lg mt-auto">Ver código en GitHub</a>
+</article></div>
+  </div>
+</section>
+<section class="py-xl bg-white">
+  <div class="max-w-[1440px] mx-auto px-margin-desktop">
+    <h2 class="font-headline-lg text-headline-lg mb-md">Productos pequeños, ingeniería visible.</h2>
+    <p class="font-body-lg text-on-surface-variant max-w-2xl mb-lg">Cada repositorio muestra el código, las instrucciones de compilación, las decisiones de implementación y los límites conocidos. Los enlaces de descarga aparecerán cuando termine la prueba manual de cada paquete.</p>
+    <a href="https://github.com/hikaribrandan3-code" target="_blank" rel="noopener noreferrer" class="text-primary font-semibold">Ver los repositorios ↗</a>
+  </div>
 </section>
 </main>
-<!-- Footer -->
-<footer class="w-full bg-surface-container-lowest border-t border-outline-variant/10">
-<div class="max-w-[1440px] mx-auto px-margin-desktop py-xl">
-<!-- Footer Grid - 3 Columns -->
-<div class="grid grid-cols-1 md:grid-cols-3 gap-lg md:gap-xl mb-xl md:text-left text-center">
-<!-- Column 1: Las Apps -->
-<div>
-<h4 class="font-label-md text-label-md font-bold text-on-surface mb-md uppercase tracking-wider opacity-70">Las Apps</h4>
-<ul class="space-y-sm">
-<li><a href="#features" class="font-body-md text-on-surface-variant hover:text-primary transition-colors">Características</a></li>
-</ul>
-</div>
-<!-- Column 2: Precios -->
-<div>
-<h4 class="font-label-md text-label-md font-bold text-on-surface mb-md uppercase tracking-wider opacity-70">Apps</h4>
-<ul class="space-y-sm">
-<li><a href="#apps" class="font-body-md text-on-surface-variant hover:text-primary transition-colors">Ver Apps</a></li>
-</ul>
-</div>
-<!-- Column 3: Soporte -->
-<div>
-<h4 class="font-label-md text-label-md font-bold text-on-surface mb-md uppercase tracking-wider opacity-70">Soporte</h4>
-<ul class="space-y-sm">
-<li><a href="tel:+351212260" class="font-body-md text-primary hover:text-primary/80 transition-colors font-semibold">(351) 212-2600</a></li>
-</ul>
-</div>
-</div>
-
-<!-- Divider -->
-<div class="border-t border-outline-variant/10 py-lg">
-<!-- Bottom Bar -->
-<div class="flex flex-col md:flex-row items-center justify-between gap-md text-center md:text-left">
-<p class="font-label-sm text-label-sm text-on-surface-variant opacity-60">Seguro • 100% Local • Compra Única</p>
-<p class="font-label-sm text-label-sm text-on-surface-variant opacity-60">© 2026 iSuite Office. Todos los derechos reservados.</p>
-</div>
-</div>
-</div>
+<footer class="bg-surface-container-lowest border-t border-outline-variant/10">
+  <div class="max-w-[1440px] mx-auto px-margin-desktop py-lg text-on-surface-variant text-sm">© 2026 iSuite · Proyectos personales para Mac. Las compilaciones nuevas están en revisión.</div>
 </footer>
-
-<!-- Checkout Modal -->
-<div id="checkoutModal" class="hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
-    <div class="bg-white rounded-2xl p-xl max-w-md w-full mx-4">
-        <h2 class="font-headline-lg text-headline-lg mb-lg">Pago</h2>
-        <div id="checkoutContent"></div>
-    </div>
-</div>
-
-<script>
-        // Simple scroll reveal interaction
-        const observerOptions = {
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100', 'translate-y-0');
-                    entry.target.classList.remove('opacity-0', 'translate-y-10');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('section > div').forEach(section => {
-            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
-            observer.observe(section);
-        });
-
-        // Checkout flow
-        function startCheckout(type) {
-            const freeDownloads = {
-                ivoz: 'https://ivoz-macos-site.vercel.app/',
-                imonitor: 'https://screen-bridge-macos.vercel.app/'
-            };
-            if (freeDownloads[type]) { window.location.href = freeDownloads[type]; return; }
-            if (type === 'bundle') { document.getElementById('apps').scrollIntoView({behavior: 'smooth'}); return; }
-            const product = typeof PRODUCTS !== 'undefined' ? PRODUCTS[type] : null;
-            if (!product) return;
-            const modal = document.getElementById('checkoutModal');
-            const content = document.getElementById('checkoutContent');
-            const title = product.name.replace(/ Pro - Lifetime License$/, '');
-            const copy = 'Completa tu compra|Compra única. Precio en USD.'.split('|');
-            content.innerHTML = `
-                <div class="space-y-lg">
-                    <div class="pb-lg border-b border-outline-variant">
-                        <p class="font-body-sm text-on-surface-variant">${copy[0]}</p>
-                        <h3 class="font-title-lg text-title-lg">${title}</h3>
-                    </div>
-                    <div class="bg-primary/5 p-md rounded-xl flex justify-between items-baseline">
-                        <span class="font-body-md text-on-surface-variant">${copy[1]}</span>
-                        <span class="text-3xl font-headline-lg text-primary">$${product.price.toFixed(2)}</span>
-                    </div>
-                    <div class="space-y-sm pt-lg">
-                        <button onclick="payWithPayPal('${type}')" class="w-full bg-primary text-on-primary py-md rounded-full font-title-lg">PayPal</button>
-                        <button onclick="payWithMercadoPago('${type}')" class="w-full bg-yellow-400 text-black py-md rounded-full font-title-lg">Mercado Pago</button>
-                        <button onclick="closeCheckout()" class="w-full border border-outline-variant py-md rounded-full">Cancelar</button>
-                    </div>
-                </div>`;
-            modal.classList.remove('hidden');
-        }
-
-        function closeCheckout() {
-            document.getElementById('checkoutModal').classList.add('hidden');
-        }
-    </script>
-    <script src="checkout.js"></script>
-<!-- Sticky Floating CTA Button -->
-<div id="floatingCTA" class="fixed bottom-24 right-8 z-40 opacity-0 translate-y-8 transition-all duration-500 pointer-events-none">
-    <button onclick="document.getElementById('apps').scrollIntoView({behavior:'smooth'})" class="bg-primary text-on-primary px-md py-sm rounded-full font-body-lg text-body-lg hover:shadow-lg hover:scale-105 active:scale-95 transition-all shadow-md flex items-center gap-xs pointer-events-auto">
-        <span class="material-symbols-outlined text-lg">shopping_cart</span>
-        Obtener Suite
-    </button>
-</div>
-<script>
-    // Show sticky CTA after scrolling past hero
-    const floatingCTA = document.getElementById('floatingCTA');
-    const heroSection = document.querySelector('section:first-of-type');
-
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 400) {
-            floatingCTA.classList.add('opacity-100', 'translate-y-0');
-            floatingCTA.classList.remove('opacity-0', 'translate-y-8', 'pointer-events-none');
-        } else {
-            floatingCTA.classList.remove('opacity-100', 'translate-y-0');
-            floatingCTA.classList.add('opacity-0', 'translate-y-8', 'pointer-events-none');
-        }
-    });
-</script>
-</body></html>
+</body>
+</html>
